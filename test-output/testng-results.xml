@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="7" passed="7">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="6631" started-at="2019-06-24T12:33:02Z" finished-at="2019-06-24T12:33:08Z">
+    <groups>
+      <group name="ex">
+        <method signature="APITest.testMethodFive()[pri:0, instance:com.fusioncharts.main.APITest@2f686d1f]" name="testMethodFive" class="com.fusioncharts.main.APITest"/>
+        <method signature="APITest.testMethodFour()[pri:0, instance:com.fusioncharts.main.APITest@2f686d1f]" name="testMethodFour" class="com.fusioncharts.main.APITest"/>
+      </group> <!-- ex -->
+      <group name="in">
+        <method signature="APITest.testMethodOne()[pri:0, instance:com.fusioncharts.main.APITest@2f686d1f]" name="testMethodOne" class="com.fusioncharts.main.APITest"/>
+        <method signature="APITest.testMethodThree()[pri:0, instance:com.fusioncharts.main.APITest@2f686d1f]" name="testMethodThree" class="com.fusioncharts.main.APITest"/>
+        <method signature="APITest.testMethodTwo()[pri:0, instance:com.fusioncharts.main.APITest@2f686d1f]" name="testMethodTwo" class="com.fusioncharts.main.APITest"/>
+      </group> <!-- in -->
+    </groups>
+    <test name="Default test" duration-ms="6631" started-at="2019-06-24T12:33:02Z" finished-at="2019-06-24T12:33:08Z">
+      <class name="com.fusioncharts.main.APITest">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.fusioncharts.main.APITest@2f686d1f]" name="beforeTest" is-config="true" duration-ms="6313" started-at="2019-06-24T12:33:02Z" finished-at="2019-06-24T12:33:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="f1()[pri:0, instance:com.fusioncharts.main.APITest@2f686d1f]" name="f1" duration-ms="6" started-at="2019-06-24T12:33:08Z" finished-at="2019-06-24T12:33:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f1 -->
+        <test-method status="PASS" signature="testMethodFive()[pri:0, instance:com.fusioncharts.main.APITest@2f686d1f]" name="testMethodFive" duration-ms="3" started-at="2019-06-24T12:33:08Z" finished-at="2019-06-24T12:33:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMethodFive -->
+        <test-method status="PASS" signature="testMethodFour()[pri:0, instance:com.fusioncharts.main.APITest@2f686d1f]" name="testMethodFour" duration-ms="1" started-at="2019-06-24T12:33:08Z" finished-at="2019-06-24T12:33:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMethodFour -->
+        <test-method status="PASS" signature="testMethodOne()[pri:0, instance:com.fusioncharts.main.APITest@2f686d1f]" name="testMethodOne" duration-ms="2" started-at="2019-06-24T12:33:08Z" finished-at="2019-06-24T12:33:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMethodOne -->
+        <test-method status="PASS" signature="testMethodThree()[pri:0, instance:com.fusioncharts.main.APITest@2f686d1f]" name="testMethodThree" duration-ms="2" started-at="2019-06-24T12:33:08Z" finished-at="2019-06-24T12:33:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMethodThree -->
+        <test-method status="PASS" signature="testMethodTwo()[pri:0, instance:com.fusioncharts.main.APITest@2f686d1f]" name="testMethodTwo" duration-ms="4" started-at="2019-06-24T12:33:08Z" finished-at="2019-06-24T12:33:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMethodTwo -->
+        <test-method status="PASS" signature="f()[pri:3, instance:com.fusioncharts.main.APITest@2f686d1f]" name="f" duration-ms="1" started-at="2019-06-24T12:33:08Z" finished-at="2019-06-24T12:33:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.fusioncharts.main.APITest@2f686d1f]" name="afterTest" is-config="true" duration-ms="260" started-at="2019-06-24T12:33:08Z" finished-at="2019-06-24T12:33:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- com.fusioncharts.main.APITest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
