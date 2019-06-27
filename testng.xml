@@ -3,19 +3,13 @@
 <suite name="Group of group Suite" verbose="1">
   <test name="Test One">
     <groups>
-      <define name="include-group">
-        <include name="in" />
-      </define>
-      <define name="exclude-group">
-        <include name="ex" />
-      </define>
       <run>
-        <include name="include-group" />
-        <exclude name="exclude-group" />
+        <include name="in" />
+        <exclude name="ex" />
       </run>
     </groups>
     <classes>
-      <class name="com.fusioncharts.main.APITest" />
+      <class name="com.fusioncharts.main.APITest"></class>
     </classes>
   </test>
 </suite>
