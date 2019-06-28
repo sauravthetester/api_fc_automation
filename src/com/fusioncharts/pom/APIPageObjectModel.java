@@ -4,6 +4,9 @@ import org.openqa.selenium.support.pagefactory.*;
 
 import com.fusioncharts.main.APITestBase;
 
+import java.util.List;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -16,6 +19,11 @@ public class APIPageObjectModel extends APITestBase
 	@FindBy(id="btn_1")
 	WebElement tempButton;
 	
+	public APIPageObjectModel()
+	{
+		PageFactory.initElements(driver, this);
+	}
+	
 	public boolean verifyIfChartMainContainerDisplayed()
 	{
 		if(mainContainer.isDisplayed())
@@ -24,7 +32,7 @@ public class APIPageObjectModel extends APITestBase
 			return false;
 	}
 	
-	public boolean temporaryButtonExists()
+	public boolean verifyTemporaryButtonExists()
 	{
 		if(tempButton.isDisplayed())
 			return true;
@@ -32,8 +40,10 @@ public class APIPageObjectModel extends APITestBase
 			return false;
 	}
 	
-	public APIPageObjectModel()
+	public List<WebElement> getTotalCharts()
 	{
-		PageFactory.initElements(driver, this);
+		return driver.findElements(By.className("fusioncharts-container"));
 	}
+	
+	
 }

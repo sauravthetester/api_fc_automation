@@ -11,7 +11,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 
-public class getObjectReference extends APITestBase
+public class GetObjectReference extends APITestBase
 {
 	//The api name according to the data sheet
 	private final static String apiName = "getObjectReference()"; 
@@ -47,17 +47,25 @@ public class getObjectReference extends APITestBase
 	@Test(priority = 3)
 	public void verifyAPI()
 	{
-		boolean buttonDisplayed;
 		String apiScript = TestUtil.apiScript(data, apiName);
 		JavascriptExecutor js = (JavascriptExecutor) driver;  
 		js.executeScript(apiScript);
-		buttonDisplayed = pom.temporaryButtonExists();
+		boolean buttonDisplayed;
+		buttonDisplayed = pom.verifyTemporaryButtonExists();
 		Assert.assertTrue(buttonDisplayed, "Button is not displayed (API is not working)");
 	}
 	
 	@AfterTest
 	public void shutDown() 
 	{
+		try
+		{
+			Thread.sleep(3000);
+		}
+		catch (InterruptedException e) 
+		{
+			e.printStackTrace();
+		}
 		report.endTest(test);
 		report.flush();
 		driver.quit();

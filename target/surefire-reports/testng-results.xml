@@ -1,58 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="7" passed="7">
+<testng-results skipped="0" failed="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Parallel tests" duration-ms="7187" started-at="2019-06-24T13:12:22Z" finished-at="2019-06-24T13:12:30Z">
+  <suite name="Parallel tests" duration-ms="4534" started-at="2019-06-27T10:46:15Z" finished-at="2019-06-27T10:46:20Z">
     <groups>
-      <group name="ex">
-        <method signature="APITest.testMethodFive()[pri:0, instance:com.fusioncharts.main.APITest@327471b5]" name="testMethodFive" class="com.fusioncharts.main.APITest"/>
-        <method signature="APITest.testMethodFour()[pri:0, instance:com.fusioncharts.main.APITest@327471b5]" name="testMethodFour" class="com.fusioncharts.main.APITest"/>
-      </group> <!-- ex -->
-      <group name="in">
-        <method signature="APITest.testMethodOne()[pri:0, instance:com.fusioncharts.main.APITest@327471b5]" name="testMethodOne" class="com.fusioncharts.main.APITest"/>
-        <method signature="APITest.testMethodThree()[pri:0, instance:com.fusioncharts.main.APITest@327471b5]" name="testMethodThree" class="com.fusioncharts.main.APITest"/>
-        <method signature="APITest.testMethodTwo()[pri:0, instance:com.fusioncharts.main.APITest@327471b5]" name="testMethodTwo" class="com.fusioncharts.main.APITest"/>
-      </group> <!-- in -->
     </groups>
-    <test name="Test One" duration-ms="7187" started-at="2019-06-24T13:12:22Z" finished-at="2019-06-24T13:12:30Z">
-      <class name="com.fusioncharts.main.APITest">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.fusioncharts.main.APITest@327471b5]" name="beforeTest" is-config="true" duration-ms="6872" started-at="2019-06-24T18:42:22Z" finished-at="2019-06-24T18:42:29Z">
+    <test name="Test One" duration-ms="4534" started-at="2019-06-27T10:46:15Z" finished-at="2019-06-27T10:46:20Z">
+      <class name="com.fusioncharts.apitest.getObjectReference">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.fusioncharts.apitest.getObjectReference@4bbfb90a]" name="setUp" is-config="true" duration-ms="3219" started-at="2019-06-27T16:16:15Z" finished-at="2019-06-27T16:16:19Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="f1()[pri:0, instance:com.fusioncharts.main.APITest@327471b5]" name="f1" duration-ms="2" started-at="2019-06-24T18:42:29Z" finished-at="2019-06-24T18:42:29Z">
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="verifyAPIExistsInDataSheet()[pri:1, instance:com.fusioncharts.apitest.getObjectReference@4bbfb90a]" name="verifyAPIExistsInDataSheet" duration-ms="2" started-at="2019-06-27T16:16:19Z" finished-at="2019-06-27T16:16:19Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- f1 -->
-        <test-method status="PASS" signature="testMethodFive()[pri:0, instance:com.fusioncharts.main.APITest@327471b5]" name="testMethodFive" duration-ms="0" started-at="2019-06-24T18:42:29Z" finished-at="2019-06-24T18:42:29Z">
+        </test-method> <!-- verifyAPIExistsInDataSheet -->
+        <test-method status="PASS" signature="verifyChartIsRendered()[pri:2, instance:com.fusioncharts.apitest.getObjectReference@4bbfb90a]" name="verifyChartIsRendered" duration-ms="894" started-at="2019-06-27T16:16:19Z" finished-at="2019-06-27T16:16:19Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testMethodFive -->
-        <test-method status="PASS" signature="testMethodFour()[pri:0, instance:com.fusioncharts.main.APITest@327471b5]" name="testMethodFour" duration-ms="0" started-at="2019-06-24T18:42:29Z" finished-at="2019-06-24T18:42:29Z">
+        </test-method> <!-- verifyChartIsRendered -->
+        <test-method status="PASS" signature="verifyAPI()[pri:3, instance:com.fusioncharts.apitest.getObjectReference@4bbfb90a]" name="verifyAPI" duration-ms="36" started-at="2019-06-27T16:16:19Z" finished-at="2019-06-27T16:16:19Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testMethodFour -->
-        <test-method status="PASS" signature="testMethodThree()[pri:0, instance:com.fusioncharts.main.APITest@327471b5]" name="testMethodThree" duration-ms="0" started-at="2019-06-24T18:42:29Z" finished-at="2019-06-24T18:42:29Z">
+        </test-method> <!-- verifyAPI -->
+        <test-method status="PASS" signature="shutDown()[pri:0, instance:com.fusioncharts.apitest.getObjectReference@4bbfb90a]" name="shutDown" is-config="true" duration-ms="372" started-at="2019-06-27T16:16:19Z" finished-at="2019-06-27T16:16:20Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testMethodThree -->
-        <test-method status="PASS" signature="testMethodOne()[pri:0, instance:com.fusioncharts.main.APITest@327471b5]" name="testMethodOne" duration-ms="0" started-at="2019-06-24T18:42:29Z" finished-at="2019-06-24T18:42:29Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testMethodOne -->
-        <test-method status="PASS" signature="testMethodTwo()[pri:0, instance:com.fusioncharts.main.APITest@327471b5]" name="testMethodTwo" duration-ms="1" started-at="2019-06-24T18:42:29Z" finished-at="2019-06-24T18:42:29Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testMethodTwo -->
-        <test-method status="PASS" signature="f()[pri:3, instance:com.fusioncharts.main.APITest@327471b5]" name="f" duration-ms="1" started-at="2019-06-24T18:42:29Z" finished-at="2019-06-24T18:42:29Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- f -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.fusioncharts.main.APITest@327471b5]" name="afterTest" is-config="true" duration-ms="299" started-at="2019-06-24T18:42:29Z" finished-at="2019-06-24T18:42:30Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterTest -->
-      </class> <!-- com.fusioncharts.main.APITest -->
+        </test-method> <!-- shutDown -->
+      </class> <!-- com.fusioncharts.apitest.getObjectReference -->
     </test> <!-- Test One -->
   </suite> <!-- Parallel tests -->
 </testng-results>

@@ -5,9 +5,6 @@
       <script type="text/javascript" src="./build/develop/fusioncharts.js"></script>
 
       <script type="text/javascript">
-        var fusioncharts, events = {};
-        var key_attr = new Array();
-        var val_attr = new Array();
 
         FusionCharts.ready(function () {
             fusioncharts = new FusionCharts({
@@ -15,7 +12,7 @@
                 type: 'dragline',
                 renderAt: 'chart-container',
                 width: '800',
-                height: '600',
+                height: '500',
                 dataFormat: 'json',
                 baseChartMessageFont: 'arial',
                 loadMessage: 'API Automation',
@@ -100,29 +97,36 @@
             });
             fusioncharts.render();
 
-            function replaceSVG() {
-                var chart = FusionCharts.getObjectReference("chart_1");
-                chart.innerHTML =
-                    "<button id='btn_1'>Test Button</button>";
+            function exact_copy() {
+                var cloned_chart = fusioncharts.clone();
+                console.log(cloned_chart);
+                cloned_chart.render('cloned-chart-container');
             }
 
-            function reDrawSVG() {
-                fusioncharts.render();
+
+            function modified_copy() {
+                var cloned_chart_2 = fusioncharts.clone({
+                    type: 'bar2d',
+                    renderAt: 'cloned-chart-container'
+                }, true);
+
+                console.log(cloned_chart_2);
+
+                var copy = new FusionCharts(cloned_chart_2);
+                copy.render();
             }
-            document.getElementById("get_ref").addEventListener("click", replaceSVG);
-            document.getElementById("redraw").addEventListener("click", reDrawSVG);
+
+            document.getElementById("exact_copy").addEventListener("click", exact_copy);
+            document.getElementById("modified_copy").addEventListener("click", modified_copy);
         });
     </script>
 </head>
 
 <body>
       <div id="chart-container">FusionCharts XT will load here!</div>
-    <p class="text-center">
-        <button id="get_ref">Remove the SVG element</button>
-    </p>
-    <p class="text-center">
-        <button id="redraw">Redraw</button>
-    </p>
+    <div id="cloned-chart-container">Cloned FusionCharts will render here</div>
+    <button id="exact_copy">Create an exact clone</button>
+    <button id="modified_copy">Create a modified clone</button>
 </body>
 
 </html>

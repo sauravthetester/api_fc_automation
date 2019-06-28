@@ -1,33 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+<testng-results skipped="0" failed="0" ignored="0" total="6" passed="6">
   <reporter-output>
   </reporter-output>
-  <suite name="Parallel tests" duration-ms="3313" started-at="2019-06-27T08:41:45Z" finished-at="2019-06-27T08:41:49Z">
+  <suite name="Sequential tests" duration-ms="12032" started-at="2019-06-28T09:19:47Z" finished-at="2019-06-28T09:19:59Z">
     <groups>
     </groups>
-    <test name="Test One" duration-ms="3313" started-at="2019-06-27T08:41:45Z" finished-at="2019-06-27T08:41:49Z">
-      <class name="com.fusioncharts.apitest.getObjectReference">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.fusioncharts.apitest.getObjectReference@51c8530f]" name="setUp" is-config="true" duration-ms="2652" started-at="2019-06-27T08:41:45Z" finished-at="2019-06-27T08:41:48Z">
+    <test name="Test All APIs" duration-ms="6491" started-at="2019-06-28T09:19:47Z" finished-at="2019-06-28T09:19:53Z">
+      <class name="com.fusioncharts.apitest.GetObjectReference">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.fusioncharts.apitest.GetObjectReference@462d5aee]" name="setUp" is-config="true" duration-ms="2774" started-at="2019-06-28T09:19:47Z" finished-at="2019-06-28T09:19:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="verifyAPIExistsInDataSheet()[pri:1, instance:com.fusioncharts.apitest.getObjectReference@51c8530f]" name="verifyAPIExistsInDataSheet" duration-ms="7" started-at="2019-06-27T08:41:48Z" finished-at="2019-06-27T08:41:48Z">
+        <test-method status="PASS" signature="verifyAPIExistsInDataSheet()[pri:1, instance:com.fusioncharts.apitest.GetObjectReference@462d5aee]" name="verifyAPIExistsInDataSheet" duration-ms="12" started-at="2019-06-28T09:19:49Z" finished-at="2019-06-28T09:19:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAPIExistsInDataSheet -->
-        <test-method status="PASS" signature="verifyChartIsRendered()[pri:2, instance:com.fusioncharts.apitest.getObjectReference@51c8530f]" name="verifyChartIsRendered" duration-ms="247" started-at="2019-06-27T08:41:48Z" finished-at="2019-06-27T08:41:48Z">
+        <test-method status="PASS" signature="verifyChartIsRendered()[pri:2, instance:com.fusioncharts.apitest.GetObjectReference@462d5aee]" name="verifyChartIsRendered" duration-ms="265" started-at="2019-06-28T09:19:49Z" finished-at="2019-06-28T09:19:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyChartIsRendered -->
-        <test-method status="PASS" signature="verifyAPI()[pri:3, instance:com.fusioncharts.apitest.getObjectReference@51c8530f]" name="verifyAPI" duration-ms="39" started-at="2019-06-27T08:41:48Z" finished-at="2019-06-27T08:41:48Z">
+        <test-method status="PASS" signature="verifyAPI()[pri:3, instance:com.fusioncharts.apitest.GetObjectReference@462d5aee]" name="verifyAPI" duration-ms="41" started-at="2019-06-28T09:19:50Z" finished-at="2019-06-28T09:19:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAPI -->
-        <test-method status="PASS" signature="shutDown()[pri:0, instance:com.fusioncharts.apitest.getObjectReference@51c8530f]" name="shutDown" is-config="true" duration-ms="339" started-at="2019-06-27T08:41:48Z" finished-at="2019-06-27T08:41:49Z">
+        <test-method status="PASS" signature="shutDown()[pri:0, instance:com.fusioncharts.apitest.GetObjectReference@462d5aee]" name="shutDown" is-config="true" duration-ms="3362" started-at="2019-06-28T09:19:50Z" finished-at="2019-06-28T09:19:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- shutDown -->
-      </class> <!-- com.fusioncharts.apitest.getObjectReference -->
-    </test> <!-- Test One -->
-  </suite> <!-- Parallel tests -->
+      </class> <!-- com.fusioncharts.apitest.GetObjectReference -->
+    </test> <!-- Test All APIs -->
+    <test name="Test All APIs2" duration-ms="5516" started-at="2019-06-28T09:19:53Z" finished-at="2019-06-28T09:19:59Z">
+      <class name="com.fusioncharts.apitest.Clone">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.fusioncharts.apitest.Clone@2de8284b]" name="setUp" is-config="true" duration-ms="1814" started-at="2019-06-28T09:19:53Z" finished-at="2019-06-28T09:19:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="verifyAPIExistsInDataSheet()[pri:1, instance:com.fusioncharts.apitest.Clone@2de8284b]" name="verifyAPIExistsInDataSheet" duration-ms="1" started-at="2019-06-28T09:19:55Z" finished-at="2019-06-28T09:19:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAPIExistsInDataSheet -->
+        <test-method status="PASS" signature="verifyChartIsRendered()[pri:2, instance:com.fusioncharts.apitest.Clone@2de8284b]" name="verifyChartIsRendered" duration-ms="399" started-at="2019-06-28T09:19:55Z" finished-at="2019-06-28T09:19:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyChartIsRendered -->
+        <test-method status="PASS" signature="verifyAPI()[pri:3, instance:com.fusioncharts.apitest.Clone@2de8284b]" name="verifyAPI" duration-ms="114" started-at="2019-06-28T09:19:55Z" finished-at="2019-06-28T09:19:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAPI -->
+        <test-method status="PASS" signature="shutDown()[pri:0, instance:com.fusioncharts.apitest.Clone@2de8284b]" name="shutDown" is-config="true" duration-ms="3183" started-at="2019-06-28T09:19:55Z" finished-at="2019-06-28T09:19:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shutDown -->
+      </class> <!-- com.fusioncharts.apitest.Clone -->
+    </test> <!-- Test All APIs2 -->
+  </suite> <!-- Sequential tests -->
 </testng-results>
