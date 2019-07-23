@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Sequential tests">
+<suite name="API Regression">
 
 	<listeners>
 		<listener class-name="com.fusioncharts.ExtentReportListener.ExtentReporterNG"/>
@@ -15,6 +15,24 @@
   	<test name="Clone" parallel="false" preserve-order="true" thread-count="1" >
     	<classes>
       		<class name="com.fusioncharts.apitest.Clone" />
+    	</classes>
+  	</test>
+  	
+  	<test name="ChartType" parallel="false" preserve-order="true" thread-count="1" >
+    	<classes>
+      		<class name="com.fusioncharts.apitest.ChartType" />
+    	</classes>
+  	</test>
+  	
+  	<test name="AddEventListener" parallel="false" preserve-order="true" thread-count="1" >
+    	<classes>
+      		<class name="com.fusioncharts.apitest.AddEventListener" />
+    	</classes>
+  	</test>
+  	
+  	<test name="FormatNumber" parallel="false" preserve-order="true" thread-count="1" >
+    	<classes>
+      		<class name="com.fusioncharts.apitest.FormatNumber" />
     	</classes>
   	</test>
   	

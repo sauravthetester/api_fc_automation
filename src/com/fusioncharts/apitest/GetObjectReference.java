@@ -28,31 +28,30 @@ public class GetObjectReference extends APITestBase
 	}
 	  
 	@Test(priority = 1)
-	public void verifyAPIExistsInDataSheet() 
+	public void verifyAPIExistsInDataSheetGetObjectReference() 
 	{
 		boolean apiExists = TestUtil.thisAPIexists(data, apiName);
-		Assert.assertTrue(apiExists, "API name does not match in data sheet");
+		Assert.assertTrue(apiExists, "API name matches in data sheet");
 	}
 	
 	@Test(priority = 2)
-	public void verifyChartIsRendered()
+	public void verifyChartIsRenderedGetObjectReference()
 	{
 		String htmlData = TestUtil.chartHtml(data, apiName);
 		TestUtil.htmlWrite(htmlData);
 		driver.navigate().refresh();
 		boolean containerDisplayed = pom.verifyIfChartMainContainerDisplayed();
-		Assert.assertTrue(containerDisplayed, "chart is not rendered");
+		Assert.assertTrue(containerDisplayed, "chart is rendered");
 	}
 	
 	@Test(priority = 3)
-	public void verifyAPI()
+	public void verifyAPIGetObjectReference()
 	{
 		String apiScript = TestUtil.apiScript(data, apiName);
-		JavascriptExecutor js = (JavascriptExecutor) driver;  
-		js.executeScript(apiScript);
+		jsExecuteWithBuffer(apiScript);
 		boolean buttonDisplayed;
 		buttonDisplayed = pom.verifyTemporaryButtonExists();
-		Assert.assertTrue(buttonDisplayed, "Button is not displayed (API is not working)");
+		Assert.assertTrue(buttonDisplayed, "Button is displayed");
 	}
 	
 	@AfterTest
@@ -60,6 +59,7 @@ public class GetObjectReference extends APITestBase
 	{
 		try
 		{
+			System.out.println("GetObjectReference() executed");
 			Thread.sleep(3000);
 		}
 		catch (InterruptedException e) 

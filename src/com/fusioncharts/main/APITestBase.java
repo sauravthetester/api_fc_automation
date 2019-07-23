@@ -7,6 +7,10 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -25,7 +29,7 @@ public class APITestBase
 	public static String htmlFile = System.getProperty("user.dir")+"/File/NewTestTry.html";
 	public static String configFile = System.getProperty("user.dir")+"/src/com/fusioncharts/config/config.properties";
 	public static String extentreportXMLFile = System.getProperty("user.dir")+"/src/com/fusioncharts/config/extent-config.xml";
-	public static String extentreportReportFile = System.getProperty("user.dir") +"/report/ExtentReportResults.html";
+	public static String extentreportReportFile = System.getProperty("user.dir") +"/test-output/FC_API_ExtentReport.html";
 	
 	
 	public APITestBase() 
@@ -35,9 +39,7 @@ public class APITestBase
 			prop = new Properties();
 			FileInputStream file = new FileInputStream(configFile);
 			prop.load(file);
-			
 			report = new ExtentReports(extentreportReportFile);
-			report.addSystemInfo("Host Name", "SoftwareTestingMaterial").addSystemInfo("Environment", "Chrome").addSystemInfo("User Name", "Saurav Ghosh");
 			report.loadConfig(new File(extentreportXMLFile));
 			test = report.startTest("ExtentDemo");
 		} 
@@ -72,4 +74,33 @@ public class APITestBase
 		
 		driver.get(prop.getProperty("url"));
 	}
+	
+	public static void jsExecuteWithBuffer(String apiScript)
+	{
+		JavascriptExecutor js = (JavascriptExecutor) driver; 
+		js.executeScript(apiScript);
+		
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	public static String capture(String screenShotName)
+    {
+        TakesScreenshot ts = (TakesScreenshot)driver;
+        File source = ts.getScreenshotAs(OutputType.FILE);
+        String dest = System.getProperty("user.dir") +"/Screenshots/"+screenShotName+".png";
+        File destination = new File(dest);
+        try {
+			FileUtils.copyFile(source, destination);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}        
+                     
+        return dest;
+    }
 }

@@ -1,0 +1,85 @@
+{
+  "_from": "fusioncharts",
+  "_id": "fusioncharts@3.14.0-rc.1",
+  "_inBundle": false,
+  "_integrity": "sha512-2gaq2/dGiHpf7DZsbib28LFlGPOcDpa0g1ite2IF/Zbw2b7pKHWd/VaETg+MbeQQetP/VC/TV+dkE3sPWpfEGA==",
+  "_location": "/fusioncharts",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "fusioncharts",
+    "name": "fusioncharts",
+    "escapedName": "fusioncharts",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "http://52.66.197.73:5001/fusioncharts/-/fusioncharts-3.14.0-rc.1.tgz",
+  "_shasum": "534f2bcf96c4e772fe8f924d535d820d6f5c02b5",
+  "_spec": "fusioncharts",
+  "_where": "/home/niladrirc",
+  "author": {
+    "name": "FusionCharts Technologies",
+    "email": "support@fusioncharts.com"
+  },
+  "bugs": {
+    "url": "http://www.fusioncharts.com/contact-support/"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@babel/runtime": "7.4.5",
+    "@fusioncharts/charts": "^3.14.0-rc.1",
+    "@fusioncharts/constructor": "^1.0.0-rc.1",
+    "@fusioncharts/core": "^1.0.0-rc.1",
+    "@fusioncharts/datatable": "^1.0.0-rc.1",
+    "@fusioncharts/features": "^1.0.0-rc.1",
+    "@fusioncharts/fusiontime": "^1.2.0-rc.1",
+    "@fusioncharts/maps": "^3.14.0-rc.1",
+    "@fusioncharts/powercharts": "^3.14.0-rc.1",
+    "@fusioncharts/utils": "^1.0.0-rc.1",
+    "@fusioncharts/widgets": "^3.14.0-rc.1"
+  },
+  "deprecated": false,
+  "description": "FusionCharts JavaScript charting framework",
+  "devDependencies": {
+    "@babel/cli": "7.4.4",
+    "terser": "^4.0.2"
+  },
+  "gitHead": "3683a1b5ff7d3a291c3f0904ad6638a9f50e8d25",
+  "homepage": "http://www.fusioncharts.com/",
+  "keywords": [
+    "fusioncharts",
+    "charts",
+    "dataviz",
+    "graphs",
+    "visualization",
+    "js-charts",
+    "javascript-charts",
+    "dashboards",
+    "data-stories",
+    "bar-charts",
+    "pie-charts",
+    "line-charts",
+    "area-charts",
+    "column-charts",
+    "gantt-chart"
+  ],
+  "license": "http://www.fusioncharts.com/buy/",
+  "main": "fusioncharts.js",
+  "name": "fusioncharts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fusioncharts/fusioncharts-dist.git"
+  },
+  "scripts": {
+    "postpublish": "./scripts/build/postpublish",
+    "prepublishOnly": "./scripts/build/prepublish",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "3.14.0-rc.1"
+}
