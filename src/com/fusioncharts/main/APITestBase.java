@@ -7,6 +7,8 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import javax.imageio.ImageIO;
+
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
@@ -18,6 +20,9 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
+import ru.yandex.qatools.ashot.AShot;
+import ru.yandex.qatools.ashot.Screenshot;
+import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
 
 public class APITestBase 
 {
@@ -41,7 +46,7 @@ public class APITestBase
 			prop.load(file);
 			report = new ExtentReports(extentreportReportFile);
 			report.loadConfig(new File(extentreportXMLFile));
-			test = report.startTest("ExtentDemo");
+			test = report.startTest("API Testing All");
 		} 
 		catch (FileNotFoundException e) 
 		{
@@ -88,18 +93,11 @@ public class APITestBase
 		}
 	}
 	
-	public static String capture(String screenShotName)
+	public static String capture(String screenShotName) throws IOException, InterruptedException
     {
-        TakesScreenshot ts = (TakesScreenshot)driver;
-        File source = ts.getScreenshotAs(OutputType.FILE);
-        String dest = System.getProperty("user.dir") +"/Screenshots/"+screenShotName+".png";
-        File destination = new File(dest);
-        try {
-			FileUtils.copyFile(source, destination);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}        
+        Screenshot fpScreenshot = new AShot().shootingStrategy(ShootingStrategies.viewportRetina(100,0,0,2)).takeScreenshot(driver);
+        String dest = System.getProperty("user.dir") + "/Screenshots/"+screenShotName+".png"; 
+			ImageIO.write(fpScreenshot.getImage(),"PNG",new File(dest));     
                      
         return dest;
     }

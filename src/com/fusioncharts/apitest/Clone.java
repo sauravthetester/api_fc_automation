@@ -1,11 +1,13 @@
 package com.fusioncharts.apitest;
 
+import java.io.IOException;
 import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -13,8 +15,6 @@ import org.testng.annotations.Test;
 import com.fusioncharts.main.APITestBase;
 import com.fusioncharts.pom.APIPageObjectModel;
 import com.fusioncharts.util.TestUtil;
-import com.relevantcodes.extentreports.ExtentReports;
-import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
 public class Clone extends APITestBase
@@ -23,8 +23,6 @@ public class Clone extends APITestBase
 	private final static String apiName = "clone()"; 
 	Object[][] data;
 	APIPageObjectModel pom;
-	ExtentReports extent;
-    ExtentTest test;
 	
 	@BeforeTest
 	public void setUp() 
@@ -33,8 +31,6 @@ public class Clone extends APITestBase
 		api.initialize();
 		pom = new APIPageObjectModel();
 		data = TestUtil.getTestData();
-		
-		extent = new ExtentReports(extentreportReportFile, true);
 	}
 	  
 	@Test(priority = 1)
@@ -55,7 +51,7 @@ public class Clone extends APITestBase
 	}
 	
 	@Test(priority = 3)
-	public void verifyAPIClone()
+	public void verifyAPIClone() throws IOException, InterruptedException
 	{
 		List<WebElement> containers;
 		//containers = pom.getTotalCharts();
@@ -77,9 +73,7 @@ public class Clone extends APITestBase
 		
 		Assert.assertTrue(firstChartElementsTotal==clonedChartElementsTotal, "Child elements of both are equal in number");
 		
-		System.out.println(APITestBase.capture("screenShotNames").replace("/", "\\\\"));
-		
-//		test.log(LogStatus.INFO, test.addScreenCapture(APITestBase.capture("screenShotNames")));
+		test.log(LogStatus.PASS, test.addScreenCapture(APITestBase.capture("Clone_thereShouldBe2SimilarCharts")));	//Code Line for screenshot
 
 	}
 	

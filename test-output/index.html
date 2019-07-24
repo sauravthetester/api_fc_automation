@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-API_Regression">
-              <span class="suite-name border-failed">API Regression</span>
+              <span class="suite-name border-passed">API Regression</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,21 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods, 1 failed,   2 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-API_Regression" class="hide-methods failed suite-API_Regression"> (hide)</a> <!-- hide-methods failed suite-API_Regression -->
-                      <a href="#" panel-name="suite-API_Regression" class="show-methods failed suite-API_Regression"> (show)</a> <!-- show-methods failed suite-API_Regression -->
-                    </span>
-                    <div class="method-list-content failed suite-API_Regression">
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-API_Regression" title="com.fusioncharts.apitest.Clone" hash-for-method="verifyAPIClone">verifyAPIClone</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-API_Regression -->
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -114,6 +100,11 @@
                       <a href="#" panel-name="suite-API_Regression" class="show-methods passed suite-API_Regression"> (show)</a> <!-- show-methods passed suite-API_Regression -->
                     </span>
                     <div class="method-list-content passed suite-API_Regression">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-API_Regression" title="com.fusioncharts.apitest.Clone" hash-for-method="verifyAPIClone">verifyAPIClone</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-API_Regression" title="com.fusioncharts.apitest.Clone" hash-for-method="verifyAPIExistsInDataSheetClone">verifyAPIExistsInDataSheetClone</a> <!-- method navigator-link -->
@@ -136,9 +127,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-API_Regression" class="panel API_Regression">
-          <div class="suite-API_Regression-class-failed">
+          <div class="suite-API_Regression-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
+              <img src="passed.png"/>
               <span class="class-name">com.fusioncharts.apitest.Clone</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -147,20 +138,8 @@
                   <a name="verifyAPIClone">
                   </a> <!-- verifyAPIClone -->
                   <span class="method-name">verifyAPIClone</span>
-                  <div class="stack-trace">java.lang.NullPointerException
-	at com.fusioncharts.apitest.Clone.verifyAPIClone(Clone.java:82)
-... Removed 25 stack frames
-</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-API_Regression-class-failed -->
-          <div class="suite-API_Regression-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.fusioncharts.apitest.Clone</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
                   <a name="verifyAPIExistsInDataSheetClone">
@@ -236,20 +215,20 @@ data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'verifyAPIClone')
 data.setCell(0, 2, 'com.fusioncharts.apitest.Clone')
-data.setCell(0, 3, 3492);
+data.setCell(0, 3, 4831);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'verifyChartIsRenderedClone')
 data.setCell(1, 2, 'com.fusioncharts.apitest.Clone')
-data.setCell(1, 3, 489);
+data.setCell(1, 3, 494);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'verifyAPIExistsInDataSheetClone')
 data.setCell(2, 2, 'com.fusioncharts.apitest.Clone')
-data.setCell(2, 3, 13);
+data.setCell(2, 3, 8);
 window.suiteTableData['API_Regression']= { tableData: data, tableDiv: 'times-div-API_Regression'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 3 seconds</span>
+              <span class="suite-total-time">Total running time: 5 seconds</span>
               <div id="times-div-API_Regression">
               </div> <!-- times-div-API_Regression -->
             </div> <!-- times-div -->
@@ -282,21 +261,19 @@ return data;
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">verifyAPIExistsInDataSheetClone</span>
-                <span class="method-start">5848 ms</span>
+                <span class="method-start">5669 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyChartIsRenderedClone</span>
-                <span class="method-start">5869 ms</span>
+                <span class="method-start">5681 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">verifyAPIClone</span>
-                <span class="method-start">6368 ms</span>
+                <span class="method-start">6177 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">shutDown</span>
-                <span class="method-start">9866 ms</span>
+                <span class="method-start">11009 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
