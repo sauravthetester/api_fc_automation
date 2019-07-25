@@ -1,5 +1,7 @@
 package com.fusioncharts.apitest;
 
+import java.io.IOException;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
@@ -10,6 +12,7 @@ import org.testng.annotations.Test;
 import com.fusioncharts.main.APITestBase;
 import com.fusioncharts.pom.APIPageObjectModel;
 import com.fusioncharts.util.TestUtil;
+import com.relevantcodes.extentreports.LogStatus;
 
 public class FormatNumber extends APITestBase
 {
@@ -45,7 +48,7 @@ public class FormatNumber extends APITestBase
 	}
 	
 	@Test(priority = 3)
-	public void verifyAPIChartTypeFormatNumber()
+	public void verifyAPIChartTypeFormatNumber() throws IOException
 	{
 		String apiScript = TestUtil.apiScript(data, apiName);
 		
@@ -60,6 +63,8 @@ public class FormatNumber extends APITestBase
 		//jsExecuteWithBuffer("");
 		
 		Assert.assertTrue(text.equals("&10.23K"), "Text has formatted number value");
+		
+		test.log(LogStatus.PASS, test.addScreenCapture(APITestBase.capture("FormatNumber_NumberShouldShowAs&10.23K")));	//Code Line for screenshot
 	}
 	
 	@AfterTest

@@ -5,12 +5,6 @@
 	<listeners>
 		<listener class-name="com.fusioncharts.ExtentReportListener.ExtentReporterNG"/>
 	</listeners>
-
-  	<test name="GetObjectReference" parallel="false" preserve-order="true" thread-count="1" >
-    	<classes>
-      		<class name="com.fusioncharts.apitest.GetObjectReference" />
-    	</classes>
-  	</test>
   	
   	<test name="Clone" parallel="false" preserve-order="true" thread-count="1" >
     	<classes>

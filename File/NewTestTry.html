@@ -5,11 +5,10 @@
       <script type="text/javascript" src="./build/develop/fusioncharts.js"></script>
 
       <script type="text/javascript">
-
         FusionCharts.ready(function () {
             fusioncharts = new FusionCharts({
                 id: "chart_1",
-                type: 'dragline',
+                type: 'doughnut3d',
                 renderAt: 'chart-container',
                 width: '800',
                 height: '500',
@@ -21,112 +20,49 @@
 
                 dataSource: {
                     "chart": {
-                        "caption": "Project Plan for Construction of a Store (time duration in weeks)",
-                        "arrowatstart": "0",
-                        "arrowatend": "1",
-                        "viewMode": "1",
-                        "connectorToolText": "$label Weeks",
-                        "theme": "fusion",
-                        "showformbtn": "1",
-                        "formAction": "#",
-                        "submitdataasxml": "1"
+                        "caption": "Split of Revenue by Product Categories",
+                        "subCaption": "Last year",
+                        "numberPrefix": "$",
+                        "theme": "fusion"
                     },
-
-                    "categories": [{
-                        "category": [{
-                                "label": "Q1"
-                            },
-                            {
-                                "label": "Q2"
-                            },
-                            {
-                                "label": "Q3(E)"
-                            },
-                            {
-                                "label": "Q4(E)"
-                            }
-                        ]
-                    }],
-                    "dataset": [{
-                            "seriesname": "Apple",
-                            "valuePosition": "ABOVE",
-                            "allowDrag": "1",
-                            "data": [{
-                                    "value": "1200"
-                                },
-                                {
-                                    "value": "1500",
-                                    "dashed": "1"
-                                },
-                                {
-                                    "value": "1300",
-                                    "allowDrag": "1",
-                                    "dashed": "1"
-                                },
-                                {
-                                    "value": "900",
-                                    "allowDrag": "1",
-                                    "tooltext": "Predicted sales $value units"
-                                }
-                            ]
+                    "data": [{
+                            "label": "Food",
+                            "value": "28504"
                         },
                         {
-                            "seriesname": "Samsung",
-                            "allowDrag": "1",
-                            "data": [{
-                                    "value": "600"
-                                },
-                                {
-                                    "value": "850",
-                                    "dashed": "1"
-                                },
-                                {
-                                    "value": "1000",
-                                    "allowDrag": "1",
-                                    "dashed": "1"
-                                },
-                                {
-                                    "value": "1200",
-                                    "allowDrag": "1",
-                                    "tooltext": "Predicted sales $value units"
-                                }
-                            ]
+                            "label": "Apparels",
+                            "value": "14633"
+                        },
+                        {
+                            "label": "Electronics",
+                            "value": "10507"
+                        },
+                        {
+                            "label": "Household",
+                            "value": "4910"
                         }
                     ]
                 }
             });
             fusioncharts.render();
 
-            function exact_copy() {
-                var cloned_chart = fusioncharts.clone();
-                console.log(cloned_chart);
-                cloned_chart.render('cloned-chart-container');
+            function format() {
+                var number = document.getElementById("number").innerText;
+                var msg = document.getElementById("msg");
+                msg.innerHTML = FusionCharts.formatNumber(number, {
+                    "numberPrefix": "&"
+                });
+
             }
 
-
-            function modified_copy() {
-                var cloned_chart_2 = fusioncharts.clone({
-                    type: 'bar2d',
-                    renderAt: 'cloned-chart-container'
-                }, true);
-
-                console.log(cloned_chart_2);
-
-                var copy = new FusionCharts(cloned_chart_2);
-                copy.render();
-            }
-
-            document.getElementById("exact_copy").addEventListener("click", exact_copy);
-            document.getElementById("modified_copy").addEventListener("click", modified_copy);
+            document.getElementById("chart-container").addEventListener("click", format);
         });
     </script>
 </head>
 
 <body>
       <div id="chart-container">FusionCharts XT will load here!</div>
-    <div id="cloned-chart-container">Cloned FusionCharts will render here</div>
-    <button id="exact_copy">Create an exact clone</button>
-    <button id="modified_copy">Create a modified clone</button>
+    <span id="number">10234</span><span id="something"> = </span><span id="msg"></span>
 </body>
 
 </html>

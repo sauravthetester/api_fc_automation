@@ -8,6 +8,7 @@
     <classes>
       <class name="com.fusioncharts.apitest.Clone">
         <methods>
+          <include name="verifyChartIsRenderedClone"/>
           <include name="verifyAPIClone"/>
           <include name="setUp"/>
           <include name="shutDown"/>

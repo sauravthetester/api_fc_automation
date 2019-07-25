@@ -1,5 +1,6 @@
 package com.fusioncharts.apitest;
 
+import java.io.IOException;
 import java.util.List;
 
 import org.openqa.selenium.JavascriptExecutor;
@@ -11,6 +12,7 @@ import org.testng.annotations.Test;
 import com.fusioncharts.main.APITestBase;
 import com.fusioncharts.pom.APIPageObjectModel;
 import com.fusioncharts.util.TestUtil;
+import com.relevantcodes.extentreports.LogStatus;
 
 public class AddEventListener extends APITestBase
 {
@@ -46,12 +48,13 @@ public class AddEventListener extends APITestBase
 	}
 	
 	@Test(priority = 3)
-	public void verifyAPIAddEventListener()
+	public void verifyAPIAddEventListener() throws IOException
 	{
 		boolean buttonDisplayed=false;
 		jsExecuteWithBuffer("");
 		buttonDisplayed = pom.verifyTemporaryButtonExists();
 		Assert.assertTrue(buttonDisplayed, "Chart rendered and button is viewed");
+		test.log(LogStatus.PASS, test.addScreenCapture(APITestBase.capture("AddEventListener_TestButtonBelowChart&BackgroundShouldBeGreen")));	//Code Line for screenshot
 	}
 	
 	@AfterTest
@@ -68,7 +71,7 @@ public class AddEventListener extends APITestBase
 		}
 		report.endTest(test);
 		report.flush();
-//		driver.quit();
+		driver.quit();
 	}
 
 

@@ -93,11 +93,11 @@ public class APITestBase
 		}
 	}
 	
-	public static String capture(String screenShotName) throws IOException, InterruptedException
+	public static String capture(String screenShotName) throws IOException
     {
         Screenshot fpScreenshot = new AShot().shootingStrategy(ShootingStrategies.viewportRetina(100,0,0,2)).takeScreenshot(driver);
         String dest = System.getProperty("user.dir") + "/Screenshots/"+screenShotName+".png"; 
-			ImageIO.write(fpScreenshot.getImage(),"PNG",new File(dest));     
+		ImageIO.write(fpScreenshot.getImage(),"PNG",new File(dest));     
                      
         return dest;
     }

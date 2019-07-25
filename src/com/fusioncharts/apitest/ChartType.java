@@ -1,5 +1,7 @@
 package com.fusioncharts.apitest;
 
+import java.io.IOException;
+
 import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
@@ -9,6 +11,7 @@ import org.testng.annotations.Test;
 import com.fusioncharts.main.APITestBase;
 import com.fusioncharts.pom.APIPageObjectModel;
 import com.fusioncharts.util.TestUtil;
+import com.relevantcodes.extentreports.LogStatus;
 
 public class ChartType extends APITestBase
 {
@@ -45,7 +48,7 @@ public class ChartType extends APITestBase
 	}
 	
 	@Test(priority = 3)
-	public void verifyAPIChartType1paramChartType()
+	public void verifyAPIChartType1paramChartType() throws IOException
 	{
 		String changeToChart = "bar2d";
 		String apiScript = TestUtil.apiScript(data, apiName);
@@ -56,10 +59,12 @@ public class ChartType extends APITestBase
 		if(chartType.toString().equals(changeToChart))
 			chartChanged = true;
 		Assert.assertTrue(chartChanged, "Chart type has changed for 1 param");
+		
+		test.log(LogStatus.PASS, test.addScreenCapture(APITestBase.capture("ChartType_ChartShouldBe_bar2d")));	//Code Line for screenshot
 	}
 	
 	@Test(priority = 4)
-	public void verifyAPIChartType3paramChartType()
+	public void verifyAPIChartType3paramChartType() throws IOException
 	{
 		String changeToChart = "msstackedcolumn2dlinedy";
 		String apiScript = TestUtil.apiScript(data, apiNameMultiparam);
@@ -70,6 +75,8 @@ public class ChartType extends APITestBase
 		if(chartType.toString().equals(changeToChart))
 			chartChanged = true;
 		Assert.assertTrue(chartChanged, "Chart type has changed for 3 param");
+		
+		test.log(LogStatus.PASS, test.addScreenCapture(APITestBase.capture("ChartType_ChartShouldBe_msstackedcolumn2dlinedy")));	//Code Line for screenshot
 	}
 	
 	@AfterTest
