@@ -3,13 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.fusioncharts.apitest.AddEventListener">
+      <class name="com.fusioncharts.apitest.IsPlotItemSliced">
         <methods>
+          <include name="verifyChartIsRenderedAddEventListener"/>
+          <include name="setUp"/>
+          <include name="verifyAPIExistsInDataSheetAddEventListener"/>
           <include name="verifyAPIAddEventListener"/>
           <include name="shutDown"/>
-          <include name="setUp"/>
         </methods>
-      </class> <!-- com.fusioncharts.apitest.AddEventListener -->
+      </class> <!-- com.fusioncharts.apitest.IsPlotItemSliced -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
