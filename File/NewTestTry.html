@@ -46,23 +46,19 @@
             });
             fusioncharts.render();
 
-            function format() {
-                var number = document.getElementById("number").innerText;
-                var msg = document.getElementById("msg");
-                msg.innerHTML = FusionCharts.formatNumber(number, {
-                    "numberPrefix": "&"
-                });
-
-            }
-
-            document.getElementById("chart-container").addEventListener("click", format);
+            
         });
     </script>
 </head>
 
 <body>
       <div id="chart-container">FusionCharts XT will load here!</div>
-    <span id="number">10234</span><span id="something"> = </span><span id="msg"></span>
+    <div class="text-center">
+        <button id="set">Set Event Listener</button>
+        <button id="rem">Remove Event Listener</button>
+
+        <div id="data1"></div>
+    </div>
 </body>
 
 </html>

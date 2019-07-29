@@ -64,7 +64,7 @@ public class Clone extends APITestBase
 		int firstChartElementsTotal = svgTotal.get(0).findElements(By.xpath("*")).size();
 		int clonedChartElementsTotal = svgTotal.get(1).findElements(By.xpath("*")).size();
 		Assert.assertTrue(firstChartElementsTotal==clonedChartElementsTotal, "Child elements of both are equal in number");
-		test.log(LogStatus.PASS, test.addScreenCapture(APITestBase.capture("Clone_thereShouldBe2SimilarCharts")));	//Code Line for screenshot
+		test.log(LogStatus.PASS, test.addScreenCapture(APITestBase.capture("Clone_there Should Be 2 Similar Charts")));	//Code Line for screenshot
 	}
 	
 	@AfterTest

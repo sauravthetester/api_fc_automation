@@ -1,109 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="13" passed="13">
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="API Regression" duration-ms="54480" started-at="2019-07-25T07:13:15Z" finished-at="2019-07-25T07:14:10Z">
+  <suite name="API Regression" duration-ms="15996" started-at="2019-07-29T13:00:17Z" finished-at="2019-07-29T13:00:33Z">
     <groups>
     </groups>
-    <test name="Clone" duration-ms="14661" started-at="2019-07-25T07:13:15Z" finished-at="2019-07-25T07:13:30Z">
-      <class name="com.fusioncharts.apitest.Clone">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.fusioncharts.apitest.Clone@66d1af89]" name="setUp" is-config="true" duration-ms="5430" started-at="2019-07-25T07:13:15Z" finished-at="2019-07-25T07:13:21Z">
+    <test name="RemoveEventListener" duration-ms="15996" started-at="2019-07-29T13:00:17Z" finished-at="2019-07-29T13:00:33Z">
+      <class name="com.fusioncharts.apitest.RemoveEventListener">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.fusioncharts.apitest.RemoveEventListener@192d3247]" name="setUp" is-config="true" duration-ms="4744" started-at="2019-07-29T13:00:17Z" finished-at="2019-07-29T13:00:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="verifyAPIExistsInDataSheetClone()[pri:1, instance:com.fusioncharts.apitest.Clone@66d1af89]" name="verifyAPIExistsInDataSheetClone" duration-ms="8" started-at="2019-07-25T07:13:21Z" finished-at="2019-07-25T07:13:21Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyAPIExistsInDataSheetClone -->
-        <test-method status="PASS" signature="verifyChartIsRenderedClone()[pri:2, instance:com.fusioncharts.apitest.Clone@66d1af89]" name="verifyChartIsRenderedClone" duration-ms="460" started-at="2019-07-25T07:13:21Z" finished-at="2019-07-25T07:13:21Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyChartIsRenderedClone -->
-        <test-method status="PASS" signature="verifyAPIClone()[pri:3, instance:com.fusioncharts.apitest.Clone@66d1af89]" name="verifyAPIClone" duration-ms="4586" started-at="2019-07-25T07:13:21Z" finished-at="2019-07-25T07:13:26Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyAPIClone -->
-        <test-method status="PASS" signature="shutDown()[pri:0, instance:com.fusioncharts.apitest.Clone@66d1af89]" name="shutDown" is-config="true" duration-ms="4145" started-at="2019-07-25T07:13:26Z" finished-at="2019-07-25T07:13:30Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- shutDown -->
-      </class> <!-- com.fusioncharts.apitest.Clone -->
-    </test> <!-- Clone -->
-    <test name="ChartType" duration-ms="16113" started-at="2019-07-25T07:13:30Z" finished-at="2019-07-25T07:13:46Z">
-      <class name="com.fusioncharts.apitest.ChartType">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.fusioncharts.apitest.ChartType@7e0e6aa2]" name="setUp" is-config="true" duration-ms="4086" started-at="2019-07-25T07:13:30Z" finished-at="2019-07-25T07:13:34Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="verifyAPIExistsInDataSheetChartType()[pri:1, instance:com.fusioncharts.apitest.ChartType@7e0e6aa2]" name="verifyAPIExistsInDataSheetChartType" duration-ms="2" started-at="2019-07-25T07:13:34Z" finished-at="2019-07-25T07:13:34Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyAPIExistsInDataSheetChartType -->
-        <test-method status="PASS" signature="verifyChartIsRenderedChartType()[pri:2, instance:com.fusioncharts.apitest.ChartType@7e0e6aa2]" name="verifyChartIsRenderedChartType" duration-ms="839" started-at="2019-07-25T07:13:34Z" finished-at="2019-07-25T07:13:35Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyChartIsRenderedChartType -->
-        <test-method status="PASS" signature="verifyAPIChartType1paramChartType()[pri:3, instance:com.fusioncharts.apitest.ChartType@7e0e6aa2]" name="verifyAPIChartType1paramChartType" duration-ms="2607" started-at="2019-07-25T07:13:35Z" finished-at="2019-07-25T07:13:38Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyAPIChartType1paramChartType -->
-        <test-method status="PASS" signature="verifyAPIChartType3paramChartType()[pri:4, instance:com.fusioncharts.apitest.ChartType@7e0e6aa2]" name="verifyAPIChartType3paramChartType" duration-ms="2730" started-at="2019-07-25T07:13:38Z" finished-at="2019-07-25T07:13:40Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyAPIChartType3paramChartType -->
-        <test-method status="PASS" signature="shutDown()[pri:0, instance:com.fusioncharts.apitest.ChartType@7e0e6aa2]" name="shutDown" is-config="true" duration-ms="5805" started-at="2019-07-25T07:13:40Z" finished-at="2019-07-25T07:13:46Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- shutDown -->
-      </class> <!-- com.fusioncharts.apitest.ChartType -->
-    </test> <!-- ChartType -->
-    <test name="AddEventListener" duration-ms="13757" started-at="2019-07-25T07:13:46Z" finished-at="2019-07-25T07:14:00Z">
-      <class name="com.fusioncharts.apitest.AddEventListener">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.fusioncharts.apitest.AddEventListener@544a2ea6]" name="setUp" is-config="true" duration-ms="4418" started-at="2019-07-25T07:13:46Z" finished-at="2019-07-25T07:13:51Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="verifyAPIExistsInDataSheetAddEventListener()[pri:1, instance:com.fusioncharts.apitest.AddEventListener@544a2ea6]" name="verifyAPIExistsInDataSheetAddEventListener" duration-ms="1" started-at="2019-07-25T07:13:51Z" finished-at="2019-07-25T07:13:51Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyAPIExistsInDataSheetAddEventListener -->
-        <test-method status="PASS" signature="verifyChartIsRenderedAddEventListener()[pri:2, instance:com.fusioncharts.apitest.AddEventListener@544a2ea6]" name="verifyChartIsRenderedAddEventListener" duration-ms="807" started-at="2019-07-25T07:13:51Z" finished-at="2019-07-25T07:13:51Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyChartIsRenderedAddEventListener -->
-        <test-method status="PASS" signature="verifyAPIAddEventListener()[pri:3, instance:com.fusioncharts.apitest.AddEventListener@544a2ea6]" name="verifyAPIAddEventListener" duration-ms="2631" started-at="2019-07-25T07:13:51Z" finished-at="2019-07-25T07:13:54Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyAPIAddEventListener -->
-        <test-method status="PASS" signature="shutDown()[pri:0, instance:com.fusioncharts.apitest.AddEventListener@544a2ea6]" name="shutDown" is-config="true" duration-ms="5886" started-at="2019-07-25T07:13:54Z" finished-at="2019-07-25T07:14:00Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- shutDown -->
-      </class> <!-- com.fusioncharts.apitest.AddEventListener -->
-    </test> <!-- AddEventListener -->
-    <test name="FormatNumber" duration-ms="9910" started-at="2019-07-25T07:14:00Z" finished-at="2019-07-25T07:14:10Z">
-      <class name="com.fusioncharts.apitest.FormatNumber">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.fusioncharts.apitest.FormatNumber@2eda0940]" name="setUp" is-config="true" duration-ms="4130" started-at="2019-07-25T07:14:00Z" finished-at="2019-07-25T07:14:04Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="verifyAPIExistsInDataSheetFormatNumber()[pri:1, instance:com.fusioncharts.apitest.FormatNumber@2eda0940]" name="verifyAPIExistsInDataSheetFormatNumber" duration-ms="2" started-at="2019-07-25T07:14:04Z" finished-at="2019-07-25T07:14:04Z">
+        <test-method status="PASS" signature="verifyAPIExistsInDataSheetFormatNumber()[pri:1, instance:com.fusioncharts.apitest.RemoveEventListener@192d3247]" name="verifyAPIExistsInDataSheetFormatNumber" duration-ms="6" started-at="2019-07-29T13:00:22Z" finished-at="2019-07-29T13:00:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAPIExistsInDataSheetFormatNumber -->
-        <test-method status="PASS" signature="verifyChartIsRenderedFormatNumber()[pri:2, instance:com.fusioncharts.apitest.FormatNumber@2eda0940]" name="verifyChartIsRenderedFormatNumber" duration-ms="597" started-at="2019-07-25T07:14:04Z" finished-at="2019-07-25T07:14:05Z">
+        <test-method status="PASS" signature="verifyChartIsRenderedFormatNumber()[pri:2, instance:com.fusioncharts.apitest.RemoveEventListener@192d3247]" name="verifyChartIsRenderedFormatNumber" duration-ms="438" started-at="2019-07-29T13:00:22Z" finished-at="2019-07-29T13:00:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyChartIsRenderedFormatNumber -->
-        <test-method status="PASS" signature="verifyAPIChartTypeFormatNumber()[pri:3, instance:com.fusioncharts.apitest.FormatNumber@2eda0940]" name="verifyAPIChartTypeFormatNumber" duration-ms="1171" started-at="2019-07-25T07:14:05Z" finished-at="2019-07-25T07:14:06Z">
+        <test-method status="PASS" signature="verifyAPIChartTypeFormatNumber()[pri:3, instance:com.fusioncharts.apitest.RemoveEventListener@192d3247]" name="verifyAPIChartTypeFormatNumber" duration-ms="7548" started-at="2019-07-29T13:00:22Z" finished-at="2019-07-29T13:00:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAPIChartTypeFormatNumber -->
-        <test-method status="PASS" signature="shutDown()[pri:0, instance:com.fusioncharts.apitest.FormatNumber@2eda0940]" name="shutDown" is-config="true" duration-ms="3988" started-at="2019-07-25T07:14:06Z" finished-at="2019-07-25T07:14:10Z">
+        <test-method status="PASS" signature="shutDown()[pri:0, instance:com.fusioncharts.apitest.RemoveEventListener@192d3247]" name="shutDown" is-config="true" duration-ms="3237" started-at="2019-07-29T13:00:30Z" finished-at="2019-07-29T13:00:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- shutDown -->
-      </class> <!-- com.fusioncharts.apitest.FormatNumber -->
-    </test> <!-- FormatNumber -->
+      </class> <!-- com.fusioncharts.apitest.RemoveEventListener -->
+    </test> <!-- RemoveEventListener -->
   </suite> <!-- API Regression -->
 </testng-results>

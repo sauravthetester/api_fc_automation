@@ -4,16 +4,15 @@
   <listeners>
     <listener class-name="com.fusioncharts.ExtentReportListener.ExtentReporterNG"/>
   </listeners>
-  <test thread-count="5" name="Clone(failed)">
+  <test thread-count="5" name="RemoveEventListener(failed)">
     <classes>
-      <class name="com.fusioncharts.apitest.Clone">
+      <class name="com.fusioncharts.apitest.RemoveEventListener">
         <methods>
-          <include name="verifyChartIsRenderedClone"/>
-          <include name="verifyAPIClone"/>
-          <include name="setUp"/>
           <include name="shutDown"/>
+          <include name="setUp"/>
+          <include name="verifyAPIChartTypeFormatNumber"/>
         </methods>
-      </class> <!-- com.fusioncharts.apitest.Clone -->
+      </class> <!-- com.fusioncharts.apitest.RemoveEventListener -->
     </classes>
-  </test> <!-- Clone(failed) -->
+  </test> <!-- RemoveEventListener(failed) -->
 </suite> <!-- Failed suite [API Regression] -->

@@ -60,7 +60,7 @@ public class ChartType extends APITestBase
 			chartChanged = true;
 		Assert.assertTrue(chartChanged, "Chart type has changed for 1 param");
 		
-		test.log(LogStatus.PASS, test.addScreenCapture(APITestBase.capture("ChartType_ChartShouldBe_bar2d")));	//Code Line for screenshot
+		test.log(LogStatus.PASS, test.addScreenCapture(APITestBase.capture("ChartType_Chart Should Be - bar2d")));	//Code Line for screenshot
 	}
 	
 	@Test(priority = 4)
@@ -76,7 +76,7 @@ public class ChartType extends APITestBase
 			chartChanged = true;
 		Assert.assertTrue(chartChanged, "Chart type has changed for 3 param");
 		
-		test.log(LogStatus.PASS, test.addScreenCapture(APITestBase.capture("ChartType_ChartShouldBe_msstackedcolumn2dlinedy")));	//Code Line for screenshot
+		test.log(LogStatus.PASS, test.addScreenCapture(APITestBase.capture("ChartType_Chart Should Be - msstackedcolumn2dlinedy")));	//Code Line for screenshot
 	}
 	
 	@AfterTest
