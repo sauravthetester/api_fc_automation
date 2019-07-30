@@ -36,4 +36,10 @@
     	</classes>
   	</test>
   	
+  	<test name="RemoveEventListener" parallel="false" preserve-order="true" thread-count="1" >
+    	<classes>
+      		<class name="com.fusioncharts.apitest.RemoveEventListener" />
+    	</classes>
+  	</test>
+  	
 </suite>

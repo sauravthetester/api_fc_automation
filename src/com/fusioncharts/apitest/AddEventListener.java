@@ -54,7 +54,7 @@ public class AddEventListener extends APITestBase
 		jsExecuteWithBuffer("");
 		buttonDisplayed = pom.verifyTemporaryButtonExists();
 		Assert.assertTrue(buttonDisplayed, "Chart rendered and button is viewed");
-		test.log(LogStatus.PASS, test.addScreenCapture(APITestBase.capture("AddEventListener_TestButtonBelowChart&BackgroundShouldBeGreen")));	//Code Line for screenshot
+		test.log(LogStatus.PASS, test.addScreenCapture(APITestBase.capture("AddEventListener_Test Button Below Chart & Background Should Be Green")));	//Code Line for screenshot
 	}
 	
 	@AfterTest

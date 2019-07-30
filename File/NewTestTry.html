@@ -1,14 +1,14 @@
 <html>
-​
+
 <head>
-      <title>My first chart using FusionCharts Suite XT</title>
-      <script type="text/javascript" src="./build/develop/fusioncharts.js"></script>
-​
-      <script type="text/javascript">
+      <title>My first chart using FusionCharts Suite XT</title>
+      <script type="text/javascript" src="./build/develop/fusioncharts.js"></script>
+
+      <script type="text/javascript">
         FusionCharts.ready(function () {
             fusioncharts = new FusionCharts({
                 id: "chart_1",
-                type: 'pie2d',
+                type: 'doughnut3d',
                 renderAt: 'chart-container',
                 width: '800',
                 height: '500',
@@ -17,6 +17,7 @@
                 loadMessage: 'API Automation',
                 loadMessageFontSize: '40',
                 loadMessageColor: '#FF0000',
+
                 dataSource: {
                     "chart": {
                         "caption": "Split of Revenue by Product Categories",
@@ -44,12 +45,20 @@
                 }
             });
             fusioncharts.render();
+
+            
         });
     </script>
 </head>
-​
+
 <body>
-        <div id="chart-container">FusionCharts will render here</div>
+      <div id="chart-container">FusionCharts XT will load here!</div>
+    <div class="text-center">
+        <button id="set">Set Event Listener</button>
+        <button id="rem">Remove Event Listener</button>
+
+        <div id="data1"></div>
+    </div>
 </body>
-​
+
 </html>
