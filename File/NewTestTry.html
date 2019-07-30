@@ -1,17 +1,17 @@
-<html>
-​
 <head>
-      <title>My first chart using FusionCharts Suite XT</title>
-      <script type="text/javascript" src="./build/develop/fusioncharts.js"></script>
-​
-      <script type="text/javascript">
+      <title>My first chart using FusionCharts Suite XT</title>
+      <script type="text/javascript" src="./build/develop/fusioncharts.js"></script>
+      <script type="text/javascript">
+        var fusioncharts, events = {};
+        var key_attr = new Array();
+        var val_attr = new Array();
         FusionCharts.ready(function () {
             fusioncharts = new FusionCharts({
                 id: "chart_1",
-                type: 'pie2d',
+                type: 'realtimecolumn',
                 renderAt: 'chart-container',
                 width: '800',
-                height: '500',
+                height: '600',
                 dataFormat: 'json',
                 baseChartMessageFont: 'arial',
                 loadMessage: 'API Automation',
@@ -19,37 +19,61 @@
                 loadMessageColor: '#FF0000',
                 dataSource: {
                     "chart": {
-                        "caption": "Split of Revenue by Product Categories",
-                        "subCaption": "Last year",
-                        "numberPrefix": "$",
-                        "theme": "fusion"
+                        "caption": "Online Transactions per 10 seconds",
+                        "subCaption": "harryssupermart.com",
+                        "showrealtimevalue": "1",
+                        "yaxismaxvalue": "10",
+                        "numdisplaysets": "10",
+                        "labeldisplay": "rotate",
+                        "slantLabels": "1",
+                        "showLegend": "0",
+                        "showValues": "0",
+                        "numbersuffix": " Transactions",
+                        "showlabels": "1",
+                        "showRealTimeValue": "0",
+                        "theme": "fint",
+                        "captionFontSize": "13",
+                        "subCaptionFontSize": "12"
                     },
-                    "data": [{
-                            "label": "Food",
-                            "value": "28504"
-                        },
-                        {
-                            "label": "Apparels",
-                            "value": "14633"
-                        },
-                        {
-                            "label": "Electronics",
-                            "value": "10507"
-                        },
-                        {
-                            "label": "Household",
-                            "value": "4910"
-                        }
-                    ]
+                    "categories": [{
+                        "category": [{
+                            "label": "Start"
+                        }]
+                    }],
+                    "dataset": [{
+                        "seriesname": "",
+                        "alpha": "100",
+                        "data": [{
+                            "value": "3"
+                        }]
+                    }]
                 }
             });
             fusioncharts.render();
+          function formatTime(time) {
+              if (time < 10) {
+                  time = "0" + time;
+              }
+              return time;
+          }
+          function updateData() {
+              var chartRef = FusionCharts("chart_1"),
+                  currDate = new Date(),
+                  label = formatTime(currDate.getHours()) + ":" + formatTime(currDate.getMinutes()) + ":" + formatTime(currDate.getSeconds()),
+                  transactions = Math.round(Math.random() * 4) + 1,
+                  strData = "&label=" + label + "&value=" + transactions;
+              chartRef.feedData(strData);
+          }
+          document.getElementById("feed_data").addEventListener("click", updateData);
         });
     </script>
 </head>
-​
+<div class="text-center">
+  <button id="feed_data" class="mb-20">Feed data</button>
+  <div id="chart-container">FusionCharts will render here</div>
+</div>
 <body>
-        <div id="chart-container">FusionCharts will render here</div>
+      <div id="chart-container">FusionCharts XT will load here!</div>
 </body>
-​
+
 </html>
