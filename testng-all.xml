@@ -42,4 +42,46 @@
     	</classes>
   	</test>
   	
+  	<test name="ClearChart" parallel="false" preserve-order="true" thread-count="1" >
+    	<classes>
+      		<class name="com.fusioncharts.apitest.ClearChart" />
+    	</classes>
+  	</test>
+  	
+  	<test name="GetDataWithId" parallel="false" preserve-order="true" thread-count="1" >
+    	<classes>
+      		<class name="com.fusioncharts.apitest.GetDataWithId" />
+    	</classes>
+  	</test>
+  	
+  	<test name="SetData" parallel="false" preserve-order="true" thread-count="1" >
+    	<classes>
+      		<class name="com.fusioncharts.apitest.SetData" />
+    	</classes>
+  	</test>
+  	
+  	<test name="SetChartDataUrl" parallel="false" preserve-order="true" thread-count="1" >
+    	<classes>
+      		<class name="com.fusioncharts.apitest.SetChartDataUrl" />
+    	</classes>
+  	</test>
+  	
+  	<test name="SetJSONUrl" parallel="false" preserve-order="true" thread-count="1" >
+    	<classes>
+      		<class name="com.fusioncharts.apitest.SetJSONUrl" />
+    	</classes>
+  	</test>
+  	
+  	<test name="SetXMLUrl" parallel="false" preserve-order="true" thread-count="1" >
+    	<classes>
+      		<class name="com.fusioncharts.apitest.SetXMLUrl" />
+    	</classes>
+  	</test>
+  	
+  	<test name="ZoomlineAPIs" parallel="false" preserve-order="true" thread-count="1" >
+    	<classes>
+      		<class name="com.fusioncharts.apitest.ZoomlineAPIs" />
+    	</classes>
+  	</test>
+  	
 </suite>

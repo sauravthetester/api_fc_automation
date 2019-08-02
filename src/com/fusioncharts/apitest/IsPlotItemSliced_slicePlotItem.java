@@ -38,14 +38,14 @@ public class IsPlotItemSliced_slicePlotItem extends APITestBase {
 	}
 	  
 	@Test(priority = 1)
-	public void verifyAPIExistsInDataSheetAddEventListener() 
+	public void verifyAPIExistsInDataSheetIsPlotItemSliced_slicePlotItem() 
 	{
 		boolean apiExists = TestUtil.thisAPIexists(data, apiName);
 		Assert.assertTrue(apiExists, "API name matches in data sheet");
 	}
 	
 	@Test(priority = 2)
-	public void verifyChartIsRenderedAddEventListener()
+	public void verifyChartIsRenderedIsPlotItemSliced_slicePlotItem()
 	{
 		String htmlData = TestUtil.chartHtml(data, apiName);
 		TestUtil.htmlWrite(htmlData);
@@ -55,7 +55,7 @@ public class IsPlotItemSliced_slicePlotItem extends APITestBase {
 	}
 	
 	@Test(priority = 3)
-	public void verifyAPIAddEventListener() throws IOException
+	public void verifyAPIIsPlotItemSliced_slicePlotItem() throws IOException
 	{
 		Object boolValue;
 		JavascriptExecutor js = (JavascriptExecutor)driver;

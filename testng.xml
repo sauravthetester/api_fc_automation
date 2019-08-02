@@ -6,15 +6,10 @@
 		<listener class-name="com.fusioncharts.ExtentReportListener.ExtentReporterNG"/>
 	</listeners>
 
-<<<<<<< HEAD
-  	<test name="IsPlotItemSliced_slicePlotItem" parallel="false" preserve-order="true" thread-count="1" >
+
+  	<test name="ZoomlineAPIs" parallel="false" preserve-order="true" thread-count="1" >
     	<classes>
-      		<class name="com.fusioncharts.apitest.IsPlotItemSliced_slicePlotItem" />
-=======
-  	<test name="RemoveEventListener" parallel="false" preserve-order="true" thread-count="1" >
-    	<classes>
-      		<class name="com.fusioncharts.apitest.RemoveEventListener" />
->>>>>>> temp_branch
+      		<class name="com.fusioncharts.apitest.ZoomlineAPIs" />
     	</classes>
   	</test>
   	

@@ -4,29 +4,15 @@
   <listeners>
     <listener class-name="com.fusioncharts.ExtentReportListener.ExtentReporterNG"/>
   </listeners>
-<<<<<<< HEAD
-  <test thread-count="5" name="IsPlotItemSliced_slicePlotItem(failed)">
+  <test thread-count="5" name="ZoomlineAPIs(failed)">
     <classes>
-      <class name="com.fusioncharts.apitest.IsPlotItemSliced_slicePlotItem">
-        <methods>
-          <include name="verifyAPIAddEventListener"/>
-          <include name="shutDown"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- com.fusioncharts.apitest.IsPlotItemSliced_slicePlotItem -->
-    </classes>
-  </test> <!-- IsPlotItemSliced_slicePlotItem(failed) -->
-=======
-  <test thread-count="5" name="RemoveEventListener(failed)">
-    <classes>
-      <class name="com.fusioncharts.apitest.RemoveEventListener">
+      <class name="com.fusioncharts.apitest.ZoomlineAPIs">
         <methods>
           <include name="shutDown"/>
+          <include name="verifyAPIZoomlineAPIs"/>
           <include name="setUp"/>
-          <include name="verifyAPIChartTypeFormatNumber"/>
         </methods>
-      </class> <!-- com.fusioncharts.apitest.RemoveEventListener -->
+      </class> <!-- com.fusioncharts.apitest.ZoomlineAPIs -->
     </classes>
-  </test> <!-- RemoveEventListener(failed) -->
->>>>>>> temp_branch
+  </test> <!-- ZoomlineAPIs(failed) -->
 </suite> <!-- Failed suite [API Regression] -->
