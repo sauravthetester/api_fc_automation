@@ -4,15 +4,29 @@
   <listeners>
     <listener class-name="com.fusioncharts.ExtentReportListener.ExtentReporterNG"/>
   </listeners>
+<<<<<<< HEAD
   <test thread-count="5" name="RestartUpdate_StopUpdate(failed)">
     <classes>
       <class name="com.fusioncharts.apitest.RestartUpdate_StopUpdate">
         <methods>
           <include name="verifyAPIRestartUpdate_StopUpdate"/>
+=======
+  <test thread-count="5" name="ZoomlineAPIs(failed)">
+    <classes>
+      <class name="com.fusioncharts.apitest.ZoomlineAPIs">
+        <methods>
+>>>>>>> 9fb5480f772bb8138ee54c34e769708ef7027db1
           <include name="shutDown"/>
+          <include name="verifyAPIZoomlineAPIs"/>
           <include name="setUp"/>
         </methods>
+<<<<<<< HEAD
       </class> <!-- com.fusioncharts.apitest.RestartUpdate_StopUpdate -->
     </classes>
   </test> <!-- RestartUpdate_StopUpdate(failed) -->
+=======
+      </class> <!-- com.fusioncharts.apitest.ZoomlineAPIs -->
+    </classes>
+  </test> <!-- ZoomlineAPIs(failed) -->
+>>>>>>> 9fb5480f772bb8138ee54c34e769708ef7027db1
 </suite> <!-- Failed suite [API Regression] -->

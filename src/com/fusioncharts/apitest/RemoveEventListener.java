@@ -33,14 +33,14 @@ public class RemoveEventListener extends APITestBase {
 	}
 	  
 	@Test(priority = 1)
-	public void verifyAPIExistsInDataSheetFormatNumber() 
+	public void verifyAPIExistsInDataSheetRemoveEventListener() 
 	{
 		boolean apiExists = TestUtil.thisAPIexists(data, apiName);
 		Assert.assertTrue(apiExists, "API name matches in data sheet");
 	}
 	
 	@Test(priority = 2)
-	public void verifyChartIsRenderedFormatNumber()
+	public void verifyChartIsRenderedRemoveEventListener()
 	{
 		String htmlData = TestUtil.chartHtml(data, apiName);
 		TestUtil.htmlWrite(htmlData);
@@ -50,7 +50,7 @@ public class RemoveEventListener extends APITestBase {
 	}
 	
 	@Test(priority = 3)
-	public void verifyAPIChartTypeFormatNumber() throws IOException
+	public void verifyAPIRemoveEventListener() throws IOException
 	{
 		String apiScript = TestUtil.apiScript(data, apiName);
 		jsExecuteWithBuffer(apiScript);

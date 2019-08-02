@@ -118,4 +118,28 @@ public class APIPageObjectModel extends APITestBase
 		return svgElement.findElements(By.xpath("//*[contains(@class,'"+name+"')]"));
 	}
 	
+	public int totalChildElements(WebElement elem)
+	{
+		return elem.findElements(By.xpath(".//*")).size();
+	}
+	
+	public WebElement canvasZoomLine()
+	{
+		List<WebElement> allCanvas = driver.findElements(By.xpath("//*[contains(@class,'-canvas')]"));
+		
+		for(WebElement canvas:allCanvas)
+		{
+			try
+			{
+				canvas.findElement(By.tagName("rect"));
+				return canvas;
+			}
+			catch(Exception e)
+			{
+				
+			}
+		}
+		return null;
+	}
+	
 }
