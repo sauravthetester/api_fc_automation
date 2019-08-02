@@ -36,4 +36,28 @@
     	</classes>
   	</test>
   	
+  	<test name="RemoveEventListener" parallel="false" preserve-order="true" thread-count="1" >
+    	<classes>
+      		<class name="com.fusioncharts.apitest.RemoveEventListener" />
+    	</classes>
+  	</test>
+  	
+  	<test name="FeedData" parallel="false" preserve-order="true" thread-count="1" >
+    	<classes>
+      		<class name="com.fusioncharts.apitest.FeedData" />
+    	</classes>
+  	</test>
+  	
+  	<test name="GetData" parallel="false" preserve-order="true" thread-count="1" >
+    	<classes>
+      		<class name="com.fusioncharts.apitest.GetData" />
+    	</classes>
+  	</test>
+  	
+  	<test name="IsUpdateActive" parallel="false" preserve-order="true" thread-count="1" >
+    	<classes>
+      		<class name="com.fusioncharts.apitest.IsUpdateActive" />
+    	</classes>
+  	</test>
+  	
 </suite>

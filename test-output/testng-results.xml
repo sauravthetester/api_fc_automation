@@ -2,32 +2,32 @@
 <testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="API Regression" duration-ms="12512" started-at="2019-07-29T13:45:58Z" finished-at="2019-07-29T13:46:10Z">
+  <suite name="API Regression" duration-ms="34431" started-at="2019-08-02T11:14:54Z" finished-at="2019-08-02T11:15:29Z">
     <groups>
     </groups>
-    <test name="IsPlotItemSliced_slicePlotItem" duration-ms="12512" started-at="2019-07-29T13:45:58Z" finished-at="2019-07-29T13:46:10Z">
-      <class name="com.fusioncharts.apitest.IsPlotItemSliced_slicePlotItem">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.fusioncharts.apitest.IsPlotItemSliced_slicePlotItem@192d3247]" name="setUp" is-config="true" duration-ms="4770" started-at="2019-07-29T13:45:58Z" finished-at="2019-07-29T13:46:02Z">
+    <test name="RestartUpdate_StopUpdate" duration-ms="34431" started-at="2019-08-02T11:14:54Z" finished-at="2019-08-02T11:15:29Z">
+      <class name="com.fusioncharts.apitest.RestartUpdate_StopUpdate">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.fusioncharts.apitest.RestartUpdate_StopUpdate@192d3247]" name="setUp" is-config="true" duration-ms="3575" started-at="2019-08-02T11:14:54Z" finished-at="2019-08-02T11:14:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="verifyAPIExistsInDataSheetAddEventListener()[pri:1, instance:com.fusioncharts.apitest.IsPlotItemSliced_slicePlotItem@192d3247]" name="verifyAPIExistsInDataSheetAddEventListener" duration-ms="7" started-at="2019-07-29T13:46:02Z" finished-at="2019-07-29T13:46:02Z">
+        <test-method status="PASS" signature="verifyAPIExistsInDataSheetRestartUpdate_StopUpdate()[pri:1, instance:com.fusioncharts.apitest.RestartUpdate_StopUpdate@192d3247]" name="verifyAPIExistsInDataSheetRestartUpdate_StopUpdate" duration-ms="6" started-at="2019-08-02T11:14:58Z" finished-at="2019-08-02T11:14:58Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyAPIExistsInDataSheetAddEventListener -->
-        <test-method status="PASS" signature="verifyChartIsRenderedAddEventListener()[pri:2, instance:com.fusioncharts.apitest.IsPlotItemSliced_slicePlotItem@192d3247]" name="verifyChartIsRenderedAddEventListener" duration-ms="347" started-at="2019-07-29T13:46:02Z" finished-at="2019-07-29T13:46:03Z">
+        </test-method> <!-- verifyAPIExistsInDataSheetRestartUpdate_StopUpdate -->
+        <test-method status="PASS" signature="verifyChartIsRenderedRestartUpdate_StopUpdate()[pri:2, instance:com.fusioncharts.apitest.RestartUpdate_StopUpdate@192d3247]" name="verifyChartIsRenderedRestartUpdate_StopUpdate" duration-ms="191" started-at="2019-08-02T11:14:58Z" finished-at="2019-08-02T11:14:58Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyChartIsRenderedAddEventListener -->
-        <test-method status="PASS" signature="verifyAPIAddEventListener()[pri:3, instance:com.fusioncharts.apitest.IsPlotItemSliced_slicePlotItem@192d3247]" name="verifyAPIAddEventListener" duration-ms="3402" started-at="2019-07-29T13:46:03Z" finished-at="2019-07-29T13:46:06Z">
+        </test-method> <!-- verifyChartIsRenderedRestartUpdate_StopUpdate -->
+        <test-method status="PASS" signature="verifyAPIRestartUpdate_StopUpdate()[pri:3, instance:com.fusioncharts.apitest.RestartUpdate_StopUpdate@192d3247]" name="verifyAPIRestartUpdate_StopUpdate" duration-ms="27226" started-at="2019-08-02T11:14:58Z" finished-at="2019-08-02T11:15:25Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyAPIAddEventListener -->
-        <test-method status="PASS" signature="shutDown()[pri:0, instance:com.fusioncharts.apitest.IsPlotItemSliced_slicePlotItem@192d3247]" name="shutDown" is-config="true" duration-ms="3965" started-at="2019-07-29T13:46:06Z" finished-at="2019-07-29T13:46:10Z">
+        </test-method> <!-- verifyAPIRestartUpdate_StopUpdate -->
+        <test-method status="PASS" signature="shutDown()[pri:0, instance:com.fusioncharts.apitest.RestartUpdate_StopUpdate@192d3247]" name="shutDown" is-config="true" duration-ms="3404" started-at="2019-08-02T11:15:25Z" finished-at="2019-08-02T11:15:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- shutDown -->
-      </class> <!-- com.fusioncharts.apitest.IsPlotItemSliced_slicePlotItem -->
-    </test> <!-- IsPlotItemSliced_slicePlotItem -->
+      </class> <!-- com.fusioncharts.apitest.RestartUpdate_StopUpdate -->
+    </test> <!-- RestartUpdate_StopUpdate -->
   </suite> <!-- API Regression -->
 </testng-results>

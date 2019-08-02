@@ -4,15 +4,15 @@
   <listeners>
     <listener class-name="com.fusioncharts.ExtentReportListener.ExtentReporterNG"/>
   </listeners>
-  <test thread-count="5" name="IsPlotItemSliced_slicePlotItem(failed)">
+  <test thread-count="5" name="RestartUpdate_StopUpdate(failed)">
     <classes>
-      <class name="com.fusioncharts.apitest.IsPlotItemSliced_slicePlotItem">
+      <class name="com.fusioncharts.apitest.RestartUpdate_StopUpdate">
         <methods>
-          <include name="verifyAPIAddEventListener"/>
+          <include name="verifyAPIRestartUpdate_StopUpdate"/>
           <include name="shutDown"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- com.fusioncharts.apitest.IsPlotItemSliced_slicePlotItem -->
+      </class> <!-- com.fusioncharts.apitest.RestartUpdate_StopUpdate -->
     </classes>
-  </test> <!-- IsPlotItemSliced_slicePlotItem(failed) -->
+  </test> <!-- RestartUpdate_StopUpdate(failed) -->
 </suite> <!-- Failed suite [API Regression] -->

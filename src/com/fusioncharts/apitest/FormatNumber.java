@@ -64,7 +64,7 @@ public class FormatNumber extends APITestBase
 		
 		Assert.assertTrue(text.equals("&10.23K"), "Text has formatted number value");
 		
-		test.log(LogStatus.PASS, test.addScreenCapture(APITestBase.capture("FormatNumber_NumberShouldShowAs&10.23K")));	//Code Line for screenshot
+		test.log(LogStatus.PASS, test.addScreenCapture(APITestBase.capture("FormatNumber_Number Should Show As &10.23K")));	//Code Line for screenshot
 	}
 	
 	@AfterTest
