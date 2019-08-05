@@ -4,29 +4,37 @@
   <listeners>
     <listener class-name="com.fusioncharts.ExtentReportListener.ExtentReporterNG"/>
   </listeners>
-<<<<<<< HEAD
-  <test thread-count="5" name="RestartUpdate_StopUpdate(failed)">
+  <test thread-count="5" name="SetChartDataUrl(failed)">
     <classes>
-      <class name="com.fusioncharts.apitest.RestartUpdate_StopUpdate">
+      <class name="com.fusioncharts.apitest.SetChartDataUrl">
         <methods>
-          <include name="verifyAPIRestartUpdate_StopUpdate"/>
-=======
-  <test thread-count="5" name="ZoomlineAPIs(failed)">
-    <classes>
-      <class name="com.fusioncharts.apitest.ZoomlineAPIs">
-        <methods>
->>>>>>> 9fb5480f772bb8138ee54c34e769708ef7027db1
+          <include name="setUp"/>
+          <include name="verifyAPISetChartDataUrl"/>
           <include name="shutDown"/>
-          <include name="verifyAPIZoomlineAPIs"/>
+        </methods>
+      </class> <!-- com.fusioncharts.apitest.SetChartDataUrl -->
+    </classes>
+  </test> <!-- SetChartDataUrl(failed) -->
+  <test thread-count="5" name="SetJSONUrl(failed)">
+    <classes>
+      <class name="com.fusioncharts.apitest.SetJSONUrl">
+        <methods>
+          <include name="verifyAPISetJSONUrl"/>
+          <include name="shutDown"/>
           <include name="setUp"/>
         </methods>
-<<<<<<< HEAD
-      </class> <!-- com.fusioncharts.apitest.RestartUpdate_StopUpdate -->
+      </class> <!-- com.fusioncharts.apitest.SetJSONUrl -->
     </classes>
-  </test> <!-- RestartUpdate_StopUpdate(failed) -->
-=======
-      </class> <!-- com.fusioncharts.apitest.ZoomlineAPIs -->
+  </test> <!-- SetJSONUrl(failed) -->
+  <test thread-count="5" name="SetXMLUrl(failed)">
+    <classes>
+      <class name="com.fusioncharts.apitest.SetXMLUrl">
+        <methods>
+          <include name="verifyAPISetXMLUrl"/>
+          <include name="shutDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.fusioncharts.apitest.SetXMLUrl -->
     </classes>
-  </test> <!-- ZoomlineAPIs(failed) -->
->>>>>>> 9fb5480f772bb8138ee54c34e769708ef7027db1
+  </test> <!-- SetXMLUrl(failed) -->
 </suite> <!-- Failed suite [API Regression] -->

@@ -6,9 +6,9 @@
 		<listener class-name="com.fusioncharts.ExtentReportListener.ExtentReporterNG"/>
 	</listeners>
 
-  	<test name="ZoomlineAPIs" parallel="false" preserve-order="true" thread-count="1" >
+  	<test name="SetChartDataUrl" parallel="false" preserve-order="true" thread-count="1" >
     	<classes>
-      		<class name="com.fusioncharts.apitest.ZoomlineAPIs" />
+      		<class name="com.fusioncharts.apitest.SetChartDataUrl" />
     	</classes>
   	</test>
   	
