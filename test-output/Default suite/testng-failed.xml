@@ -3,6 +3,7 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
+<<<<<<< HEAD
       <class name="com.fusioncharts.apitest.ShowChartMessage">
         <methods>
           <include name="verifyAPISetXMLData"/>
@@ -10,6 +11,15 @@
           <include name="shutDown"/>
         </methods>
       </class> <!-- com.fusioncharts.apitest.ShowChartMessage -->
+=======
+      <class name="com.fusioncharts.apitest.RealTimeAPIs">
+        <methods>
+          <include name="verifyAPILockResize_ResizeTo"/>
+          <include name="setUp"/>
+          <include name="shutDown"/>
+        </methods>
+      </class> <!-- com.fusioncharts.apitest.RealTimeAPIs -->
+>>>>>>> 40+ APIs completed and zoomline in progress
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -6,14 +6,374 @@
 
       <script type="text/javascript">
         FusionCharts.ready(function () {
+<<<<<<< HEAD
             var revenueChart = new FusionCharts({
                 type: 'mscolumn2d',
                 renderAt: 'chart-container',
                 width: '500',
+=======
+            fusioncharts_gauge = new FusionCharts({
+                id: "chart_1",
+                type: 'angulargauge',
+                renderAt: 'chart-container',
+                width: '320',
+                height: '300',
+                dataFormat: 'json',
+                baseChartMessageFont: 'arial',
+                loadMessage: 'API Automation',
+                loadMessageFontSize: '40',
+                loadMessageColor: '#FF0000',
+
+                dataSource: {
+
+                    "chart": {
+                        "caption": "Speedometer",
+                        "origw": "320",
+                        "origh": "320",
+                        "tickvaluedistance": "-10",
+                        "upperlimit": "240",
+                        "lowerlimit": "0",
+                        "basefontcolor": "#FFFFFF",
+                        "majortmnumber": "9",
+                        "majortmcolor": "#FFFFFF",
+                        "majortmheight": "8",
+                        "majortmthickness": "5",
+                        "minortmnumber": "5",
+                        "minortmcolor": "#FFFFFF",
+                        "minortmheight": "3",
+                        "minortmthickness": "2",
+                        "pivotradius": "10",
+                        "pivotbgcolor": "#000000",
+                        "pivotbordercolor": "#FFFFFF",
+                        "pivotborderthickness": "2",
+                        "tooltipbordercolor": "#FFFFFF",
+                        "tooltipbgcolor": "#333333",
+                        "gaugeouterradius": "115",
+                        "gaugestartangle": "240",
+                        "gaugeendangle": "-60",
+                        "decimals": "0",
+                        "placevaluesinside": "1",
+                        "pivotfillmix": "",
+                        "showpivotborder": "1",
+                        "annrenderdelay": "0",
+                        "gaugeoriginx": "160",
+                        "gaugeoriginy": "160",
+                        "theme": "fusion"
+                    },
+                    "dials": {
+                        "dial": [{
+                                "value": "65",
+                                "bgcolor": "000000",
+                                "bordercolor": "#FFFFFF",
+                                "borderalpha": "100",
+                                "basewidth": "4",
+                                "topwidth": "4",
+                                "borderthickness": "2",
+                                "valuey": "260",
+                                "id" : "dial1"
+                            },
+                            {
+                                "value": "85",
+                                "bgcolor": "000000",
+                                "bordercolor": "#00FF00",
+                                "borderalpha": "100",
+                                "basewidth": "4",
+                                "topwidth": "4",
+                                "borderthickness": "2",
+                                "valuey": "260",
+                                "id" : "dial2"
+                            }
+                        ]
+                    },
+                    "annotations": {
+                        "groups": [{
+                                "x": "160",
+                                "y": "160",
+                                "items": [{
+                                        "type": "circle",
+                                        "radius": "130",
+                                        "fillasgradient": "1",
+                                        "fillcolor": "#4B4B4B,#AAAAAA",
+                                        "fillalpha": "100,100",
+                                        "fillratio": "95,5"
+                                    },
+                                    {
+                                        "type": "circle",
+                                        "x": "0",
+                                        "y": "0",
+                                        "radius": "120",
+                                        "showborder": "1",
+                                        "bordercolor": "cccccc",
+                                        "fillasgradient": "1",
+                                        "fillcolor": "#ffffff,#000000",
+                                        "fillalpha": "50,100",
+                                        "fillratio": "1,99"
+                                    }
+                                ]
+                            },
+                            {
+                                "x": "160",
+                                "y": "160",
+                                "showbelow": "0",
+                                "scaletext": "1",
+                                "items": [{
+                                    "type": "text",
+                                    "y": "100",
+                                    "label": "KPH",
+                                    "fontcolor": "#FFFFFF",
+                                    "fontsize": "14",
+                                    "bold": "1"
+                                }]
+                            }
+                        ]
+                    }
+                }
+            });
+            fusioncharts_gauge.render();
+
+
+
+
+            fusioncharts_rtarea = new FusionCharts({
+                id: "chart_2",
+                type: 'realtimearea',
+                renderAt: 'chart-container2',
+                width: '320',
+                height: '300',
+                dataFormat: 'json',
+                baseChartMessageFont: 'arial',
+                loadMessage: 'API Automation',
+                loadMessageFontSize: '40',
+                loadMessageColor: '#FF0000',
+
+                dataSource: {
+                    "chart": {
+                        "caption": "Real-time stock price monitor",
+                        "subCaption": "Harry's SuperMart",
+                        "xAxisName": "Time",
+                        "yAxisName": "Stock Price",
+                        "numberPrefix": "$",
+                        "refreshinterval": "5",
+                        "yaxisminvalue": "35",
+                        "yaxismaxvalue": "36",
+                        "numdisplaysets": "10",
+                        "labeldisplay": "rotate",
+                        "showRealTimeValue": "0",
+                        "theme": "fusion"
+                    },
+                    "categories": [{
+                        "category": [{
+                            "label": "Day Start"
+                        }]
+                    }],
+                    "dataset": [{
+                        "data": [{
+                            "value": "35.27"
+                        }]
+                    }]
+                }
+            });
+            fusioncharts_rtarea.render();
+
+
+            fusioncharts_rtbulb = new FusionCharts({
+                id: "chart_3",
+                type: 'bulb',
+                renderAt: 'chart-container3',
+                width: '320',
+                height: '300',
+                dataFormat: 'json',
+                baseChartMessageFont: 'arial',
+                loadMessage: 'API Automation',
+                loadMessageFontSize: '40',
+                loadMessageColor: '#FF0000',
+
+                dataSource: {
+                    "chart": {
+                        "caption": "Temperature status of deep freezers",
+                        "upperlimit": "-5",
+                        "lowerlimit": "-60",
+                        "captionPadding": "30",
+                        "showshadow": "0",
+                        "showvalue": "1",
+                        "useColorNameAsValue": "1",
+                        "placeValuesInside": "1",
+                        "theme": "fusion"
+                    },
+                    "colorrange": {
+                        "color": [{
+                                "minvalue": "-60",
+                                "maxvalue": "-35",
+                                "label": "Problem detected!",
+                                "code": "#ff0000"
+                            },
+                            {
+                                "minvalue": "-35",
+                                "maxvalue": "-25",
+                                "label": "Alert!",
+                                "code": "#ff9900"
+                            },
+                            {
+                                "minvalue": "-25",
+                                "maxvalue": "-5",
+                                "label": "All well!",
+                                "code": "#00ff00"
+                            }
+                        ]
+                    },
+                    "value": "-5"
+                }
+            });
+            fusioncharts_rtbulb.render();
+
+
+
+            fusioncharts_rtcolumn = new FusionCharts({
+                id: "chart_4",
+                type: 'realtimecolumn',
+                renderAt: 'chart-container4',
+                width: '320',
+                height: '300',
+                dataFormat: 'json',
+                baseChartMessageFont: 'arial',
+                loadMessage: 'API Automation',
+                loadMessageFontSize: '40',
+                loadMessageColor: '#FF0000',
+
+                dataSource: {
+                    "chart": {
+                        "caption": "Online Transactions per 10 seconds",
+                        "subCaption": "HarrysSupermart.com",
+                        "showrealtimevalue": "1",
+                        "yaxismaxvalue": "10",
+                        "numdisplaysets": "10",
+                        "labeldisplay": "rotate",
+                        "slantLabels": "1",
+                        "showLegend": "0",
+                        "numbersuffix": " Transactions",
+                        "showRealTimeValue": "0",
+                        "theme": "fusion"
+                    },
+                    "categories": [{
+                        "category": [{
+                            "label": "Start"
+                        }]
+                    }],
+                    "dataset": [{
+                        "seriesname": "",
+                        "alpha": "100",
+                        "data": [{
+                            "value": "3"
+                        }]
+                    }]
+                }
+            });
+            fusioncharts_rtcolumn.render();
+
+            fusioncharts_rtcylinder = new FusionCharts({
+                id: "chart_5",
+                type: 'cylinder',
+                renderAt: 'chart-container5',
+                width: '320',
+                height: '300',
+                dataFormat: 'json',
+                baseChartMessageFont: 'arial',
+                loadMessage: 'API Automation',
+                loadMessageFontSize: '40',
+                loadMessageColor: '#FF0000',
+
+                dataSource: {
+                    "chart": {
+                        "caption": "Fuel Meter",
+                        "subcaption": "Diesel level in generator Bakersfield Central",
+                        "subcaptionFontBold": "0",
+                        "lowerLimit": "0",
+                        "upperLimit": "120",
+                        "lowerLimitDisplay": "Empty",
+                        "upperLimitDisplay": "Full",
+                        "numberSuffix": " ltrs",
+                        "showhovereffect": "1",
+                        "theme": "fusion"
+                    },
+                    "value": "85"
+                }
+            });
+            fusioncharts_rtcylinder.render();
+
+
+
+            fusioncharts_rthlinear = new FusionCharts({
+                id: "chart_6",
+                type: 'HLinearGauge',
+                renderAt: 'chart-container6',
+                width: '320',
+                height: '300',
+                dataFormat: 'json',
+                baseChartMessageFont: 'arial',
+                loadMessage: 'API Automation',
+                loadMessageFontSize: '40',
+                loadMessageColor: '#FF0000',
+
+                dataSource: {
+                    "chart": {
+                        "caption": "Server CPU Utilization",
+                        "subcaption": "food.hsm.com",
+                        "lowerLimit": "0",
+                        "upperLimit": "100",
+                        "numberSuffix": "%",
+                        "valueAbovePointer": "0",
+                        "showShadow": "0",
+                        "gaugeFillMix": "{light}",
+                        "theme": "fusion"
+                    },
+                    "colorRange": {
+                        "color": [{
+                                "minValue": "0",
+                                "maxValue": "35",
+                                "label": "Low",
+                                "code": "#1aaf5d"
+                            },
+                            {
+                                "minValue": "35",
+                                "maxValue": "70",
+                                "label": "Moderate",
+                                "code": "#f2c500"
+                            },
+                            {
+                                "minValue": "70",
+                                "maxValue": "100",
+                                "label": "High",
+                                "code": "#c02d00"
+                            }
+                        ]
+                    },
+                    "pointers": {
+                        "pointer": [{
+                            "value": "80",
+                            "id": "pointer1"
+                        },
+                        {
+                            "value": "68",
+                            "id": "pointer2"
+                        }]
+                    }
+                }
+            });
+            fusioncharts_rthlinear.render();
+
+
+
+            fusioncharts_rtline = new FusionCharts({
+                id: "chart_7",
+                type: 'realtimeline',
+                renderAt: 'chart-container7',
+                width: '320',
+>>>>>>> 40+ APIs completed and zoomline in progress
                 height: '300',
                 dataFormat: 'json',
                 dataSource: {
                     "chart": {
+<<<<<<< HEAD
                         "caption": "Comparison of Quarterly Revenue",
                         "xAxisname": "Quarter",
                         "yAxisName": "Revenues (In USD)",
@@ -95,12 +455,473 @@
                 }
             }
             document.getElementById("show_message").addEventListener("click", show);
+=======
+                        "caption": "Real-time stock price monitor",
+                        "subCaption": "Harry's SuperMart",
+                        "xAxisName": "Time",
+                        "yAxisName": "Stock Price",
+                        "numberPrefix": "$",
+                        "refreshinterval": "5",
+                        "yaxisminvalue": "35",
+                        "yaxismaxvalue": "36",
+                        "numdisplaysets": "10",
+                        "labeldisplay": "rotate",
+                        "showRealTimeValue": "0",
+                        "theme": "fusion"
+                    },
+                    "categories": [{
+                        "category": [{
+                            "label": "Day Start"
+                        }]
+                    }],
+                    "dataset": [{
+                        "data": [{
+                            "value": "50"
+                        }]
+                    }]
+                }
+            });
+            fusioncharts_rtline.render();
+
+
+
+            fusioncharts_rtlinedy = new FusionCharts({
+                id: "chart_8",
+                type: 'realtimelinedy',
+                renderAt: 'chart-container8',
+                width: '320',
+                height: '300',
+                dataFormat: 'json',
+                baseChartMessageFont: 'arial',
+                loadMessage: 'API Automation',
+                loadMessageFontSize: '40',
+                loadMessageColor: '#FF0000',
+
+                dataSource: {
+                    "chart": {
+                        "caption": "Stock Price Monitor",
+                        "subCaption": "Harry's Supermart",
+                        "showRealTimeValue": "0",
+                        "numberprefix": "$",
+                        "setadaptiveymin": "1",
+                        "setadaptivesymin": "1",
+                        "xaxisname": "Time",
+                        "labeldisplay": "Rotate",
+                        "slantlabels": "1",
+                        "pyaxisminvalue": "35",
+                        "pyaxismaxvalue": "36",
+                        "syaxisminvalue": "10000",
+                        "syaxismaxvalue": "12000",
+                        "numDisplaySets": "10",
+                        "theme": "fusion"
+                    },
+                    "categories": [{
+                        "category": [{
+                            "label": "Day Start"
+                        }]
+                    }],
+                    "dataset": [{
+                            "seriesname": "HRYS Price",
+                            "showvalues": "0",
+                            "data": [{
+                                "value": "2500"
+                            }]
+                        },
+                        {
+                            "seriesname": "NYSE Index",
+                            "showvalues": "0",
+                            "parentyaxis": "S",
+                            "data": [{
+                                "value": "6000"
+                            }]
+                        }
+                    ],
+                    "trendlines": [{
+                        "line": [{
+                                "parentyaxis": "P",
+                                "startvalue": "35.1",
+                                "displayvalue": "Open",
+                                "thickness": "1",
+                                "color": "#0075c2",
+                                "dashed": "1"
+                            },
+                            {
+                                "parentyaxis": "S",
+                                "startvalue": "10962.87",
+                                "displayvalue": "Open",
+                                "thickness": "1",
+                                "color": "#1aaf5d",
+                                "dashed": "1"
+                            }
+                        ]
+                    }]
+                }
+            });
+            fusioncharts_rtlinedy.render();
+
+
+
+
+            fusioncharts_rtsarea = new FusionCharts({
+                id: "chart_9",
+                type: 'realtimestackedarea',
+                renderAt: 'chart-container9',
+                width: '320',
+                height: '300',
+                dataFormat: 'json',
+                baseChartMessageFont: 'arial',
+                loadMessage: 'API Automation',
+                loadMessageFontSize: '40',
+                loadMessageColor: '#FF0000',
+
+                dataSource: {
+                    "chart": {
+                        "caption": "Live Visitors on Site",
+                        "subCaption": "Updated every 5 seconds",
+                        "xAxisName": "Time",
+                        "yAxisName": "No. of visitors",
+                        "numberSuffix": "s",
+                        "refreshinterval": "5",
+                        "yaxisminvalue": "0",
+                        "yaxismaxvalue": "60",
+                        "numdisplaysets": "10",
+                        "labeldisplay": "rotate",
+                        "showRealTimeValue": "0",
+                        "theme": "fusion"
+                    },
+                    "categories": [{
+                        "category": [{
+                            "label": "Day Start"
+                        }]
+                    }],
+                    "dataset": [{
+                            "seriesName": "clothing.hsm.com",
+                            "data": [{
+                                "value": "88"
+                            }]
+                        },
+                        {
+                            "seriesName": "food.hsm.com",
+                            "data": [{
+                                "value": "77"
+                            }]
+                        }
+                    ]
+                }
+            });
+            fusioncharts_rtsarea.render();
+
+
+
+
+            fusioncharts_rtscolumn = new FusionCharts({
+                id: "chart_10",
+                type: 'realtimestackedcolumn',
+                renderAt: 'chart-container10',
+                width: '320',
+                height: '300',
+                dataFormat: 'json',
+                baseChartMessageFont: 'arial',
+                loadMessage: 'API Automation',
+                loadMessageFontSize: '40',
+                loadMessageColor: '#FF0000',
+
+                dataSource: {
+                    "chart": {
+                        "caption": "Live Visitors on Site",
+                        "subCaption": "Every 5 seconds",
+                        "xAxisName": "Time",
+                        "yAxisName": "No. of visitors",
+                        "refreshinterval": "5",
+                        "numberSuffix": "s",
+                        "yaxisminvalue": "0",
+                        "yaxismaxvalue": "60",
+                        "numdisplaysets": "10",
+                        "labeldisplay": "rotate",
+                        "showValues": "1",
+                        "showRealTimeValue": "0",
+                        "placeValuesInside": "1",
+                        "theme": "fusion"
+                    },
+                    "categories": [{
+                        "category": [{
+                            "label": "Day Start"
+                        }]
+                    }],
+                    "dataset": [{
+                            "seriesName": "clothing.hsm.com",
+                            "data": [{
+                                "value": "12"
+                            }]
+                        },
+                        {
+                            "seriesName": "food.hsm.com",
+                            "data": [{
+                                "value": "20"
+                            }]
+                        }
+                    ]
+                }
+            });
+            fusioncharts_rtscolumn.render();
+
+
+
+            fusioncharts_rtthermometer = new FusionCharts({
+                id: "chart_11",
+                type: 'thermometer',
+                renderAt: 'chart-container11',
+                width: '320',
+                height: '300',
+                dataFormat: 'json',
+                baseChartMessageFont: 'arial',
+                loadMessage: 'API Automation',
+                loadMessageFontSize: '40',
+                loadMessageColor: '#FF0000',
+
+                dataSource: {
+                    "chart": {
+                        "caption": "Central cold storage",
+                        "subcaption": "Bakersfield Central",
+                        "lowerLimit": "-20",
+                        "upperLimit": "20",
+                        "numberSuffix": "°C",
+                        "theme": "fusion"
+                    },
+                    "value": "-10"
+                }
+            });
+            fusioncharts_rtthermometer.render();
+
+
+
+
+            fusioncharts_rthbullet = new FusionCharts({
+                id: "chart_12",
+                type: 'hbullet',
+                renderAt: 'chart-container12',
+                width: '320',
+                height: '300',
+                dataFormat: 'json',
+                baseChartMessageFont: 'arial',
+                loadMessage: 'API Automation',
+                loadMessageFontSize: '40',
+                loadMessageColor: '#FF0000',
+
+                dataSource: {
+                    "chart": {
+                        "lowerLimit": "0",
+                        "upperLimit": "100",
+                        "caption": "Monthly Revenue",
+                        "subcaption": "Actual vs Target<br>Bakersfield Central",
+                        "numberPrefix": "$",
+                        "numberSuffix": "K",
+                        "targetColor": "#8e0000",
+                        "showHoverEffect": "1",
+                        "colorRangeFillMix": "{light+0}",
+                        "valuePadding": "7",
+                        "theme": "fusion"
+                    },
+                    "colorRange": {
+                        "color": [{
+                                "minValue": "0",
+                                "maxValue": "50",
+                                "code": "#e44a00",
+                                "alpha": "70"
+                            },
+                            {
+                                "minValue": "50",
+                                "maxValue": "75",
+                                "code": "#f2c500",
+                                "alpha": "70"
+                            },
+                            {
+                                "minValue": "75",
+                                "maxValue": "120",
+                                "code": "#1aaf5d",
+                                "alpha": "70"
+                            }
+                        ]
+                    },
+                    "value": "82",
+                    "target": "90"
+                }
+            });
+            fusioncharts_rthbullet.render();
+
+
+
+
+            fusioncharts_rthled = new FusionCharts({
+                id: "chart_13",
+                type: 'hled',
+                renderAt: 'chart-container13',
+                width: '320',
+                height: '300',
+                dataFormat: 'json',
+                baseChartMessageFont: 'arial',
+                loadMessage: 'API Automation',
+                loadMessageFontSize: '40',
+                loadMessageColor: '#FF0000',
+
+                dataSource: {
+                    "chart": {
+                        "lowerLimit": "0",
+                        "upperLimit": "100",
+                        "caption": "Monthly Revenue",
+                        "subcaption": "Actual vs Target<br>Bakersfield Central",
+                        "numberPrefix": "$",
+                        "numberSuffix": "K",
+                        "targetColor": "#8e0000",
+                        "showHoverEffect": "1",
+                        "colorRangeFillMix": "{light+0}",
+                        "valuePadding": "7",
+                        "theme": "fusion"
+                    },
+                    "colorRange": {
+                        "color": [{
+                                "minValue": "0",
+                                "maxValue": "50",
+                                "code": "#e44a00",
+                                "alpha": "70"
+                            },
+                            {
+                                "minValue": "50",
+                                "maxValue": "75",
+                                "code": "#f2c500",
+                                "alpha": "70"
+                            },
+                            {
+                                "minValue": "75",
+                                "maxValue": "120",
+                                "code": "#1aaf5d",
+                                "alpha": "70"
+                            }
+                        ]
+                    },
+                    "value": "67",
+                    "target": "90"
+                }
+            });
+            fusioncharts_rthled.render();
+
+
+
+            fusioncharts_rtvbullet = new FusionCharts({
+                id: "chart_14",
+                type: 'vbullet',
+                renderAt: 'chart-container14',
+                width: '320',
+                height: '300',
+                dataFormat: 'json',
+                baseChartMessageFont: 'arial',
+                loadMessage: 'API Automation',
+                loadMessageFontSize: '40',
+                loadMessageColor: '#FF0000',
+
+                dataSource: {
+                    "chart": {
+                        "lowerLimit": "0",
+                        "upperLimit": "100",
+                        "caption": "Monthly Revenue",
+                        "subcaption": "Actual vs Target<br>Bakersfield Central",
+                        "numberPrefix": "$",
+                        "numberSuffix": "K",
+                        "targetColor": "#8e0000",
+                        "showHoverEffect": "1",
+                        "colorRangeFillMix": "{light+0}",
+                        "valuePadding": "7",
+                        "theme": "fusion"
+                    },
+                    "colorRange": {
+                        "color": [{
+                                "minValue": "0",
+                                "maxValue": "50",
+                                "code": "#e44a00",
+                                "alpha": "70"
+                            },
+                            {
+                                "minValue": "50",
+                                "maxValue": "75",
+                                "code": "#f2c500",
+                                "alpha": "70"
+                            },
+                            {
+                                "minValue": "75",
+                                "maxValue": "120",
+                                "code": "#1aaf5d",
+                                "alpha": "70"
+                            }
+                        ]
+                    },
+                    "value": "73",
+                    "target": "90"
+                }
+            });
+            fusioncharts_rtvbullet.render();
+
+
+
+            fusioncharts_rtvled = new FusionCharts({
+                id: "chart_15",
+                type: 'vled',
+                renderAt: 'chart-container15',
+                width: '320',
+                height: '300',
+                dataFormat: 'json',
+                baseChartMessageFont: 'arial',
+                loadMessage: 'API Automation',
+                loadMessageFontSize: '40',
+                loadMessageColor: '#FF0000',
+
+                dataSource: {
+                    "chart": {
+                        "lowerLimit": "0",
+                        "upperLimit": "100",
+                        "caption": "Monthly Revenue",
+                        "subcaption": "Actual vs Target<br>Bakersfield Central",
+                        "numberPrefix": "$",
+                        "numberSuffix": "K",
+                        "targetColor": "#8e0000",
+                        "showHoverEffect": "1",
+                        "colorRangeFillMix": "{light+0}",
+                        "valuePadding": "7",
+                        "theme": "fusion"
+                    },
+                    "colorRange": {
+                        "color": [{
+                                "minValue": "0",
+                                "maxValue": "50",
+                                "code": "#e44a00",
+                                "alpha": "70"
+                            },
+                            {
+                                "minValue": "50",
+                                "maxValue": "75",
+                                "code": "#f2c500",
+                                "alpha": "70"
+                            },
+                            {
+                                "minValue": "75",
+                                "maxValue": "120",
+                                "code": "#1aaf5d",
+                                "alpha": "70"
+                            }
+                        ]
+                    },
+                    "value": "58",
+                    "target": "90"
+                }
+            });
+            fusioncharts_rtvled.render();
+>>>>>>> 40+ APIs completed and zoomline in progress
 
         });
     </script>
 </head>
 
 <body>
+<<<<<<< HEAD
     <div class="">
         <input type="text" id="chart_message" placeholder="Enter your message here." />
 
@@ -114,5 +935,23 @@
     </div>
     <div id="chart-container">FusionCharts will render here</div>
 </body>
+=======
+    <div id="main1">
+        <span id="chart-container">FusionCharts will render here</span>
+        <span id="chart-container2">FusionCharts will render here</span>
+        <span id="chart-container3">FusionCharts will render here</span>
+    </div>
+>>>>>>> 40+ APIs completed and zoomline in progress
 
-</html>
+    <div id="main2">
+        <span id="chart-container4">FusionCharts will render here</span>
+        <span id="chart-container5">FusionCharts will render here</span>
+        <span id="chart-container6">FusionCharts will render here</span>
+    </div>
+    <div id="main3">
+        <span id="chart-container7">FusionCharts will render here</span>
+        <span id="chart-container8">FusionCharts will render here</span>
+        <span id="chart-container9">FusionCharts will render here</span>
+    </div>
+    <div id="main4">
+        <span id="chart-container10">FusionCharts will render 

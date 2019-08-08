@@ -6,9 +6,9 @@
 		<listener class-name="com.fusioncharts.ExtentReportListener.ExtentReporterNG"/>
 	</listeners>
 
-  	<test name="ShowChartMessage" parallel="false" preserve-order="true" thread-count="1" >
+  	<test name="GetChartAttribute" parallel="false" preserve-order="true" thread-count="1" >
     	<classes>
-      		<class name="com.fusioncharts.apitest.ShowChartMessage" />
+      		<class name="com.fusioncharts.apitest.GetChartAttribute" />
     	</classes>
   	</test>
   	
