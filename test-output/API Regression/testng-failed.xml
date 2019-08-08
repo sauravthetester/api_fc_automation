@@ -4,10 +4,30 @@
   <listeners>
     <listener class-name="com.fusioncharts.ExtentReportListener.ExtentReporterNG"/>
   </listeners>
+<<<<<<< HEAD
   <test thread-count="5" name="GetChartAttribute(failed)">
     <classes>
       <class name="com.fusioncharts.apitest.GetChartAttribute">
         <methods>
+=======
+<<<<<<< HEAD
+  <test thread-count="5" name="SetXMLData(failed)">
+    <classes>
+      <class name="com.fusioncharts.apitest.SetXMLData">
+        <methods>
+          <include name="setUp"/>
+          <include name="shutDown"/>
+          <include name="verifyAPISetXMLData"/>
+        </methods>
+      </class> <!-- com.fusioncharts.apitest.SetXMLData -->
+    </classes>
+  </test> <!-- SetXMLData(failed) -->
+=======
+  <test thread-count="5" name="GetChartAttribute(failed)">
+    <classes>
+      <class name="com.fusioncharts.apitest.GetChartAttribute">
+        <methods>
+>>>>>>> mergebranch
           <include name="verifyAPIGetChartAttribute"/>
           <include name="shutDown"/>
           <include name="setUp"/>
@@ -15,4 +35,8 @@
       </class> <!-- com.fusioncharts.apitest.GetChartAttribute -->
     </classes>
   </test> <!-- GetChartAttribute(failed) -->
+<<<<<<< HEAD
+=======
+>>>>>>> 40+ APIs completed and zoomline in progress
+>>>>>>> mergebranch
 </suite> <!-- Failed suite [API Regression] -->
