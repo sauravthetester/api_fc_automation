@@ -1,40 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [API Regression]">
-  <listeners>
-    <listener class-name="com.fusioncharts.ExtentReportListener.ExtentReporterNG"/>
-  </listeners>
-  <test thread-count="5" name="SetChartDataUrl(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.fusioncharts.apitest.SetChartDataUrl">
+      <class name="com.fusioncharts.apitest.ShowChartMessage">
         <methods>
+          <include name="verifyAPISetXMLData"/>
           <include name="setUp"/>
-          <include name="verifyAPISetChartDataUrl"/>
           <include name="shutDown"/>
         </methods>
-      </class> <!-- com.fusioncharts.apitest.SetChartDataUrl -->
+      </class> <!-- com.fusioncharts.apitest.ShowChartMessage -->
     </classes>
-  </test> <!-- SetChartDataUrl(failed) -->
-  <test thread-count="5" name="SetJSONUrl(failed)">
-    <classes>
-      <class name="com.fusioncharts.apitest.SetJSONUrl">
-        <methods>
-          <include name="verifyAPISetJSONUrl"/>
-          <include name="shutDown"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- com.fusioncharts.apitest.SetJSONUrl -->
-    </classes>
-  </test> <!-- SetJSONUrl(failed) -->
-  <test thread-count="5" name="SetXMLUrl(failed)">
-    <classes>
-      <class name="com.fusioncharts.apitest.SetXMLUrl">
-        <methods>
-          <include name="verifyAPISetXMLUrl"/>
-          <include name="shutDown"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- com.fusioncharts.apitest.SetXMLUrl -->
-    </classes>
-  </test> <!-- SetXMLUrl(failed) -->
-</suite> <!-- Failed suite [API Regression] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
