@@ -2,28 +2,28 @@
 <testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="10547" started-at="2019-08-08T08:05:06Z" finished-at="2019-08-08T08:05:17Z">
+  <suite name="Default suite" duration-ms="16636" started-at="2019-08-08T10:32:39Z" finished-at="2019-08-08T10:32:56Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="10547" started-at="2019-08-08T08:05:06Z" finished-at="2019-08-08T08:05:17Z">
+    <test name="Default test" duration-ms="16636" started-at="2019-08-08T10:32:39Z" finished-at="2019-08-08T10:32:56Z">
       <class name="com.fusioncharts.apitest.ShowChartMessage">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.fusioncharts.apitest.ShowChartMessage@7cbd213e]" name="setUp" is-config="true" duration-ms="3176" started-at="2019-08-08T08:05:06Z" finished-at="2019-08-08T08:05:09Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.fusioncharts.apitest.ShowChartMessage@7cbd213e]" name="setUp" is-config="true" duration-ms="3411" started-at="2019-08-08T10:32:39Z" finished-at="2019-08-08T10:32:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="verifyAPIExistsInDataSheetShowChartMessage()[pri:1, instance:com.fusioncharts.apitest.ShowChartMessage@7cbd213e]" name="verifyAPIExistsInDataSheetShowChartMessage" duration-ms="7" started-at="2019-08-08T08:05:09Z" finished-at="2019-08-08T08:05:09Z">
+        <test-method status="PASS" signature="verifyAPIExistsInDataSheetShowChartMessage()[pri:1, instance:com.fusioncharts.apitest.ShowChartMessage@7cbd213e]" name="verifyAPIExistsInDataSheetShowChartMessage" duration-ms="7" started-at="2019-08-08T10:32:43Z" finished-at="2019-08-08T10:32:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAPIExistsInDataSheetShowChartMessage -->
-        <test-method status="PASS" signature="verifyChartIsRenderedShowChartMessage()[pri:2, instance:com.fusioncharts.apitest.ShowChartMessage@7cbd213e]" name="verifyChartIsRenderedShowChartMessage" duration-ms="2279" started-at="2019-08-08T08:05:09Z" finished-at="2019-08-08T08:05:11Z">
+        <test-method status="PASS" signature="verifyChartIsRenderedShowChartMessage()[pri:2, instance:com.fusioncharts.apitest.ShowChartMessage@7cbd213e]" name="verifyChartIsRenderedShowChartMessage" duration-ms="2264" started-at="2019-08-08T10:32:43Z" finished-at="2019-08-08T10:32:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyChartIsRenderedShowChartMessage -->
-        <test-method status="PASS" signature="verifyAPIShowChartMessage()[pri:3, instance:com.fusioncharts.apitest.ShowChartMessage@7cbd213e]" name="verifyAPIShowChartMessage" duration-ms="1694" started-at="2019-08-08T08:05:12Z" finished-at="2019-08-08T08:05:13Z">
+        <test-method status="PASS" signature="verifyAPIShowChartMessage()[pri:3, instance:com.fusioncharts.apitest.ShowChartMessage@7cbd213e]" name="verifyAPIShowChartMessage" duration-ms="7520" started-at="2019-08-08T10:32:45Z" finished-at="2019-08-08T10:32:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAPIShowChartMessage -->
-        <test-method status="PASS" signature="shutDown()[pri:0, instance:com.fusioncharts.apitest.ShowChartMessage@7cbd213e]" name="shutDown" is-config="true" duration-ms="3363" started-at="2019-08-08T08:05:13Z" finished-at="2019-08-08T08:05:17Z">
+        <test-method status="PASS" signature="shutDown()[pri:0, instance:com.fusioncharts.apitest.ShowChartMessage@7cbd213e]" name="shutDown" is-config="true" duration-ms="3404" started-at="2019-08-08T10:32:53Z" finished-at="2019-08-08T10:32:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- shutDown -->
