@@ -4,39 +4,48 @@
   <listeners>
     <listener class-name="com.fusioncharts.ExtentReportListener.ExtentReporterNG"/>
   </listeners>
-<<<<<<< HEAD
-  <test thread-count="5" name="GetChartAttribute(failed)">
+  <test thread-count="5" name="SetChartDataUrl(failed)">
     <classes>
-      <class name="com.fusioncharts.apitest.GetChartAttribute">
+      <class name="com.fusioncharts.apitest.SetChartDataUrl">
         <methods>
-=======
-<<<<<<< HEAD
+          <include name="setUp"/>
+          <include name="verifyAPISetChartDataUrl"/>
+          <include name="shutDown"/>
+        </methods>
+      </class> <!-- com.fusioncharts.apitest.SetChartDataUrl -->
+    </classes>
+  </test> <!-- SetChartDataUrl(failed) -->
+  <test thread-count="5" name="SetXMLUrl(failed)">
+    <classes>
+      <class name="com.fusioncharts.apitest.SetXMLUrl">
+        <methods>
+          <include name="verifyAPISetXMLUrl"/>
+          <include name="shutDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.fusioncharts.apitest.SetXMLUrl -->
+    </classes>
+  </test> <!-- SetXMLUrl(failed) -->
   <test thread-count="5" name="SetXMLData(failed)">
     <classes>
-      <class name="com.fusioncharts.apitest.SetXMLData">
+      <class name="com.fusioncharts.apitest.SetXMLUrl">
         <methods>
-          <include name="setUp"/>
+          <include name="verifyAPISetXMLUrl"/>
           <include name="shutDown"/>
-          <include name="verifyAPISetXMLData"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- com.fusioncharts.apitest.SetXMLData -->
+      </class> <!-- com.fusioncharts.apitest.SetXMLUrl -->
     </classes>
   </test> <!-- SetXMLData(failed) -->
-=======
-  <test thread-count="5" name="GetChartAttribute(failed)">
+  <test thread-count="5" name="LockResize_ResizeTo(failed)">
     <classes>
-      <class name="com.fusioncharts.apitest.GetChartAttribute">
+      <class name="com.fusioncharts.apitest.LockResize_ResizeTo">
         <methods>
->>>>>>> mergebranch
-          <include name="verifyAPIGetChartAttribute"/>
-          <include name="shutDown"/>
+          <include name="verifyAPILockResize_ResizeTo"/>
           <include name="setUp"/>
+          <include name="shutDown"/>
         </methods>
-      </class> <!-- com.fusioncharts.apitest.GetChartAttribute -->
+      </class> <!-- com.fusioncharts.apitest.LockResize_ResizeTo -->
     </classes>
-  </test> <!-- GetChartAttribute(failed) -->
-<<<<<<< HEAD
-=======
->>>>>>> 40+ APIs completed and zoomline in progress
->>>>>>> mergebranch
+  </test> <!-- LockResize_ResizeTo(failed) -->
 </suite> <!-- Failed suite [API Regression] -->

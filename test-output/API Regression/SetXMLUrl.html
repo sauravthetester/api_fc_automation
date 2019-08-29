@@ -57,21 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>2/1/0</td>
 </tr><tr>
-<<<<<<< HEAD
-<td>Started on:</td><td>Mon Aug 05 17:54:20 IST 2019</td>
+<td>Started on:</td><td>Thu Aug 08 17:26:03 IST 2019</td>
 </tr>
-<tr><td>Total time:</td><td>12 seconds (12518 ms)</td>
-=======
-<<<<<<< HEAD
-<td>Started on:</td><td>Mon Aug 05 13:12:08 IST 2019</td>
-</tr>
-<tr><td>Total time:</td><td>9 seconds (9517 ms)</td>
-=======
-<td>Started on:</td><td>Mon Aug 05 17:54:20 IST 2019</td>
-</tr>
-<tr><td>Total time:</td><td>12 seconds (12518 ms)</td>
->>>>>>> 40+ APIs completed and zoomline in progress
->>>>>>> mergebranch
+<tr><td>Total time:</td><td>8 seconds (8308 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -88,17 +76,22 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='com.fusioncharts.apitest.SetXMLUrl.verifyAPISetXMLUrl()'><b>verifyAPISetXMLUrl</b><br>Test class: com.fusioncharts.apitest.SetXMLUrl</td>
-<td><div><pre>org.openqa.selenium.StaleElementReferenceException: The element reference of &lt;g class=&quot;raphael-group-58-top-Side&quot;&gt; is stale; either the element is no longer attached to the DOM, it is not in the current frame context, or the document has been refreshed
+<td><div><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=75.0.3770.142)
+  (Driver info: chromedriver=2.44.609545 (c2f88692e98ce7233d2df7c724465ecacfe74df5),platform=Mac OS X 10.13.6 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;LPMB-Kol-Saurav.local&apos;, ip: &apos;fe80:0:0:0:427:6766:604a:d648%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.13.6&apos;, java.version: &apos;1.8.0_121&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 68.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190705220548, moz:geckodriverVersion: 0.24.0, moz:headless: false, moz:processID: 15968, moz:profile: /var/folders/bs/j4f7vv4s237..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: MAC, platformName: MAC, platformVersion: 17.7.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: b205ad9d-102f-c249-b405-0e97efe60a58
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.44.609545 (c2f88692e98ce7..., userDataDir: /var/folders/bs/j4f7vv4s237...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:56557}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 75.0.3770.142, webStorageEnabled: true}
+Session ID: 36507ddefb9bd1a219353873170c94fd
 *** Element info: {Using=xpath, value=.//*}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
@@ -107,24 +100,29 @@ Session ID: b205ad9d-102f-c249-b405-0e97efe60a58
 	at org.openqa.selenium.remote.RemoteWebElement.findElementsByXPath(RemoteWebElement.java:265)
 	at org.openqa.selenium.By$ByXPath.findElements(By.java:348)
 	at org.openqa.selenium.remote.RemoteWebElement.findElements(RemoteWebElement.java:177)
-	at com.fusioncharts.pom.APIPageObjectModel.totalChildElements(APIPageObjectModel.java:139)
+	at com.fusioncharts.pom.APIPageObjectModel.totalChildElements(APIPageObjectModel.java:144)
 	at com.fusioncharts.apitest.SetXMLUrl.verifyAPISetXMLUrl(SetXMLUrl.java:66)
-... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace202521905", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace202521905'><pre>org.openqa.selenium.StaleElementReferenceException: The element reference of &lt;g class=&quot;raphael-group-58-top-Side&quot;&gt; is stale; either the element is no longer attached to the DOM, it is not in the current frame context, or the document has been refreshed
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1219970479", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1219970479'><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=75.0.3770.142)
+  (Driver info: chromedriver=2.44.609545 (c2f88692e98ce7233d2df7c724465ecacfe74df5),platform=Mac OS X 10.13.6 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;LPMB-Kol-Saurav.local&apos;, ip: &apos;fe80:0:0:0:427:6766:604a:d648%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.13.6&apos;, java.version: &apos;1.8.0_121&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 68.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190705220548, moz:geckodriverVersion: 0.24.0, moz:headless: false, moz:processID: 15968, moz:profile: /var/folders/bs/j4f7vv4s237..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: MAC, platformName: MAC, platformVersion: 17.7.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: b205ad9d-102f-c249-b405-0e97efe60a58
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.44.609545 (c2f88692e98ce7..., userDataDir: /var/folders/bs/j4f7vv4s237...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:56557}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 75.0.3770.142, webStorageEnabled: true}
+Session ID: 36507ddefb9bd1a219353873170c94fd
 *** Element info: {Using=xpath, value=.//*}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
@@ -133,7 +131,7 @@ Session ID: b205ad9d-102f-c249-b405-0e97efe60a58
 	at org.openqa.selenium.remote.RemoteWebElement.findElementsByXPath(RemoteWebElement.java:265)
 	at org.openqa.selenium.By$ByXPath.findElements(By.java:348)
 	at org.openqa.selenium.remote.RemoteWebElement.findElements(RemoteWebElement.java:177)
-	at com.fusioncharts.pom.APIPageObjectModel.totalChildElements(APIPageObjectModel.java:139)
+	at com.fusioncharts.pom.APIPageObjectModel.totalChildElements(APIPageObjectModel.java:144)
 	at com.fusioncharts.apitest.SetXMLUrl.verifyAPISetXMLUrl(SetXMLUrl.java:66)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -161,8 +159,8 @@ Session ID: b205ad9d-102f-c249-b405-0e97efe60a58
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>3</td>
-<td>com.fusioncharts.apitest.SetXMLUrl@2df32bf7</td></tr>
+<td>2</td>
+<td>com.fusioncharts.apitest.SetXMLUrl@32464a14</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -175,12 +173,12 @@ Session ID: b205ad9d-102f-c249-b405-0e97efe60a58
 <td title='com.fusioncharts.apitest.SetXMLUrl.verifyAPIExistsInDataSheetSetXMLUrl()'><b>verifyAPIExistsInDataSheetSetXMLUrl</b><br>Test class: com.fusioncharts.apitest.SetXMLUrl</td>
 <td></td>
 <td>0</td>
-<td>com.fusioncharts.apitest.SetXMLUrl@2df32bf7</td></tr>
+<td>com.fusioncharts.apitest.SetXMLUrl@32464a14</td></tr>
 <tr>
 <td title='com.fusioncharts.apitest.SetXMLUrl.verifyChartIsRenderedSetXMLUrl()'><b>verifyChartIsRenderedSetXMLUrl</b><br>Test class: com.fusioncharts.apitest.SetXMLUrl</td>
 <td></td>
 <td>0</td>
-<td>com.fusioncharts.apitest.SetXMLUrl@2df32bf7</td></tr>
+<td>com.fusioncharts.apitest.SetXMLUrl@32464a14</td></tr>
 </table><p>
 </body>
 </html>

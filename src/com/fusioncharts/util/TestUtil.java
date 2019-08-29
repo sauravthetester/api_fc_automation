@@ -79,7 +79,7 @@ public class TestUtil
 		{
 			String apiNameSheet = (String) data[i][0];
 			if(apiName.equals(apiNameSheet))
-				return (String) data[i][1];
+				return (String) data[i][2];
 		}
 		return "";
 	}
@@ -90,7 +90,7 @@ public class TestUtil
 		{
 			String apiNameSheet = (String) data[i][0];
 			if(apiName.equals(apiNameSheet))
-				return (String) data[i][2];
+				return (String) data[i][1];
 		}
 		return "";
 	}

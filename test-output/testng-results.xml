@@ -2,90 +2,32 @@
 <testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-<<<<<<< HEAD
-  <suite name="Default suite" duration-ms="7146" started-at="2019-08-08T08:48:05Z" finished-at="2019-08-08T08:48:12Z">
+  <suite name="Default suite" duration-ms="544504" started-at="2019-08-29T07:01:17Z" finished-at="2019-08-29T07:10:21Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="7146" started-at="2019-08-08T08:48:05Z" finished-at="2019-08-08T08:48:12Z">
-      <class name="com.fusioncharts.apitest.RealTimeAPIs">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.fusioncharts.apitest.RealTimeAPIs@7cbd213e]" name="setUp" is-config="true" duration-ms="2914" started-at="2019-08-08T08:48:05Z" finished-at="2019-08-08T08:48:08Z">
+    <test name="Default test" duration-ms="544504" started-at="2019-08-29T07:01:17Z" finished-at="2019-08-29T07:10:21Z">
+      <class name="com.fusioncharts.apitest.RealTimeAPIsAutoFeed">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.fusioncharts.apitest.RealTimeAPIsAutoFeed@7cbd213e]" name="setUp" is-config="true" duration-ms="5161" started-at="2019-08-29T07:01:17Z" finished-at="2019-08-29T07:01:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="verifyAPIExistsInDataSheetLockResize_ResizeTo()[pri:1, instance:com.fusioncharts.apitest.RealTimeAPIs@7cbd213e]" name="verifyAPIExistsInDataSheetLockResize_ResizeTo" duration-ms="8" started-at="2019-08-08T08:48:08Z" finished-at="2019-08-08T08:48:08Z">
+        <test-method status="PASS" signature="verifyAPIExistsInDataSheetRealTimeAPIsAutoFeed()[pri:1, instance:com.fusioncharts.apitest.RealTimeAPIsAutoFeed@7cbd213e]" name="verifyAPIExistsInDataSheetRealTimeAPIsAutoFeed" duration-ms="12" started-at="2019-08-29T07:01:22Z" finished-at="2019-08-29T07:01:22Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyAPIExistsInDataSheetLockResize_ResizeTo -->
-        <test-method status="PASS" signature="verifyChartIsRenderedLockResize_ResizeTo()[pri:2, instance:com.fusioncharts.apitest.RealTimeAPIs@7cbd213e]" name="verifyChartIsRenderedLockResize_ResizeTo" duration-ms="708" started-at="2019-08-08T08:48:08Z" finished-at="2019-08-08T08:48:08Z">
+        </test-method> <!-- verifyAPIExistsInDataSheetRealTimeAPIsAutoFeed -->
+        <test-method status="PASS" signature="verifyChartIsRenderedRealTimeAPIsAutoFeed()[pri:2, instance:com.fusioncharts.apitest.RealTimeAPIsAutoFeed@7cbd213e]" name="verifyChartIsRenderedRealTimeAPIsAutoFeed" duration-ms="981" started-at="2019-08-29T07:01:22Z" finished-at="2019-08-29T07:01:23Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyChartIsRenderedLockResize_ResizeTo -->
-        <test-method status="PASS" signature="verifyAPILockResize_ResizeTo()[pri:3, instance:com.fusioncharts.apitest.RealTimeAPIs@7cbd213e]" name="verifyAPILockResize_ResizeTo" duration-ms="156" started-at="2019-08-08T08:48:08Z" finished-at="2019-08-08T08:48:09Z">
+        </test-method> <!-- verifyChartIsRenderedRealTimeAPIsAutoFeed -->
+        <test-method status="PASS" signature="verifyAPIRealTimeAPIsAutoFeed()[pri:3, instance:com.fusioncharts.apitest.RealTimeAPIsAutoFeed@7cbd213e]" name="verifyAPIRealTimeAPIsAutoFeed" duration-ms="534909" started-at="2019-08-29T07:01:23Z" finished-at="2019-08-29T07:10:18Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyAPILockResize_ResizeTo -->
-        <test-method status="PASS" signature="shutDown()[pri:0, instance:com.fusioncharts.apitest.RealTimeAPIs@7cbd213e]" name="shutDown" is-config="true" duration-ms="3330" started-at="2019-08-08T08:48:09Z" finished-at="2019-08-08T08:48:12Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- shutDown -->
-      </class> <!-- com.fusioncharts.apitest.RealTimeAPIs -->
-=======
-<<<<<<< HEAD
-  <suite name="Default suite" duration-ms="10547" started-at="2019-08-08T08:05:06Z" finished-at="2019-08-08T08:05:17Z">
-    <groups>
-    </groups>
-    <test name="Default test" duration-ms="10547" started-at="2019-08-08T08:05:06Z" finished-at="2019-08-08T08:05:17Z">
-      <class name="com.fusioncharts.apitest.ShowChartMessage">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.fusioncharts.apitest.ShowChartMessage@7cbd213e]" name="setUp" is-config="true" duration-ms="3176" started-at="2019-08-08T08:05:06Z" finished-at="2019-08-08T08:05:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="verifyAPIExistsInDataSheetShowChartMessage()[pri:1, instance:com.fusioncharts.apitest.ShowChartMessage@7cbd213e]" name="verifyAPIExistsInDataSheetShowChartMessage" duration-ms="7" started-at="2019-08-08T08:05:09Z" finished-at="2019-08-08T08:05:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyAPIExistsInDataSheetShowChartMessage -->
-        <test-method status="PASS" signature="verifyChartIsRenderedShowChartMessage()[pri:2, instance:com.fusioncharts.apitest.ShowChartMessage@7cbd213e]" name="verifyChartIsRenderedShowChartMessage" duration-ms="2279" started-at="2019-08-08T08:05:09Z" finished-at="2019-08-08T08:05:11Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyChartIsRenderedShowChartMessage -->
-        <test-method status="PASS" signature="verifyAPIShowChartMessage()[pri:3, instance:com.fusioncharts.apitest.ShowChartMessage@7cbd213e]" name="verifyAPIShowChartMessage" duration-ms="1694" started-at="2019-08-08T08:05:12Z" finished-at="2019-08-08T08:05:13Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyAPIShowChartMessage -->
-        <test-method status="PASS" signature="shutDown()[pri:0, instance:com.fusioncharts.apitest.ShowChartMessage@7cbd213e]" name="shutDown" is-config="true" duration-ms="3363" started-at="2019-08-08T08:05:13Z" finished-at="2019-08-08T08:05:17Z">
+        </test-method> <!-- verifyAPIRealTimeAPIsAutoFeed -->
+        <test-method status="PASS" signature="shutDown()[pri:0, instance:com.fusioncharts.apitest.RealTimeAPIsAutoFeed@7cbd213e]" name="shutDown" is-config="true" duration-ms="3395" started-at="2019-08-29T07:10:18Z" finished-at="2019-08-29T07:10:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- shutDown -->
-      </class> <!-- com.fusioncharts.apitest.ShowChartMessage -->
-=======
-  <suite name="Default suite" duration-ms="7146" started-at="2019-08-08T08:48:05Z" finished-at="2019-08-08T08:48:12Z">
-    <groups>
-    </groups>
-    <test name="Default test" duration-ms="7146" started-at="2019-08-08T08:48:05Z" finished-at="2019-08-08T08:48:12Z">
-      <class name="com.fusioncharts.apitest.RealTimeAPIs">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.fusioncharts.apitest.RealTimeAPIs@7cbd213e]" name="setUp" is-config="true" duration-ms="2914" started-at="2019-08-08T08:48:05Z" finished-at="2019-08-08T08:48:08Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="verifyAPIExistsInDataSheetLockResize_ResizeTo()[pri:1, instance:com.fusioncharts.apitest.RealTimeAPIs@7cbd213e]" name="verifyAPIExistsInDataSheetLockResize_ResizeTo" duration-ms="8" started-at="2019-08-08T08:48:08Z" finished-at="2019-08-08T08:48:08Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyAPIExistsInDataSheetLockResize_ResizeTo -->
-        <test-method status="PASS" signature="verifyChartIsRenderedLockResize_ResizeTo()[pri:2, instance:com.fusioncharts.apitest.RealTimeAPIs@7cbd213e]" name="verifyChartIsRenderedLockResize_ResizeTo" duration-ms="708" started-at="2019-08-08T08:48:08Z" finished-at="2019-08-08T08:48:08Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyChartIsRenderedLockResize_ResizeTo -->
-        <test-method status="PASS" signature="verifyAPILockResize_ResizeTo()[pri:3, instance:com.fusioncharts.apitest.RealTimeAPIs@7cbd213e]" name="verifyAPILockResize_ResizeTo" duration-ms="156" started-at="2019-08-08T08:48:08Z" finished-at="2019-08-08T08:48:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyAPILockResize_ResizeTo -->
-        <test-method status="PASS" signature="shutDown()[pri:0, instance:com.fusioncharts.apitest.RealTimeAPIs@7cbd213e]" name="shutDown" is-config="true" duration-ms="3330" started-at="2019-08-08T08:48:09Z" finished-at="2019-08-08T08:48:12Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- shutDown -->
-      </class> <!-- com.fusioncharts.apitest.RealTimeAPIs -->
->>>>>>> 40+ APIs completed and zoomline in progress
->>>>>>> mergebranch
+      </class> <!-- com.fusioncharts.apitest.RealTimeAPIsAutoFeed -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

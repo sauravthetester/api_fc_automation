@@ -57,11 +57,11 @@ public class RestartUpdate_StopUpdate extends APITestBase
 		try {Thread.sleep(5000);} catch (InterruptedException e) {e.printStackTrace();}
 		JavascriptExecutor js = (JavascriptExecutor) driver; 
 		jsExecuteWithBuffer(apiScript);
-		
+		test.log(LogStatus.PASS, test.addScreenCapture(APITestBase.capture("stopUpdate()_Realtime data should be present")));
 		try {Thread.sleep(9000);} catch (InterruptedException e) {e.printStackTrace();}
 		test.log(LogStatus.PASS, test.addScreenCapture(APITestBase.capture("stopUpdate()_Realtime data should be present")));
 		
-		String satrtUpdate = (String) js.executeScript("return fusioncharts.restartUpdate() " );
+		js.executeScript("return fusioncharts.restartUpdate() " );
 		
 		try {Thread.sleep(9000);} catch (InterruptedException e) {e.printStackTrace();}
 		test.log(LogStatus.PASS, test.addScreenCapture(APITestBase.capture("restartUpdate()_Realtime data should have more data")));
