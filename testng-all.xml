@@ -84,13 +84,31 @@
     	</classes>
   	</test>
   	
+  	<test name="SetChartData" parallel="false" preserve-order="true" thread-count="1" >
+    	<classes>
+      		<class name="com.fusioncharts.apitest.SetChartData" />
+    	</classes>
+  	</test>
+  	
   	<test name="SetJSONUrl" parallel="false" preserve-order="true" thread-count="1" >
     	<classes>
       		<class name="com.fusioncharts.apitest.SetJSONUrl" />
     	</classes>
   	</test>
   	
+  	<test name="SetJSONData" parallel="false" preserve-order="true" thread-count="1" >
+    	<classes>
+      		<class name="com.fusioncharts.apitest.SetJSONData" />
+    	</classes>
+  	</test>
+  	
   	<test name="SetXMLUrl" parallel="false" preserve-order="true" thread-count="1" >
+    	<classes>
+      		<class name="com.fusioncharts.apitest.SetXMLUrl" />
+    	</classes>
+  	</test>
+  	
+  	<test name="SetXMLData" parallel="false" preserve-order="true" thread-count="1" >
     	<classes>
       		<class name="com.fusioncharts.apitest.SetXMLUrl" />
     	</classes>
@@ -107,5 +125,91 @@
       		<class name="com.fusioncharts.apitest.ZoomlineAPIs" />
     	</classes>
   	</test>
+  	
+  	<test name="CenterLabel" parallel="false" preserve-order="true" thread-count="1" >
+    	<classes>
+      		<class name="com.fusioncharts.apitest.CenterLabel" />
+    	</classes>
+  	</test>
+  	
+  	<test name="Dispose" parallel="false" preserve-order="true" thread-count="1" >
+    	<classes>
+      		<class name="com.fusioncharts.apitest.Dispose" />
+    	</classes>
+  	</test>
+  	
+  	<test name="GetChartAttribute" parallel="false" preserve-order="true" thread-count="1" >
+    	<classes>
+      		<class name="com.fusioncharts.apitest.GetChartAttribute" />
+    	</classes>
+  	</test>
+  	
+  	<test name="GetChartData" parallel="false" preserve-order="true" thread-count="1" >
+    	<classes>
+      		<class name="com.fusioncharts.apitest.GetChartData" />
+    	</classes>
+  	</test>
+  	
+  	<test name="GetCSVData" parallel="false" preserve-order="true" thread-count="1" >
+    	<classes>
+      		<class name="com.fusioncharts.apitest.GetCSVData" />
+    	</classes>
+  	</test>
+  	
+  	<test name="GetDataAsCSV" parallel="false" preserve-order="true" thread-count="1" >
+    	<classes>
+      		<class name="com.fusioncharts.apitest.GetDataAsCSV" />
+    	</classes>
+  	</test>
+  	
+  	<test name="GetJSONData" parallel="false" preserve-order="true" thread-count="1" >
+    	<classes>
+      		<class name="com.fusioncharts.apitest.GetJSONData" />
+    	</classes>
+  	</test>
+  	
+  	<test name="GetSVGString" parallel="false" preserve-order="true" thread-count="1" >
+    	<classes>
+      		<class name="com.fusioncharts.apitest.GetSVGString" />
+    	</classes>
+  	</test>
+  	
+  	<test name="GetXMLData" parallel="false" preserve-order="true" thread-count="1" >
+    	<classes>
+      		<class name="com.fusioncharts.apitest.GetXMLData" />
+    	</classes>
+  	</test>
+  	
+  	<test name="HasRendered" parallel="false" preserve-order="true" thread-count="1" >
+    	<classes>
+      		<class name="com.fusioncharts.apitest.HasRendered" />
+    	</classes>
+  	</test>
+  	
+  	<test name="LockResize_ResizeTo" parallel="false" preserve-order="true" thread-count="1" >
+    	<classes>
+      		<class name="com.fusioncharts.apitest.LockResize_ResizeTo" />
+    	</classes>
+  	</test>
+  	
+  	<test name="Configure" parallel="false" preserve-order="true" thread-count="1" >
+    	<classes>
+      		<class name="com.fusioncharts.apitest.Configure" />
+    	</classes>
+  	</test>
+  	
+  	<test name="ConfigureLink" parallel="false" preserve-order="true" thread-count="1" >
+    	<classes>
+      		<class name="com.fusioncharts.apitest.ConfigureLink" />
+    	</classes>
+  	</test>
+  	
+  	<test name="RealTimeAPIs" parallel="false" preserve-order="true" thread-count="1" >
+    	<classes>
+      		<class name="com.fusioncharts.apitest.RealTimeAPIs" />
+    	</classes>
+  	</test>
+  	
+  	
   	
 </suite>

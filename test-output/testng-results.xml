@@ -2,32 +2,32 @@
 <testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="16636" started-at="2019-08-08T10:32:39Z" finished-at="2019-08-08T10:32:56Z">
+  <suite name="Default suite" duration-ms="25511" started-at="2019-08-21T13:18:23Z" finished-at="2019-08-21T13:18:49Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="16636" started-at="2019-08-08T10:32:39Z" finished-at="2019-08-08T10:32:56Z">
-      <class name="com.fusioncharts.apitest.ShowChartMessage">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.fusioncharts.apitest.ShowChartMessage@7cbd213e]" name="setUp" is-config="true" duration-ms="3411" started-at="2019-08-08T10:32:39Z" finished-at="2019-08-08T10:32:43Z">
+    <test name="Default test" duration-ms="25511" started-at="2019-08-21T13:18:23Z" finished-at="2019-08-21T13:18:49Z">
+      <class name="com.fusioncharts.apitest.IsPlotItemSliced_slicePlotItem">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.fusioncharts.apitest.IsPlotItemSliced_slicePlotItem@64f6106c]" name="setUp" is-config="true" duration-ms="5178" started-at="2019-08-21T13:18:23Z" finished-at="2019-08-21T13:18:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="verifyAPIExistsInDataSheetShowChartMessage()[pri:1, instance:com.fusioncharts.apitest.ShowChartMessage@7cbd213e]" name="verifyAPIExistsInDataSheetShowChartMessage" duration-ms="7" started-at="2019-08-08T10:32:43Z" finished-at="2019-08-08T10:32:43Z">
+        <test-method status="PASS" signature="verifyAPIExistsInDataSheetIsPlotItemSliced_slicePlotItem()[pri:1, instance:com.fusioncharts.apitest.IsPlotItemSliced_slicePlotItem@64f6106c]" name="verifyAPIExistsInDataSheetIsPlotItemSliced_slicePlotItem" duration-ms="8" started-at="2019-08-21T13:18:28Z" finished-at="2019-08-21T13:18:28Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyAPIExistsInDataSheetShowChartMessage -->
-        <test-method status="PASS" signature="verifyChartIsRenderedShowChartMessage()[pri:2, instance:com.fusioncharts.apitest.ShowChartMessage@7cbd213e]" name="verifyChartIsRenderedShowChartMessage" duration-ms="2264" started-at="2019-08-08T10:32:43Z" finished-at="2019-08-08T10:32:45Z">
+        </test-method> <!-- verifyAPIExistsInDataSheetIsPlotItemSliced_slicePlotItem -->
+        <test-method status="PASS" signature="verifyChartIsRenderedIsPlotItemSliced_slicePlotItem()[pri:2, instance:com.fusioncharts.apitest.IsPlotItemSliced_slicePlotItem@64f6106c]" name="verifyChartIsRenderedIsPlotItemSliced_slicePlotItem" duration-ms="522" started-at="2019-08-21T13:18:28Z" finished-at="2019-08-21T13:18:29Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyChartIsRenderedShowChartMessage -->
-        <test-method status="PASS" signature="verifyAPIShowChartMessage()[pri:3, instance:com.fusioncharts.apitest.ShowChartMessage@7cbd213e]" name="verifyAPIShowChartMessage" duration-ms="7520" started-at="2019-08-08T10:32:45Z" finished-at="2019-08-08T10:32:53Z">
+        </test-method> <!-- verifyChartIsRenderedIsPlotItemSliced_slicePlotItem -->
+        <test-method status="PASS" signature="verifyAPIIsPlotItemSliced_slicePlotItem()[pri:3, instance:com.fusioncharts.apitest.IsPlotItemSliced_slicePlotItem@64f6106c]" name="verifyAPIIsPlotItemSliced_slicePlotItem" duration-ms="14707" started-at="2019-08-21T13:18:29Z" finished-at="2019-08-21T13:18:44Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyAPIShowChartMessage -->
-        <test-method status="PASS" signature="shutDown()[pri:0, instance:com.fusioncharts.apitest.ShowChartMessage@7cbd213e]" name="shutDown" is-config="true" duration-ms="3404" started-at="2019-08-08T10:32:53Z" finished-at="2019-08-08T10:32:56Z">
+        </test-method> <!-- verifyAPIIsPlotItemSliced_slicePlotItem -->
+        <test-method status="PASS" signature="shutDown()[pri:0, instance:com.fusioncharts.apitest.IsPlotItemSliced_slicePlotItem@64f6106c]" name="shutDown" is-config="true" duration-ms="5056" started-at="2019-08-21T13:18:44Z" finished-at="2019-08-21T13:18:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- shutDown -->
-      </class> <!-- com.fusioncharts.apitest.ShowChartMessage -->
+      </class> <!-- com.fusioncharts.apitest.IsPlotItemSliced_slicePlotItem -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

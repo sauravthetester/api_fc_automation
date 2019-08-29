@@ -95,6 +95,11 @@
     		<artifactId>ashot</artifactId>
     		<version>1.5.3</version>
 		</dependency>
+		<dependency>
+   		 	<groupId>net.avh4.util</groupId>
+    		<artifactId>imagecomparison</artifactId>
+    		<version>0.3.2</version>
+		</dependency>
 		
     </dependencies>
 </project>

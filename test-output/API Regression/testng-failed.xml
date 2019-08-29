@@ -4,15 +4,48 @@
   <listeners>
     <listener class-name="com.fusioncharts.ExtentReportListener.ExtentReporterNG"/>
   </listeners>
-  <test thread-count="5" name="SetXMLData(failed)">
+  <test thread-count="5" name="SetJSONUrl(failed)">
     <classes>
-      <class name="com.fusioncharts.apitest.SetXMLData">
+      <class name="com.fusioncharts.apitest.SetJSONUrl">
         <methods>
+          <include name="verifyAPISetJSONUrl"/>
+          <include name="shutDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.fusioncharts.apitest.SetJSONUrl -->
+    </classes>
+  </test> <!-- SetJSONUrl(failed) -->
+  <test thread-count="5" name="GetSVGString(failed)">
+    <classes>
+      <class name="com.fusioncharts.apitest.GetSVGString">
+        <methods>
+          <include name="verifyAPIGetSVGString"/>
+          <include name="shutDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.fusioncharts.apitest.GetSVGString -->
+    </classes>
+  </test> <!-- GetSVGString(failed) -->
+  <test thread-count="5" name="HasRendered(failed)">
+    <classes>
+      <class name="com.fusioncharts.apitest.HasRendered">
+        <methods>
+          <include name="verifyAPIHasRendered"/>
           <include name="setUp"/>
           <include name="shutDown"/>
-          <include name="verifyAPISetXMLData"/>
         </methods>
-      </class> <!-- com.fusioncharts.apitest.SetXMLData -->
+      </class> <!-- com.fusioncharts.apitest.HasRendered -->
     </classes>
-  </test> <!-- SetXMLData(failed) -->
+  </test> <!-- HasRendered(failed) -->
+  <test thread-count="5" name="Configure(failed)">
+    <classes>
+      <class name="com.fusioncharts.apitest.Configure">
+        <methods>
+          <include name="shutDown"/>
+          <include name="setUp"/>
+          <include name="verifyAPIConfigure"/>
+        </methods>
+      </class> <!-- com.fusioncharts.apitest.Configure -->
+    </classes>
+  </test> <!-- Configure(failed) -->
 </suite> <!-- Failed suite [API Regression] -->

@@ -18,8 +18,6 @@ import com.relevantcodes.extentreports.LogStatus;
 
 public class SetXMLData extends APITestBase 
 {
-
-	//The api name according to the data sheet
 	private final static String apiName = "setXMLData()"; 
 	Object[][] data;
 	APIPageObjectModel pom;

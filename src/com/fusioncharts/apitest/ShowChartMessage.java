@@ -58,8 +58,9 @@ public class ShowChartMessage extends APITestBase
 	@Test(priority = 3)
 	public void verifyAPIShowChartMessage() throws IOException
 	{
+		String msg = "Chart Message";
 		WebElement Label = driver.findElement(By.tagName("input"));
-		Label.sendKeys("Chart Message");
+		Label.sendKeys(msg);
 		
 		WebElement mode = driver.findElement(By.id("mode"));
 		Select options = new Select(mode);
@@ -74,12 +75,26 @@ public class ShowChartMessage extends APITestBase
 		WebElement button = driver.findElement(By.tagName("button"));
 		Actions action = new Actions(driver);
 		action.click(button).build().perform();
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 		test.log(LogStatus.PASS, test.addScreenCapture(APITestBase.capture("ShowChartMessage()_Overlay Chart Message should be shown over the Chart")));
+		
+		WebElement messageGroup = pom.getElementByPartialClassName("g", "messageGroup");
+		WebElement msgGroupRect = messageGroup.findElement(By.tagName("rect"));
+		Assert.assertTrue(msgGroupRect.getAttribute("fill-opacity").equals("0.2"),"Opacity should be 0.2");
+		
+		WebElement messageGroup1 = pom.getElementByPartialClassName("g", "messageGroup");
+		WebElement messageText = messageGroup1.findElement(By.tagName("text"));
+		String checkText = messageText.getText();
+		Assert.assertTrue(checkText.equals("Chart Message"),"Chart Message should be shown as: Chart Message");
 		
 		options.selectByValue("onchart");
 		try {
 			Thread.sleep(2000);
-		} catch (InterruptedException e) {
+		} catch (InterruptedException e){
 			e.printStackTrace();
 		}
 		String buttonMessage1 = driver.findElement(By.tagName("button")).getText();
@@ -87,8 +102,13 @@ public class ShowChartMessage extends APITestBase
 		WebElement button1 = driver.findElement(By.tagName("button"));
 		Actions action1 = new Actions(driver);
 		action1.click(button1).build().perform();
-		test.log(LogStatus.PASS, test.addScreenCapture(APITestBase.capture("ShowChartMessage()_OnChart Chart Message should be shown over the Chart")));
-		
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		test.log(LogStatus.PASS, test.addScreenCapture(APITestBase.capture("ShowChartMessage()_OnChart Chart Message should be shown on the Chart")));
+		Assert.assertTrue(checkText.equals("Chart Message"),"Chart Message should be shown as: Chart Message");
 	}
 	
 	@AfterTest

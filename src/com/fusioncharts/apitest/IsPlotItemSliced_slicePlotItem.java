@@ -20,10 +20,8 @@ import com.fusioncharts.util.TestUtil;
 import com.relevantcodes.extentreports.LogStatus;
 
 
-public class IsPlotItemSliced_slicePlotItem extends APITestBase {
-	
-
-	//The api name according to the data sheet
+public class IsPlotItemSliced_slicePlotItem extends APITestBase 
+{
 	private final static String apiName = "isPlotItemSliced()"; 
 	Object[][] data;
 	APIPageObjectModel pom;
@@ -62,6 +60,8 @@ public class IsPlotItemSliced_slicePlotItem extends APITestBase {
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		List<WebElement> plots = pom.getElementsByPartialClassName("plots");
 		Actions action = new Actions(driver);
+		
+		
 		for(WebElement plotTag : plots)
 		{
 			List<WebElement> plotmain = plotTag.findElements(By.xpath(".//*"));
@@ -69,20 +69,21 @@ public class IsPlotItemSliced_slicePlotItem extends APITestBase {
 			String tagName = firstplot.getTagName();
 			if(tagName.equals("path"))
 			{
-				js.executeScript("fusioncharts.slicePlotItem(0)");
+				js.executeScript("fusioncharts_pie2d.slicePlotItem(0)");
+				break;
 			}
 		}
 		
-		boolValue = js.executeScript("return fusioncharts.isPlotItemSliced(0)");
+		boolValue = js.executeScript("return fusioncharts_pie2d.isPlotItemSliced(0)");
 		Assert.assertTrue(boolValue.equals(true), "Item should be sliced");
 		
-		boolValue = js.executeScript("return fusioncharts.isPlotItemSliced(1)");
+		boolValue = js.executeScript("return fusioncharts_pie2d.isPlotItemSliced(1)");
 		Assert.assertTrue(boolValue.equals(false), "Item should not be sliced");
 		
-		boolValue = js.executeScript("return fusioncharts.isPlotItemSliced(2)");
+		boolValue = js.executeScript("return fusioncharts_pie2d.isPlotItemSliced(2)");
 		Assert.assertTrue(boolValue.equals(false), "Item should not be sliced");
 		
-		boolValue = js.executeScript("return fusioncharts.isPlotItemSliced(3)");
+		boolValue = js.executeScript("return fusioncharts_pie2d.isPlotItemSliced(3)");
 		Assert.assertTrue(boolValue.equals(false), "Item should not be sliced");
 		
 		test.log(LogStatus.PASS, test.addScreenCapture(APITestBase.capture("IsPlotItemSliced_In Pie chart the first plot should be sliced")));	//Code Line for screenshot
@@ -95,20 +96,21 @@ public class IsPlotItemSliced_slicePlotItem extends APITestBase {
 			String tagName = firstplot.getTagName();
 			if(tagName.equals("path"))
 			{
-				js.executeScript("fusioncharts.slicePlotItem(1)");
+				js.executeScript("fusioncharts_pie2d.slicePlotItem(1)");
+				break;
 			}
 		}
 		
-		boolValue = js.executeScript("return fusioncharts.isPlotItemSliced(0)");
+		boolValue = js.executeScript("return fusioncharts_pie2d.isPlotItemSliced(0)");
 		Assert.assertTrue(boolValue.equals(true), "Item should be sliced");
 		
-		boolValue = js.executeScript("return fusioncharts.isPlotItemSliced(1)");
+		boolValue = js.executeScript("return fusioncharts_pie2d.isPlotItemSliced(1)");
 		Assert.assertTrue(boolValue.equals(true), "Item should be sliced");
 		
-		boolValue = js.executeScript("return fusioncharts.isPlotItemSliced(2)");
+		boolValue = js.executeScript("return fusioncharts_pie2d.isPlotItemSliced(2)");
 		Assert.assertTrue(boolValue.equals(false), "Item should not be sliced");
 		
-		boolValue = js.executeScript("return fusioncharts.isPlotItemSliced(3)");
+		boolValue = js.executeScript("return fusioncharts_pie2d.isPlotItemSliced(3)");
 		Assert.assertTrue(boolValue.equals(false), "Item should not be sliced");
 		
 		test.log(LogStatus.PASS, test.addScreenCapture(APITestBase.capture("IsPlotItemSliced_In Pie chart the 2 plots should be sliced in order")));	//Code Line for screenshot
@@ -120,20 +122,21 @@ public class IsPlotItemSliced_slicePlotItem extends APITestBase {
 			String tagName = firstplot.getTagName();
 			if(tagName.equals("path"))
 			{
-				js.executeScript("fusioncharts.slicePlotItem(2)");
+				js.executeScript("fusioncharts_pie2d.slicePlotItem(2)");
+				break;
 			}
 		}
 		
-		boolValue = js.executeScript("return fusioncharts.isPlotItemSliced(0)");
+		boolValue = js.executeScript("return fusioncharts_pie2d.isPlotItemSliced(0)");
 		Assert.assertTrue(boolValue.equals(true), "Item should be sliced");
 		
-		boolValue = js.executeScript("return fusioncharts.isPlotItemSliced(1)");
+		boolValue = js.executeScript("return fusioncharts_pie2d.isPlotItemSliced(1)");
 		Assert.assertTrue(boolValue.equals(true), "Item should be sliced");
 		
-		boolValue = js.executeScript("return fusioncharts.isPlotItemSliced(2)");
+		boolValue = js.executeScript("return fusioncharts_pie2d.isPlotItemSliced(2)");
 		Assert.assertTrue(boolValue.equals(true), "Item should be sliced");
 		
-		boolValue = js.executeScript("return fusioncharts.isPlotItemSliced(3)");
+		boolValue = js.executeScript("return fusioncharts_pie2d.isPlotItemSliced(3)");
 		Assert.assertTrue(boolValue.equals(false), "Item should not be sliced");
 		
 		test.log(LogStatus.PASS, test.addScreenCapture(APITestBase.capture("IsPlotItemSliced_In Pie chart the 3 plots should be sliced in order")));	//Code Line for screenshot
@@ -145,21 +148,338 @@ public class IsPlotItemSliced_slicePlotItem extends APITestBase {
 			String tagName = firstplot.getTagName();
 			if(tagName.equals("path"))
 			{
-				js.executeScript("fusioncharts.slicePlotItem(3)");
+				js.executeScript("fusioncharts_pie2d.slicePlotItem(3)");
+				break;
 			}
 		}
 		
-		boolValue = js.executeScript("return fusioncharts.isPlotItemSliced(0)");
+		boolValue = js.executeScript("return fusioncharts_pie2d.isPlotItemSliced(0)");
 		Assert.assertTrue(boolValue.equals(true), "Item should be sliced");
 		
-		boolValue = js.executeScript("return fusioncharts.isPlotItemSliced(1)");
+		boolValue = js.executeScript("return fusioncharts_pie2d.isPlotItemSliced(1)");
 		Assert.assertTrue(boolValue.equals(true), "Item should be sliced");
 		
-		boolValue = js.executeScript("return fusioncharts.isPlotItemSliced(2)");
+		boolValue = js.executeScript("return fusioncharts_pie2d.isPlotItemSliced(2)");
 		Assert.assertTrue(boolValue.equals(true), "Item should be sliced");
 		
-		boolValue = js.executeScript("return fusioncharts.isPlotItemSliced(3)");
+		boolValue = js.executeScript("return fusioncharts_pie2d.isPlotItemSliced(3)");
 		Assert.assertTrue(boolValue.equals(true), "Item should be sliced");
+		
+		/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		
+		for(WebElement plotTag : plots)
+		{
+			List<WebElement> plotmain = plotTag.findElements(By.xpath(".//*"));
+			WebElement firstplot = plotmain.get(0);
+			String tagName = firstplot.getTagName();
+			if(tagName.equals("path"))
+			{
+				js.executeScript("fusioncharts_pie3d.slicePlotItem(0)");
+				break;
+			}
+		}
+		
+		boolValue = js.executeScript("return fusioncharts_pie3d.isPlotItemSliced(0)");
+		Assert.assertTrue(boolValue.equals(true), "Item should be sliced");
+		
+		boolValue = js.executeScript("return fusioncharts_pie3d.isPlotItemSliced(1)");
+		Assert.assertTrue(boolValue.equals(false), "Item should not be sliced");
+		
+		boolValue = js.executeScript("return fusioncharts_pie3d.isPlotItemSliced(2)");
+		Assert.assertTrue(boolValue.equals(false), "Item should not be sliced");
+		
+		boolValue = js.executeScript("return fusioncharts_pie3d.isPlotItemSliced(3)");
+		Assert.assertTrue(boolValue.equals(false), "Item should not be sliced");
+		
+		test.log(LogStatus.PASS, test.addScreenCapture(APITestBase.capture("IsPlotItemSliced_In Pie chart the first plot should be sliced")));	//Code Line for screenshot
+		
+		
+		for(WebElement plotTag : plots)
+		{
+			List<WebElement> plotmain = plotTag.findElements(By.xpath(".//*"));
+			WebElement firstplot = plotmain.get(1);
+			String tagName = firstplot.getTagName();
+			if(tagName.equals("path"))
+			{
+				js.executeScript("fusioncharts_pie3d.slicePlotItem(1)");
+				break;
+			}
+		}
+		
+		boolValue = js.executeScript("return fusioncharts_pie3d.isPlotItemSliced(0)");
+		Assert.assertTrue(boolValue.equals(true), "Item should be sliced");
+		
+		boolValue = js.executeScript("return fusioncharts_pie3d.isPlotItemSliced(1)");
+		Assert.assertTrue(boolValue.equals(true), "Item should be sliced");
+		
+		boolValue = js.executeScript("return fusioncharts_pie3d.isPlotItemSliced(2)");
+		Assert.assertTrue(boolValue.equals(false), "Item should not be sliced");
+		
+		boolValue = js.executeScript("return fusioncharts_pie3d.isPlotItemSliced(3)");
+		Assert.assertTrue(boolValue.equals(false), "Item should not be sliced");
+		
+		test.log(LogStatus.PASS, test.addScreenCapture(APITestBase.capture("IsPlotItemSliced_In Pie chart the 2 plots should be sliced in order")));	//Code Line for screenshot
+		
+		for(WebElement plotTag : plots)
+		{
+			List<WebElement> plotmain = plotTag.findElements(By.xpath(".//*"));
+			WebElement firstplot = plotmain.get(2);
+			String tagName = firstplot.getTagName();
+			if(tagName.equals("path"))
+			{
+				js.executeScript("fusioncharts_pie3d.slicePlotItem(2)");
+				break;
+			}
+		}
+		
+		boolValue = js.executeScript("return fusioncharts_pie3d.isPlotItemSliced(0)");
+		Assert.assertTrue(boolValue.equals(true), "Item should be sliced");
+		
+		boolValue = js.executeScript("return fusioncharts_pie3d.isPlotItemSliced(1)");
+		Assert.assertTrue(boolValue.equals(true), "Item should be sliced");
+		
+		boolValue = js.executeScript("return fusioncharts_pie3d.isPlotItemSliced(2)");
+		Assert.assertTrue(boolValue.equals(true), "Item should be sliced");
+		
+		boolValue = js.executeScript("return fusioncharts_pie3d.isPlotItemSliced(3)");
+		Assert.assertTrue(boolValue.equals(false), "Item should not be sliced");
+		
+		test.log(LogStatus.PASS, test.addScreenCapture(APITestBase.capture("IsPlotItemSliced_In Pie chart the 3 plots should be sliced in order")));	//Code Line for screenshot
+		
+		for(WebElement plotTag : plots)
+		{
+			List<WebElement> plotmain = plotTag.findElements(By.xpath(".//*"));
+			WebElement firstplot = plotmain.get(3);
+			String tagName = firstplot.getTagName();
+			if(tagName.equals("path"))
+			{
+				js.executeScript("fusioncharts_pie3d.slicePlotItem(3)");
+				break;
+			}
+		}
+		
+		boolValue = js.executeScript("return fusioncharts_pie3d.isPlotItemSliced(0)");
+		Assert.assertTrue(boolValue.equals(true), "Item should be sliced");
+		
+		boolValue = js.executeScript("return fusioncharts_pie3d.isPlotItemSliced(1)");
+		Assert.assertTrue(boolValue.equals(true), "Item should be sliced");
+		
+		boolValue = js.executeScript("return fusioncharts_pie3d.isPlotItemSliced(2)");
+		Assert.assertTrue(boolValue.equals(true), "Item should be sliced");
+		
+		boolValue = js.executeScript("return fusioncharts_pie3d.isPlotItemSliced(3)");
+		Assert.assertTrue(boolValue.equals(true), "Item should be sliced");
+		
+		/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		
+		for(WebElement plotTag : plots)
+		{
+			List<WebElement> plotmain = plotTag.findElements(By.xpath(".//*"));
+			WebElement firstplot = plotmain.get(0);
+			String tagName = firstplot.getTagName();
+			if(tagName.equals("path"))
+			{
+				js.executeScript("fusioncharts_doughnut2d.slicePlotItem(0)");
+				break;
+			}
+		}
+		
+		boolValue = js.executeScript("return fusioncharts_doughnut2d.isPlotItemSliced(0)");
+		Assert.assertTrue(boolValue.equals(true), "Item should be sliced");
+		
+		boolValue = js.executeScript("return fusioncharts_doughnut2d.isPlotItemSliced(1)");
+		Assert.assertTrue(boolValue.equals(false), "Item should not be sliced");
+		
+		boolValue = js.executeScript("return fusioncharts_doughnut2d.isPlotItemSliced(2)");
+		Assert.assertTrue(boolValue.equals(false), "Item should not be sliced");
+		
+		boolValue = js.executeScript("return fusioncharts_doughnut2d.isPlotItemSliced(3)");
+		Assert.assertTrue(boolValue.equals(false), "Item should not be sliced");
+		
+		test.log(LogStatus.PASS, test.addScreenCapture(APITestBase.capture("IsPlotItemSliced_In Pie chart the first plot should be sliced")));	//Code Line for screenshot
+		
+		
+		for(WebElement plotTag : plots)
+		{
+			List<WebElement> plotmain = plotTag.findElements(By.xpath(".//*"));
+			WebElement firstplot = plotmain.get(1);
+			String tagName = firstplot.getTagName();
+			if(tagName.equals("path"))
+			{
+				js.executeScript("fusioncharts_doughnut2d.slicePlotItem(1)");
+				break;
+			}
+		}
+		
+		boolValue = js.executeScript("return fusioncharts_doughnut2d.isPlotItemSliced(0)");
+		Assert.assertTrue(boolValue.equals(true), "Item should be sliced");
+		
+		boolValue = js.executeScript("return fusioncharts_doughnut2d.isPlotItemSliced(1)");
+		Assert.assertTrue(boolValue.equals(true), "Item should be sliced");
+		
+		boolValue = js.executeScript("return fusioncharts_doughnut2d.isPlotItemSliced(2)");
+		Assert.assertTrue(boolValue.equals(false), "Item should not be sliced");
+		
+		boolValue = js.executeScript("return fusioncharts_doughnut2d.isPlotItemSliced(3)");
+		Assert.assertTrue(boolValue.equals(false), "Item should not be sliced");
+		
+		test.log(LogStatus.PASS, test.addScreenCapture(APITestBase.capture("IsPlotItemSliced_In Pie chart the 2 plots should be sliced in order")));	//Code Line for screenshot
+		
+		for(WebElement plotTag : plots)
+		{
+			List<WebElement> plotmain = plotTag.findElements(By.xpath(".//*"));
+			WebElement firstplot = plotmain.get(2);
+			String tagName = firstplot.getTagName();
+			if(tagName.equals("path"))
+			{
+				js.executeScript("fusioncharts_doughnut2d.slicePlotItem(2)");
+				break;
+			}
+		}
+		
+		boolValue = js.executeScript("return fusioncharts_doughnut2d.isPlotItemSliced(0)");
+		Assert.assertTrue(boolValue.equals(true), "Item should be sliced");
+		
+		boolValue = js.executeScript("return fusioncharts_doughnut2d.isPlotItemSliced(1)");
+		Assert.assertTrue(boolValue.equals(true), "Item should be sliced");
+		
+		boolValue = js.executeScript("return fusioncharts_doughnut2d.isPlotItemSliced(2)");
+		Assert.assertTrue(boolValue.equals(true), "Item should be sliced");
+		
+		boolValue = js.executeScript("return fusioncharts_doughnut2d.isPlotItemSliced(3)");
+		Assert.assertTrue(boolValue.equals(false), "Item should not be sliced");
+		
+		test.log(LogStatus.PASS, test.addScreenCapture(APITestBase.capture("IsPlotItemSliced_In Pie chart the 3 plots should be sliced in order")));	//Code Line for screenshot
+		
+		for(WebElement plotTag : plots)
+		{
+			List<WebElement> plotmain = plotTag.findElements(By.xpath(".//*"));
+			WebElement firstplot = plotmain.get(3);
+			String tagName = firstplot.getTagName();
+			if(tagName.equals("path"))
+			{
+				js.executeScript("fusioncharts_doughnut2d.slicePlotItem(3)");
+				break;
+			}
+		}
+		
+		boolValue = js.executeScript("return fusioncharts_doughnut2d.isPlotItemSliced(0)");
+		Assert.assertTrue(boolValue.equals(true), "Item should be sliced");
+		
+		boolValue = js.executeScript("return fusioncharts_doughnut2d.isPlotItemSliced(1)");
+		Assert.assertTrue(boolValue.equals(true), "Item should be sliced");
+		
+		boolValue = js.executeScript("return fusioncharts_doughnut2d.isPlotItemSliced(2)");
+		Assert.assertTrue(boolValue.equals(true), "Item should be sliced");
+		
+		boolValue = js.executeScript("return fusioncharts_doughnut2d.isPlotItemSliced(3)");
+		Assert.assertTrue(boolValue.equals(true), "Item should be sliced");
+		
+		/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		
+		for(WebElement plotTag : plots)
+		{
+			List<WebElement> plotmain = plotTag.findElements(By.xpath(".//*"));
+			WebElement firstplot = plotmain.get(0);
+			String tagName = firstplot.getTagName();
+			if(tagName.equals("path"))
+			{
+				js.executeScript("fusioncharts_doughnut3d.slicePlotItem(0)");
+				break;
+			}
+		}
+		
+		boolValue = js.executeScript("return fusioncharts_doughnut3d.isPlotItemSliced(0)");
+		Assert.assertTrue(boolValue.equals(true), "Item should be sliced");
+		
+		boolValue = js.executeScript("return fusioncharts_doughnut3d.isPlotItemSliced(1)");
+		Assert.assertTrue(boolValue.equals(false), "Item should not be sliced");
+		
+		boolValue = js.executeScript("return fusioncharts_doughnut3d.isPlotItemSliced(2)");
+		Assert.assertTrue(boolValue.equals(false), "Item should not be sliced");
+		
+		boolValue = js.executeScript("return fusioncharts_doughnut3d.isPlotItemSliced(3)");
+		Assert.assertTrue(boolValue.equals(false), "Item should not be sliced");
+		
+		test.log(LogStatus.PASS, test.addScreenCapture(APITestBase.capture("IsPlotItemSliced_In Pie chart the first plot should be sliced")));	//Code Line for screenshot
+		
+		
+		for(WebElement plotTag : plots)
+		{
+			List<WebElement> plotmain = plotTag.findElements(By.xpath(".//*"));
+			WebElement firstplot = plotmain.get(1);
+			String tagName = firstplot.getTagName();
+			if(tagName.equals("path"))
+			{
+				js.executeScript("fusioncharts_doughnut3d.slicePlotItem(1)");
+				break;
+			}
+		}
+		
+		boolValue = js.executeScript("return fusioncharts_doughnut3d.isPlotItemSliced(0)");
+		Assert.assertTrue(boolValue.equals(true), "Item should be sliced");
+		
+		boolValue = js.executeScript("return fusioncharts_doughnut3d.isPlotItemSliced(1)");
+		Assert.assertTrue(boolValue.equals(true), "Item should be sliced");
+		
+		boolValue = js.executeScript("return fusioncharts_doughnut3d.isPlotItemSliced(2)");
+		Assert.assertTrue(boolValue.equals(false), "Item should not be sliced");
+		
+		boolValue = js.executeScript("return fusioncharts_doughnut3d.isPlotItemSliced(3)");
+		Assert.assertTrue(boolValue.equals(false), "Item should not be sliced");
+		
+		test.log(LogStatus.PASS, test.addScreenCapture(APITestBase.capture("IsPlotItemSliced_In Pie chart the 2 plots should be sliced in order")));	//Code Line for screenshot
+		
+		for(WebElement plotTag : plots)
+		{
+			List<WebElement> plotmain = plotTag.findElements(By.xpath(".//*"));
+			WebElement firstplot = plotmain.get(2);
+			String tagName = firstplot.getTagName();
+			if(tagName.equals("path"))
+			{
+				js.executeScript("fusioncharts_doughnut3d.slicePlotItem(2)");
+				break;
+			}
+		}
+		
+		boolValue = js.executeScript("return fusioncharts_doughnut3d.isPlotItemSliced(0)");
+		Assert.assertTrue(boolValue.equals(true), "Item should be sliced");
+		
+		boolValue = js.executeScript("return fusioncharts_doughnut3d.isPlotItemSliced(1)");
+		Assert.assertTrue(boolValue.equals(true), "Item should be sliced");
+		
+		boolValue = js.executeScript("return fusioncharts_doughnut3d.isPlotItemSliced(2)");
+		Assert.assertTrue(boolValue.equals(true), "Item should be sliced");
+		
+		boolValue = js.executeScript("return fusioncharts_doughnut3d.isPlotItemSliced(3)");
+		Assert.assertTrue(boolValue.equals(false), "Item should not be sliced");
+		
+		test.log(LogStatus.PASS, test.addScreenCapture(APITestBase.capture("IsPlotItemSliced_In Pie chart the 3 plots should be sliced in order")));	//Code Line for screenshot
+		
+		for(WebElement plotTag : plots)
+		{
+			List<WebElement> plotmain = plotTag.findElements(By.xpath(".//*"));
+			WebElement firstplot = plotmain.get(3);
+			String tagName = firstplot.getTagName();
+			if(tagName.equals("path"))
+			{
+				js.executeScript("fusioncharts_doughnut3d.slicePlotItem(3)");
+				break;
+			}
+		}
+		
+		boolValue = js.executeScript("return fusioncharts_doughnut3d.isPlotItemSliced(0)");
+		Assert.assertTrue(boolValue.equals(true), "Item should be sliced");
+		
+		boolValue = js.executeScript("return fusioncharts_doughnut3d.isPlotItemSliced(1)");
+		Assert.assertTrue(boolValue.equals(true), "Item should be sliced");
+		
+		boolValue = js.executeScript("return fusioncharts_doughnut3d.isPlotItemSliced(2)");
+		Assert.assertTrue(boolValue.equals(true), "Item should be sliced");
+		
+		boolValue = js.executeScript("return fusioncharts_doughnut3d.isPlotItemSliced(3)");
+		Assert.assertTrue(boolValue.equals(true), "Item should be sliced");
+		
 		
 		test.log(LogStatus.PASS, test.addScreenCapture(APITestBase.capture("IsPlotItemSliced_In Pie chart the 4 plots should be sliced in order")));	//Code Line for screenshot
 	}

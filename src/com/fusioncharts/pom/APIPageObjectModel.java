@@ -2,6 +2,8 @@ package com.fusioncharts.pom;
 import org.openqa.selenium.support.pagefactory.*;
 import com.fusioncharts.main.APITestBase;
 import java.util.List;
+import java.util.NoSuchElementException;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -43,6 +45,20 @@ public class APIPageObjectModel extends APITestBase
 			return false;
 	}
 	
+	public boolean verifyIfChartMainContainerExists()
+	{
+		try {
+			if(mainContainer.isDisplayed())
+				return true;
+			else
+				return false;
+		}
+		catch(org.openqa.selenium.NoSuchElementException e)
+		{
+			return false;
+		}
+	}
+	
 	public List<WebElement> getTotalCharts()
 	{
 		return driver.findElements(By.className("fusioncharts-container"));
@@ -51,6 +67,11 @@ public class APIPageObjectModel extends APITestBase
 	public String getInnerHtml(WebElement elem)
 	{
 		return elem.getAttribute("innerHTML");
+	}
+	
+	public WebElement getSvg()
+	{
+		return svgElement;
 	}
 	
 	public List<WebElement> getAllSvgElems()
@@ -140,6 +161,32 @@ public class APIPageObjectModel extends APITestBase
 			}
 		}
 		return null;
+	}
+	
+	public String centerLabelText()
+	{
+		WebElement textTag=null;
+		String centerLabel = "";
+		WebElement plots = driver.findElement(By.xpath("//*[contains(@class,'-plots')]"));
+		List<WebElement> plotsChild = plots.findElements(By.xpath(".//*"));
+		
+		for(WebElement plot:plotsChild)
+		{
+			try
+			{
+				if(plot.getTagName().equals("text"))
+					textTag=plot;
+			}
+			catch(Exception e){}
+		}
+		List<WebElement> tspans = textTag.findElements(By.tagName("tspan"));
+		
+		for(WebElement tspan:tspans)
+		{
+			centerLabel = centerLabel.concat(tspan.getText());
+		}
+		
+		return centerLabel;
 	}
 	
 }
