@@ -1,12 +1,8 @@
 package com.fusioncharts.apitest;
 
 import java.io.IOException;
-import java.util.List;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -38,6 +34,7 @@ public class HasRendered extends APITestBase
 	{
 		boolean apiExists = TestUtil.thisAPIexists(data, apiName);
 		Assert.assertTrue(apiExists, "API name matches in data sheet");
+		driver.navigate().refresh();
 	}
 	
 	

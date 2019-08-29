@@ -59,6 +59,11 @@ public class APIPageObjectModel extends APITestBase
 		}
 	}
 	
+	public WebElement getUserDefinedContainer(String container)
+	{
+		return driver.findElement(By.id(container));
+	}
+	
 	public List<WebElement> getTotalCharts()
 	{
 		return driver.findElements(By.className("fusioncharts-container"));

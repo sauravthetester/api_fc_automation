@@ -2,32 +2,32 @@
 <testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="25511" started-at="2019-08-21T13:18:23Z" finished-at="2019-08-21T13:18:49Z">
+  <suite name="Default suite" duration-ms="56318" started-at="2019-08-29T07:49:33Z" finished-at="2019-08-29T07:50:29Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="25511" started-at="2019-08-21T13:18:23Z" finished-at="2019-08-21T13:18:49Z">
-      <class name="com.fusioncharts.apitest.IsPlotItemSliced_slicePlotItem">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.fusioncharts.apitest.IsPlotItemSliced_slicePlotItem@64f6106c]" name="setUp" is-config="true" duration-ms="5178" started-at="2019-08-21T13:18:23Z" finished-at="2019-08-21T13:18:28Z">
+    <test name="Default test" duration-ms="56318" started-at="2019-08-29T07:49:33Z" finished-at="2019-08-29T07:50:29Z">
+      <class name="com.fusioncharts.apitest.RealTimeAPIs">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.fusioncharts.apitest.RealTimeAPIs@64f6106c]" name="setUp" is-config="true" duration-ms="5681" started-at="2019-08-29T07:49:33Z" finished-at="2019-08-29T07:49:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="verifyAPIExistsInDataSheetIsPlotItemSliced_slicePlotItem()[pri:1, instance:com.fusioncharts.apitest.IsPlotItemSliced_slicePlotItem@64f6106c]" name="verifyAPIExistsInDataSheetIsPlotItemSliced_slicePlotItem" duration-ms="8" started-at="2019-08-21T13:18:28Z" finished-at="2019-08-21T13:18:28Z">
+        <test-method status="PASS" signature="verifyAPIExistsInDataSheetRealTimeAPIs()[pri:1, instance:com.fusioncharts.apitest.RealTimeAPIs@64f6106c]" name="verifyAPIExistsInDataSheetRealTimeAPIs" duration-ms="7" started-at="2019-08-29T07:49:39Z" finished-at="2019-08-29T07:49:39Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyAPIExistsInDataSheetIsPlotItemSliced_slicePlotItem -->
-        <test-method status="PASS" signature="verifyChartIsRenderedIsPlotItemSliced_slicePlotItem()[pri:2, instance:com.fusioncharts.apitest.IsPlotItemSliced_slicePlotItem@64f6106c]" name="verifyChartIsRenderedIsPlotItemSliced_slicePlotItem" duration-ms="522" started-at="2019-08-21T13:18:28Z" finished-at="2019-08-21T13:18:29Z">
+        </test-method> <!-- verifyAPIExistsInDataSheetRealTimeAPIs -->
+        <test-method status="PASS" signature="verifyChartIsRenderedRealTimeAPIs()[pri:2, instance:com.fusioncharts.apitest.RealTimeAPIs@64f6106c]" name="verifyChartIsRenderedRealTimeAPIs" duration-ms="852" started-at="2019-08-29T07:49:39Z" finished-at="2019-08-29T07:49:39Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyChartIsRenderedIsPlotItemSliced_slicePlotItem -->
-        <test-method status="PASS" signature="verifyAPIIsPlotItemSliced_slicePlotItem()[pri:3, instance:com.fusioncharts.apitest.IsPlotItemSliced_slicePlotItem@64f6106c]" name="verifyAPIIsPlotItemSliced_slicePlotItem" duration-ms="14707" started-at="2019-08-21T13:18:29Z" finished-at="2019-08-21T13:18:44Z">
+        </test-method> <!-- verifyChartIsRenderedRealTimeAPIs -->
+        <test-method status="PASS" signature="verifyAPIRealTimeAPIs()[pri:3, instance:com.fusioncharts.apitest.RealTimeAPIs@64f6106c]" name="verifyAPIRealTimeAPIs" duration-ms="45621" started-at="2019-08-29T07:49:39Z" finished-at="2019-08-29T07:50:25Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyAPIIsPlotItemSliced_slicePlotItem -->
-        <test-method status="PASS" signature="shutDown()[pri:0, instance:com.fusioncharts.apitest.IsPlotItemSliced_slicePlotItem@64f6106c]" name="shutDown" is-config="true" duration-ms="5056" started-at="2019-08-21T13:18:44Z" finished-at="2019-08-21T13:18:49Z">
+        </test-method> <!-- verifyAPIRealTimeAPIs -->
+        <test-method status="PASS" signature="shutDown()[pri:0, instance:com.fusioncharts.apitest.RealTimeAPIs@64f6106c]" name="shutDown" is-config="true" duration-ms="4127" started-at="2019-08-29T07:50:25Z" finished-at="2019-08-29T07:50:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- shutDown -->
-      </class> <!-- com.fusioncharts.apitest.IsPlotItemSliced_slicePlotItem -->
+      </class> <!-- com.fusioncharts.apitest.RealTimeAPIs -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -180,11 +180,11 @@
     	</classes>
   	</test>
   	
-  	<test name="HasRendered" parallel="false" preserve-order="true" thread-count="1" >
+  	<!-- <test name="HasRendered" parallel="false" preserve-order="true" thread-count="1" >
     	<classes>
       		<class name="com.fusioncharts.apitest.HasRendered" />
     	</classes>
-  	</test>
+  	</test> -->
   	
   	<test name="LockResize_ResizeTo" parallel="false" preserve-order="true" thread-count="1" >
     	<classes>

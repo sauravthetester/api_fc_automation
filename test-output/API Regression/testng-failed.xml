@@ -4,6 +4,7 @@
   <listeners>
     <listener class-name="com.fusioncharts.ExtentReportListener.ExtentReporterNG"/>
   </listeners>
+<<<<<<< HEAD
   <test thread-count="5" name="SetJSONUrl(failed)">
     <classes>
       <class name="com.fusioncharts.apitest.SetJSONUrl">
@@ -31,8 +32,37 @@
       <class name="com.fusioncharts.apitest.HasRendered">
         <methods>
           <include name="verifyAPIHasRendered"/>
+=======
+  <test thread-count="5" name="SetChartDataUrl(failed)">
+    <classes>
+      <class name="com.fusioncharts.apitest.SetChartDataUrl">
+        <methods>
           <include name="setUp"/>
+          <include name="verifyAPISetChartDataUrl"/>
           <include name="shutDown"/>
+        </methods>
+      </class> <!-- com.fusioncharts.apitest.SetChartDataUrl -->
+    </classes>
+  </test> <!-- SetChartDataUrl(failed) -->
+  <test thread-count="5" name="SetXMLUrl(failed)">
+    <classes>
+      <class name="com.fusioncharts.apitest.SetXMLUrl">
+        <methods>
+          <include name="verifyAPISetXMLUrl"/>
+          <include name="shutDown"/>
+>>>>>>> 34API
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.fusioncharts.apitest.SetXMLUrl -->
+    </classes>
+  </test> <!-- SetXMLUrl(failed) -->
+  <test thread-count="5" name="SetXMLData(failed)">
+    <classes>
+      <class name="com.fusioncharts.apitest.SetXMLUrl">
+        <methods>
+          <include name="verifyAPISetXMLUrl"/>
+          <include name="shutDown"/>
+<<<<<<< HEAD
         </methods>
       </class> <!-- com.fusioncharts.apitest.HasRendered -->
     </classes>
@@ -48,4 +78,22 @@
       </class> <!-- com.fusioncharts.apitest.Configure -->
     </classes>
   </test> <!-- Configure(failed) -->
+=======
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.fusioncharts.apitest.SetXMLUrl -->
+    </classes>
+  </test> <!-- SetXMLData(failed) -->
+  <test thread-count="5" name="LockResize_ResizeTo(failed)">
+    <classes>
+      <class name="com.fusioncharts.apitest.LockResize_ResizeTo">
+        <methods>
+          <include name="verifyAPILockResize_ResizeTo"/>
+          <include name="setUp"/>
+          <include name="shutDown"/>
+        </methods>
+      </class> <!-- com.fusioncharts.apitest.LockResize_ResizeTo -->
+    </classes>
+  </test> <!-- LockResize_ResizeTo(failed) -->
+>>>>>>> 34API
 </suite> <!-- Failed suite [API Regression] -->

@@ -50,7 +50,7 @@ public class CenterLabel extends APITestBase {
 	public void verifyAPICenterLabel() throws IOException
 	{
 		String apiScript = TestUtil.apiScript(data, apiName);
-		
+		System.out.println();
 		jsExecuteWithBuffer(apiScript);
 		
 		String centerLabel = pom.centerLabelText();
