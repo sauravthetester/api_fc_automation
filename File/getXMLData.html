@@ -1,0 +1,61 @@
+<html>
+
+<head>
+      <title>My first chart using FusionCharts Suite XT</title>
+      <script type="text/javascript" src="./build/develop/fusioncharts.js"></script>
+
+      <script type="text/javascript">
+        FusionCharts.ready(function () {
+            fusioncharts = new FusionCharts({
+                id: "chart_1",
+                type: 'pie3d',
+                renderAt: 'chart-container',
+                width: '800',
+                height: '500',
+                dataFormat: 'json',
+                baseChartMessageFont: 'arial',
+                loadMessage: 'API Automation',
+                loadMessageFontSize: '40',
+                loadMessageColor: '#FF0000',
+
+                dataSource: {
+                    "chart": {
+                        "caption": "Quarterly revenue analysis-2014",
+                        "subCaption": "Harry's SuperMart",
+                        "xAxisName": "Quarter",
+                        "yAxisname": "Revenue",
+                        "numberPrefix": "$",
+                        "theme": "fint",
+                        "captionFontSize": "13",
+                        "subCaptionFontSize": "12"
+                    },
+
+                    "data": [{
+                        "label": "Q1",
+                        "value": "2850400"
+                    }, {
+                        "label": "Q2",
+                        "value": "1463300"
+                    }, {
+                        "label": "Q3",
+                        "value": "1050700"
+                    }, {
+                        "label": "Q4",
+                        "value": "4910000"
+                    }]
+                }
+            });
+            fusioncharts.render();
+
+            //document.getElementById('datainsert').innerHTML = fusioncharts.getXMLData();
+        });
+    </script>
+</head>
+
+<body>
+    <div id="chart-container">FusionCharts will render here</div>
+    <div id="data-text">Data will be shown below</div>
+    <div id="datainsert"></div>
+</body>
+
+</html>

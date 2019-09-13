@@ -194,4 +194,8 @@ public class APIPageObjectModel extends APITestBase
 		return centerLabel;
 	}
 	
+	public WebElement crossline()
+	{
+		return driver.findElement(By.xpath("//*[contains(@class,'-crosslineBottom')]")).findElement(By.tagName("path"));
+	}
 }

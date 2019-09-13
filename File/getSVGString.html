@@ -1,0 +1,123 @@
+<html>
+
+<head>
+      <title>My first chart using FusionCharts Suite XT</title>
+      <script type="text/javascript" src="./build/develop/fusioncharts.js"></script>
+
+      <script type="text/javascript">
+        FusionCharts.ready(function () {
+            fusioncharts = new FusionCharts({
+                id: "chart_1",
+                type: 'msline',
+                renderAt: 'chart-container',
+                width: '800',
+                height: '500',
+                dataFormat: 'json',
+                baseChartMessageFont: 'arial',
+                loadMessage: 'API Automation',
+                loadMessageFontSize: '40',
+                loadMessageColor: '#FF0000',
+
+                dataSource: {
+                    "chart": {
+                        "caption": "Number of visitors last week",
+                        "subCaption": "Bakersfield Central vs Los Angeles Topanga",
+                        "theme": "fint",
+                        "captionFontSize": "13",
+                        "subcaptionFontSize": "12"
+                    },
+                    "categories": [{
+                        "category": [{
+                            "label": "Mon"
+                        }, {
+                            "label": "Tue"
+                        }, {
+                            "label": "Wed"
+                        }, {
+                            "vline": "true",
+                            "lineposition": "0",
+                            "color": "#6baa01",
+                            "labelHAlign": "center",
+                            "labelPosition": "0",
+                            "label": "National holiday",
+                            "dashed": "1"
+                        }, {
+                            "label": "Thu"
+                        }, {
+                            "label": "Fri"
+                        }, {
+                            "label": "Sat"
+                        }, {
+                            "label": "Sun"
+                        }]
+                    }],
+                    "dataset": [{
+                        "seriesname": "Bakersfield Central",
+                        "data": [{
+                            "value": "15123"
+                        }, {
+                            "value": "14233"
+                        }, {
+                            "value": "25507"
+                        }, {
+                            "value": "9110"
+                        }, {
+                            "value": "15529"
+                        }, {
+                            "value": "20803"
+                        }, {
+                            "value": "19202"
+                        }]
+                    }, {
+                        "seriesname": "Los Angeles Topanga",
+                        "data": [{
+                            "value": "13400"
+                        }, {
+                            "value": "12800"
+                        }, {
+                            "value": "22800"
+                        }, {
+                            "value": "12400"
+                        }, {
+                            "value": "15800"
+                        }, {
+                            "value": "19800"
+                        }, {
+                            "value": "21800"
+                        }]
+                    }],
+                    "trendlines": [{
+                        "line": [{
+                            "startvalue": "17022",
+                            "color": "#6baa01",
+                            "valueOnRight": "1",
+                            "displayvalue": "Average"
+                        }]
+                    }]
+                }
+            });
+            fusioncharts.render();
+
+            function svgString() {
+
+                fusioncharts.getSVGString(function (svg) {
+                    document.getElementById("msg").appendChild(document.createTextNode(svg));
+                });
+
+            }
+            document.getElementById("get").addEventListener("click", svgString);
+        });
+    </script>
+</head>
+<div class="text-center">
+    <button id="get">Get SVG String</button>   	
+
+    <div id="text" >The chart SVG string is given below:
+        <div id="msg" align="left"></div>
+    </div>
+
+<body>
+    <div id="chart-container">FusionCharts will render here</div>
+</body>
+
+</html>

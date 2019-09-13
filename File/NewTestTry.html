@@ -3,135 +3,19 @@
 <head>
       <title>My first chart using FusionCharts Suite XT</title>
       <script type="text/javascript" src="./build/develop/fusioncharts.js"></script>
+      <script type="text/javascript" src="./build/develop/themes/fusioncharts.theme.carbon.js"></script>
+      <script type="text/javascript" src="./build/develop/themes/fusioncharts.theme.zune.js"></script>
+      <script type="text/javascript" src="./build/develop/themes/fusioncharts.theme.ocean.js"></script>
+      <script type="text/javascript" src="./build/develop/maps/fusioncharts.usa.js"></script>
 
       <script type="text/javascript">
         FusionCharts.ready(function () {
-            fusioncharts_gauge = new FusionCharts({
+            fusioncharts = new FusionCharts({
                 id: "chart_1",
-                type: 'angulargauge',
+                type: 'usa',
                 renderAt: 'chart-container',
-                width: '320',
-                height: '300',
-                dataFormat: 'json',
-                baseChartMessageFont: 'arial',
-                loadMessage: 'API Automation',
-                loadMessageFontSize: '40',
-                loadMessageColor: '#FF0000',
-                dataSource: {
-                    "chart": {
-                        "caption": "Speedometer",
-                        "origw": "320",
-                        "origh": "320",
-                        "tickvaluedistance": "-10",
-                        "upperlimit": "240",
-                        "lowerlimit": "0",
-                        "basefontcolor": "#FFFFFF",
-                        "majortmnumber": "9",
-                        "majortmcolor": "#FFFFFF",
-                        "majortmheight": "8",
-                        "majortmthickness": "5",
-                        "minortmnumber": "5",
-                        "minortmcolor": "#FFFFFF",
-                        "minortmheight": "3",
-                        "minortmthickness": "2",
-                        "pivotradius": "10",
-                        "pivotbgcolor": "#000000",
-                        "pivotbordercolor": "#FFFFFF",
-                        "pivotborderthickness": "2",
-                        "tooltipbordercolor": "#FFFFFF",
-                        "tooltipbgcolor": "#333333",
-                        "gaugeouterradius": "115",
-                        "gaugestartangle": "240",
-                        "gaugeendangle": "-60",
-                        "decimals": "0",
-                        "placevaluesinside": "1",
-                        "pivotfillmix": "",
-                        "showpivotborder": "1",
-                        "annrenderdelay": "0",
-                        "gaugeoriginx": "160",
-                        "gaugeoriginy": "160",
-                        "theme": "fusion"
-                    },
-                    "dials": {
-                        "dial": [{
-                                "value": "65",
-                                "bgcolor": "000000",
-                                "bordercolor": "#FFFFFF",
-                                "borderalpha": "100",
-                                "basewidth": "4",
-                                "topwidth": "4",
-                                "borderthickness": "2",
-                                "valuey": "260",
-                                "id": "dial1"
-                            },
-                            {
-                                "value": "85",
-                                "bgcolor": "000000",
-                                "bordercolor": "#00FF00",
-                                "borderalpha": "100",
-                                "basewidth": "4",
-                                "topwidth": "4",
-                                "borderthickness": "2",
-                                "valuey": "260",
-                                "id": "dial2"
-                            }
-                        ]
-                    },
-                    "annotations": {
-                        "groups": [{
-                                "x": "160",
-                                "y": "160",
-                                "items": [{
-                                        "type": "circle",
-                                        "radius": "130",
-                                        "fillasgradient": "1",
-                                        "fillcolor": "#4B4B4B,#AAAAAA",
-                                        "fillalpha": "100,100",
-                                        "fillratio": "95,5"
-                                    },
-                                    {
-                                        "type": "circle",
-                                        "x": "0",
-                                        "y": "0",
-                                        "radius": "120",
-                                        "showborder": "1",
-                                        "bordercolor": "cccccc",
-                                        "fillasgradient": "1",
-                                        "fillcolor": "#ffffff,#000000",
-                                        "fillalpha": "50,100",
-                                        "fillratio": "1,99"
-                                    }
-                                ]
-                            },
-                            {
-                                "x": "160",
-                                "y": "160",
-                                "showbelow": "0",
-                                "scaletext": "1",
-                                "items": [{
-                                    "type": "text",
-                                    "y": "100",
-                                    "label": "KPH",
-                                    "fontcolor": "#FFFFFF",
-                                    "fontsize": "14",
-                                    "bold": "1"
-                                }]
-                            }
-                        ]
-                    }
-                }
-            });
-            fusioncharts_gauge.render();
-
-
-
-
-            fusioncharts_rtarea = new FusionCharts({
-                id: "chart_2",
-                type: 'realtimearea',
-                renderAt: 'chart-container2',
-                width: '320',
-                height: '300',
+                width: '800',
+                height: '500',
                 dataFormat: 'json',
                 baseChartMessageFont: 'arial',
                 loadMessage: 'API Automation',
@@ -140,703 +24,556 @@
 
                 dataSource: {
                     "chart": {
-                        "caption": "Real-time stock price monitor",
-                        "subCaption": "Harry's SuperMart",
-                        "xAxisName": "Time",
-                        "yAxisName": "Stock Price",
+                        "caption": "Annual Sales by State",
+                        "subcaption": "Last year",
+                        "entityFillHoverColor": "#cccccc",
+                        "numberScaleValue": "1,1000,1000",
+                        "numberScaleUnit": "K,M,B",
                         "numberPrefix": "$",
-                        "refreshinterval": "5",
-                        "yaxisminvalue": "35",
-                        "yaxismaxvalue": "36",
-                        "numdisplaysets": "10",
-                        "labeldisplay": "rotate",
-                        "showRealTimeValue": "0",
-                        "theme": "fusion"
-                    },
-                    "categories": [{
-                        "category": [{
-                            "label": "Day Start"
-                        }]
-                    }],
-                    "dataset": [{
-                        "data": [{
-                            "value": "35.27"
-                        }]
-                    }]
-                }
-            });
-            fusioncharts_rtarea.render();
-
-
-            fusioncharts_rtbulb = new FusionCharts({
-                id: "chart_3",
-                type: 'bulb',
-                renderAt: 'chart-container3',
-                width: '320',
-                height: '300',
-                dataFormat: 'json',
-                baseChartMessageFont: 'arial',
-                loadMessage: 'API Automation',
-                loadMessageFontSize: '40',
-                loadMessageColor: '#FF0000',
-
-                dataSource: {
-                    "chart": {
-                        "caption": "Temperature status of deep freezers",
-                        "upperlimit": "-5",
-                        "lowerlimit": "-60",
-                        "captionPadding": "30",
-                        "showshadow": "0",
-                        "showvalue": "1",
-                        "useColorNameAsValue": "1",
-                        "placeValuesInside": "1",
-                        "theme": "fusion"
+                        "showLabels": "1",
+                        "theme": "fusion",
+                        "drawcrossline": "1",
+                        "crossLineColor": "#ff0000"
                     },
                     "colorrange": {
+                        "minvalue": "0",
+                        "startlabel": "Low",
+                        "endlabel": "High",
+                        "code": "#e44a00",
+                        "gradient": "1",
                         "color": [{
-                                "minvalue": "-60",
-                                "maxvalue": "-35",
-                                "label": "Problem detected!",
-                                "code": "#ff0000"
+                                "maxvalue": "56580",
+                                "displayvalue": "Average",
+                                "code": "#f8bd19"
                             },
                             {
-                                "minvalue": "-35",
-                                "maxvalue": "-25",
-                                "label": "Alert!",
-                                "code": "#ff9900"
-                            },
-                            {
-                                "minvalue": "-25",
-                                "maxvalue": "-5",
-                                "label": "All well!",
-                                "code": "#00ff00"
+                                "maxvalue": "100000",
+                                "code": "#6baa01"
                             }
                         ]
                     },
-                    "value": "-5"
-                }
-            });
-            fusioncharts_rtbulb.render();
-
-
-
-            fusioncharts_rtcolumn = new FusionCharts({
-                id: "chart_4",
-                type: 'realtimecolumn',
-                renderAt: 'chart-container4',
-                width: '320',
-                height: '300',
-                dataFormat: 'json',
-                baseChartMessageFont: 'arial',
-                loadMessage: 'API Automation',
-                loadMessageFontSize: '40',
-                loadMessageColor: '#FF0000',
-
-                dataSource: {
-                    "chart": {
-                        "showrealtimevalue": "1",
-                        "yaxismaxvalue": "10",
-                        "numdisplaysets": "10",
-                        "labeldisplay": "rotate",
-                        "slantLabels": "1",
-                        "showLegend": "0",
-                        "numbersuffix": " Transactions",
-                        "showRealTimeValue": "0",
-                        "theme": "fusion"
-                    },
-                    "categories": [{
-                        "category": [{
-                            "label": "Start"
-                        }]
-                    }],
-                    "dataset": [{
-                        "seriesname": "",
-                        "alpha": "100",
-                        "data": [{
-                            "value": "3"
-                        }]
-                    }]
-                }
-            });
-            fusioncharts_rtcolumn.render();
-
-            fusioncharts_rtcylinder = new FusionCharts({
-                id: "chart_5",
-                type: 'cylinder',
-                renderAt: 'chart-container5',
-                width: '320',
-                height: '300',
-                dataFormat: 'json',
-                baseChartMessageFont: 'arial',
-                loadMessage: 'API Automation',
-                loadMessageFontSize: '40',
-                loadMessageColor: '#FF0000',
-
-                dataSource: {
-                    "chart": {
-                        "lowerLimit": "0",
-                        "upperLimit": "120",
-                        "lowerLimitDisplay": "Empty",
-                        "upperLimitDisplay": "Full",
-                        "numberSuffix": " ltrs",
-                        "showhovereffect": "1",
-                        "theme": "fusion"
-                    },
-                    "value": "85"
-                }
-            });
-            fusioncharts_rtcylinder.render();
-
-
-
-            fusioncharts_rthlinear = new FusionCharts({
-                id: "chart_6",
-                type: 'HLinearGauge',
-                renderAt: 'chart-container6',
-                width: '320',
-                height: '300',
-                dataFormat: 'json',
-                baseChartMessageFont: 'arial',
-                loadMessage: 'API Automation',
-                loadMessageFontSize: '40',
-                loadMessageColor: '#FF0000',
-
-                dataSource: {
-                    "chart": {
-                        "lowerLimit": "0",
-                        "upperLimit": "100",
-                        "numberSuffix": "%",
-                        "valueAbovePointer": "0",
-                        "showShadow": "0",
-                        "gaugeFillMix": "{light}",
-                        "theme": "fusion"
-                    },
-                    "colorRange": {
-                        "color": [{
-                                "minValue": "0",
-                                "maxValue": "35",
-                                "label": "Low",
-                                "code": "#1aaf5d"
-                            },
-                            {
-                                "minValue": "35",
-                                "maxValue": "70",
-                                "label": "Moderate",
-                                "code": "#f2c500"
-                            },
-                            {
-                                "minValue": "70",
-                                "maxValue": "100",
-                                "label": "High",
-                                "code": "#c02d00"
-                            }
-                        ]
-                    },
-                    "pointers": {
-                        "pointer": [{
-                                "value": "80",
-                                "id": "pointer1"
-                            },
-                            {
-                                "value": "68",
-                                "id": "pointer2"
-                            }
-                        ]
-                    }
-                }
-            });
-            fusioncharts_rthlinear.render();
-
-
-
-            fusioncharts_rtline = new FusionCharts({
-                id: "chart_7",
-                type: 'realtimeline',
-                renderAt: 'chart-container7',
-                width: '320',
-                height: '300',
-                dataFormat: 'json',
-                baseChartMessageFont: 'arial',
-                loadMessage: 'API Automation',
-                loadMessageFontSize: '40',
-                loadMessageColor: '#FF0000',
-
-                dataSource: {
-                    "chart": {
-                        "xAxisName": "Time",
-                        "yAxisName": "Stock Price",
-                        "numberPrefix": "$",
-                        "refreshinterval": "5",
-                        "yaxisminvalue": "35",
-                        "yaxismaxvalue": "36",
-                        "numdisplaysets": "10",
-                        "labeldisplay": "rotate",
-                        "showRealTimeValue": "0",
-                        "theme": "fusion"
-                    },
-                    "categories": [{
-                        "category": [{
-                            "label": "Day Start"
-                        }]
-                    }],
-                    "dataset": [{
-                        "data": [{
-                            "value": "50"
-                        }]
-                    }]
-                }
-            });
-            fusioncharts_rtline.render();
-
-
-
-            fusioncharts_rtlinedy = new FusionCharts({
-                id: "chart_8",
-                type: 'realtimelinedy',
-                renderAt: 'chart-container8',
-                width: '320',
-                height: '300',
-                dataFormat: 'json',
-                baseChartMessageFont: 'arial',
-                loadMessage: 'API Automation',
-                loadMessageFontSize: '40',
-                loadMessageColor: '#FF0000',
-
-                dataSource: {
-                    "chart": {
-                        "showRealTimeValue": "0",
-                        "numberprefix": "$",
-                        "setadaptiveymin": "1",
-                        "setadaptivesymin": "1",
-                        "xaxisname": "Time",
-                        "labeldisplay": "Rotate",
-                        "slantlabels": "1",
-                        "pyaxisminvalue": "35",
-                        "pyaxismaxvalue": "36",
-                        "syaxisminvalue": "10000",
-                        "syaxismaxvalue": "12000",
-                        "numDisplaySets": "10",
-                        "theme": "fusion"
-                    },
-                    "categories": [{
-                        "category": [{
-                            "label": "Day Start"
-                        }]
-                    }],
-                    "dataset": [{
-                            "seriesname": "HRYS Price",
-                            "showvalues": "0",
-                            "data": [{
-                                "value": "2500"
-                            }]
+                    "data": [{
+                            "id": "HI",
+                            "value": "3189"
                         },
                         {
-                            "seriesname": "NYSE Index",
-                            "showvalues": "0",
-                            "parentyaxis": "S",
-                            "data": [{
-                                "value": "6000"
-                            }]
-                        }
-                    ],
-                    "trendlines": [{
-                        "line": [{
-                                "parentyaxis": "P",
-                                "startvalue": "35.1",
-                                "displayvalue": "Open",
-                                "thickness": "1",
-                                "color": "#0075c2",
-                                "dashed": "1"
-                            },
-                            {
-                                "parentyaxis": "S",
-                                "startvalue": "10962.87",
-                                "displayvalue": "Open",
-                                "thickness": "1",
-                                "color": "#1aaf5d",
-                                "dashed": "1"
-                            }
-                        ]
-                    }]
-                }
-            });
-            fusioncharts_rtlinedy.render();
-
-
-
-
-            fusioncharts_rtsarea = new FusionCharts({
-                id: "chart_9",
-                type: 'realtimestackedarea',
-                renderAt: 'chart-container9',
-                width: '320',
-                height: '300',
-                dataFormat: 'json',
-                baseChartMessageFont: 'arial',
-                loadMessage: 'API Automation',
-                loadMessageFontSize: '40',
-                loadMessageColor: '#FF0000',
-
-                dataSource: {
-                    "chart": {
-                        "xAxisName": "Time",
-                        "yAxisName": "No. of visitors",
-                        "numberSuffix": "s",
-                        "refreshinterval": "5",
-                        "yaxisminvalue": "0",
-                        "yaxismaxvalue": "60",
-                        "numdisplaysets": "10",
-                        "labeldisplay": "rotate",
-                        "showRealTimeValue": "0",
-                        "theme": "fusion"
-                    },
-                    "categories": [{
-                        "category": [{
-                            "label": "Day Start"
-                        }]
-                    }],
-                    "dataset": [{
-                            "seriesName": "clothing.hsm.com",
-                            "data": [{
-                                "value": "88"
-                            }]
+                            "id": "DC",
+                            "value": "2879"
                         },
                         {
-                            "seriesName": "food.hsm.com",
-                            "data": [{
-                                "value": "77"
-                            }]
+                            "id": "MD",
+                            "value": "920"
+                        },
+                        {
+                            "id": "DE",
+                            "value": "4607"
+                        },
+                        {
+                            "id": "RI",
+                            "value": "4890"
+                        },
+                        {
+                            "id": "WA",
+                            "value": "34927"
+                        },
+                        {
+                            "id": "OR",
+                            "value": "65798"
+                        },
+                        {
+                            "id": "CA",
+                            "value": "61861"
+                        },
+                        {
+                            "id": "AK",
+                            "value": "58911"
+                        },
+                        {
+                            "id": "ID",
+                            "value": "42662"
+                        },
+                        {
+                            "id": "NV",
+                            "value": "78041"
+                        },
+                        {
+                            "id": "AZ",
+                            "value": "41558"
+                        },
+                        {
+                            "id": "MT",
+                            "value": "62942"
+                        },
+                        {
+                            "id": "WY",
+                            "value": "78834"
+                        },
+                        {
+                            "id": "UT",
+                            "value": "50512"
+                        },
+                        {
+                            "id": "CO",
+                            "value": "73026"
+                        },
+                        {
+                            "id": "NM",
+                            "value": "78865"
+                        },
+                        {
+                            "id": "ND",
+                            "value": "50554"
+                        },
+                        {
+                            "id": "SD",
+                            "value": "35922"
+                        },
+                        {
+                            "id": "NE",
+                            "value": "43736"
+                        },
+                        {
+                            "id": "KS",
+                            "value": "32681"
+                        },
+                        {
+                            "id": "OK",
+                            "value": "79038"
+                        },
+                        {
+                            "id": "TX",
+                            "value": "75425"
+                        },
+                        {
+                            "id": "MN",
+                            "value": "43485"
+                        },
+                        {
+                            "id": "IA",
+                            "value": "46515"
+                        },
+                        {
+                            "id": "MO",
+                            "value": "63715"
+                        },
+                        {
+                            "id": "AR",
+                            "value": "34497"
+                        },
+                        {
+                            "id": "LA",
+                            "value": "70706"
+                        },
+                        {
+                            "id": "WI",
+                            "value": "42382"
+                        },
+                        {
+                            "id": "IL",
+                            "value": "73202"
+                        },
+                        {
+                            "id": "KY",
+                            "value": "79118"
+                        },
+                        {
+                            "id": "TN",
+                            "value": "44657"
+                        },
+                        {
+                            "id": "MS",
+                            "value": "66205"
+                        },
+                        {
+                            "id": "AL",
+                            "value": "75873"
+                        },
+                        {
+                            "id": "GA",
+                            "value": "76895"
+                        },
+                        {
+                            "id": "MI",
+                            "value": "67695"
+                        },
+                        {
+                            "id": "IN",
+                            "value": "33592"
+                        },
+                        {
+                            "id": "OH",
+                            "value": "32960"
+                        },
+                        {
+                            "id": "PA",
+                            "value": "54346"
+                        },
+                        {
+                            "id": "NY",
+                            "value": "42828"
+                        },
+                        {
+                            "id": "VT",
+                            "value": "77411"
+                        },
+                        {
+                            "id": "NH",
+                            "value": "51403"
+                        },
+                        {
+                            "id": "ME",
+                            "value": "64636"
+                        },
+                        {
+                            "id": "MA",
+                            "value": "51767"
+                        },
+                        {
+                            "id": "CT",
+                            "value": "57353"
+                        },
+                        {
+                            "id": "NJ",
+                            "value": "80788"
+                        },
+                        {
+                            "id": "WV",
+                            "value": "95890"
+                        },
+                        {
+                            "id": "VA",
+                            "value": "83140"
+                        },
+                        {
+                            "id": "NC",
+                            "value": "97344"
+                        },
+                        {
+                            "id": "SC",
+                            "value": "88234"
+                        },
+                        {
+                            "id": "FL",
+                            "value": "88234"
                         }
                     ]
                 }
-            });
-            fusioncharts_rtsarea.render();
+            });            var msg = document.getElementById("msg");
+
+            function getData() {
+                var format = document.getElementById("data_format").value;
+                var data = fusioncharts.getChartData(format);
+                if (format == "csv") {
+                    data = data.replace(/\n/g, "<br>");
+                    msg.innerHTML = data;
+                } else if (format == "json") {
+                    msg.innerHTML = JSON.stringify(data, undefined, 2);
+                }
+            }
+            document.getElementById("get_chart_data").addEventListener("click", getData);
 
 
+            var msg_CSV = document.getElementById("msg_CSV");
+
+            function getCSVData() {
+                var data = fusioncharts.getCSVData();
+
+                data = data.replace(/\n/g, "<br>");
+                msg_CSV.innerHTML = data;
+            }
+            document.getElementById("get_CSV_data").addEventListener("click", getCSVData);
 
 
-            fusioncharts_rtscolumn = new FusionCharts({
-                id: "chart_10",
-                type: 'realtimestackedcolumn',
-                renderAt: 'chart-container10',
-                width: '320',
-                height: '300',
-                dataFormat: 'json',
-                baseChartMessageFont: 'arial',
-                loadMessage: 'API Automation',
-                loadMessageFontSize: '40',
-                loadMessageColor: '#FF0000',
+            var msg_JSON = document.getElementById("msg_JSON");
 
-                dataSource: {
+            function getJSONData() {
+                var data = fusioncharts.getJSONData();
+                msg_JSON.innerHTML = JSON.stringify(data, undefined, 2);
+            }
+            document.getElementById("get_JSON_data").addEventListener("click", getJSONData);
+
+            function svgString() {
+                fusioncharts.getSVGString(function (svg) {
+                    document.getElementById("msg_SVG").appendChild(document.createTextNode(svg));
+                });
+            }
+            document.getElementById("get_SVG_data").addEventListener("click", svgString);
+
+
+            document.getElementById('xmlins').appendChild(document.createTextNode(fusioncharts.getXMLData()));
+
+            function getTranscodedData() {
+                var csv = FusionCharts.transcodeData({
                     "chart": {
-                        "xAxisName": "Time",
-                        "yAxisName": "No. of visitors",
-                        "refreshinterval": "5",
-                        "numberSuffix": "s",
-                        "yaxisminvalue": "0",
-                        "yaxismaxvalue": "60",
-                        "numdisplaysets": "10",
-                        "labeldisplay": "rotate",
-                        "showValues": "1",
-                        "showRealTimeValue": "0",
-                        "placeValuesInside": "1",
-                        "theme": "fusion"
+                        "caption": "Annual Sales by State",
+                        "subcaption": "Last year",
+                        "entityFillHoverColor": "#cccccc",
+                        "numberScaleValue": "1,1000,1000",
+                        "numberScaleUnit": "K,M,B",
+                        "numberPrefix": "$",
+                        "showLabels": "1",
+                        "theme": "fusion",
+                        "drawcrossline": "1",
+                        "crossLineColor": "#ff0000"
                     },
-                    "categories": [{
-                        "category": [{
-                            "label": "Day Start"
-                        }]
-                    }],
-                    "dataset": [{
-                            "seriesName": "clothing.hsm.com",
-                            "data": [{
-                                "value": "12"
-                            }]
+                    "colorrange": {
+                        "minvalue": "0",
+                        "startlabel": "Low",
+                        "endlabel": "High",
+                        "code": "#e44a00",
+                        "gradient": "1",
+                        "color": [{
+                                "maxvalue": "56580",
+                                "displayvalue": "Average",
+                                "code": "#f8bd19"
+                            },
+                            {
+                                "maxvalue": "100000",
+                                "code": "#6baa01"
+                            }
+                        ]
+                    },
+                    "data": [{
+                            "id": "HI",
+                            "value": "3189"
                         },
                         {
-                            "seriesName": "food.hsm.com",
-                            "data": [{
-                                "value": "20"
-                            }]
+                            "id": "DC",
+                            "value": "2879"
+                        },
+                        {
+                            "id": "MD",
+                            "value": "920"
+                        },
+                        {
+                            "id": "DE",
+                            "value": "4607"
+                        },
+                        {
+                            "id": "RI",
+                            "value": "4890"
+                        },
+                        {
+                            "id": "WA",
+                            "value": "34927"
+                        },
+                        {
+                            "id": "OR",
+                            "value": "65798"
+                        },
+                        {
+                            "id": "CA",
+                            "value": "61861"
+                        },
+                        {
+                            "id": "AK",
+                            "value": "58911"
+                        },
+                        {
+                            "id": "ID",
+                            "value": "42662"
+                        },
+                        {
+                            "id": "NV",
+                            "value": "78041"
+                        },
+                        {
+                            "id": "AZ",
+                            "value": "41558"
+                        },
+                        {
+                            "id": "MT",
+                            "value": "62942"
+                        },
+                        {
+                            "id": "WY",
+                            "value": "78834"
+                        },
+                        {
+                            "id": "UT",
+                            "value": "50512"
+                        },
+                        {
+                            "id": "CO",
+                            "value": "73026"
+                        },
+                        {
+                            "id": "NM",
+                            "value": "78865"
+                        },
+                        {
+                            "id": "ND",
+                            "value": "50554"
+                        },
+                        {
+                            "id": "SD",
+                            "value": "35922"
+                        },
+                        {
+                            "id": "NE",
+                            "value": "43736"
+                        },
+                        {
+                            "id": "KS",
+                            "value": "32681"
+                        },
+                        {
+                            "id": "OK",
+                            "value": "79038"
+                        },
+                        {
+                            "id": "TX",
+                            "value": "75425"
+                        },
+                        {
+                            "id": "MN",
+                            "value": "43485"
+                        },
+                        {
+                            "id": "IA",
+                            "value": "46515"
+                        },
+                        {
+                            "id": "MO",
+                            "value": "63715"
+                        },
+                        {
+                            "id": "AR",
+                            "value": "34497"
+                        },
+                        {
+                            "id": "LA",
+                            "value": "70706"
+                        },
+                        {
+                            "id": "WI",
+                            "value": "42382"
+                        },
+                        {
+                            "id": "IL",
+                            "value": "73202"
+                        },
+                        {
+                            "id": "KY",
+                            "value": "79118"
+                        },
+                        {
+                            "id": "TN",
+                            "value": "44657"
+                        },
+                        {
+                            "id": "MS",
+                            "value": "66205"
+                        },
+                        {
+                            "id": "AL",
+                            "value": "75873"
+                        },
+                        {
+                            "id": "GA",
+                            "value": "76895"
+                        },
+                        {
+                            "id": "MI",
+                            "value": "67695"
+                        },
+                        {
+                            "id": "IN",
+                            "value": "33592"
+                        },
+                        {
+                            "id": "OH",
+                            "value": "32960"
+                        },
+                        {
+                            "id": "PA",
+                            "value": "54346"
+                        },
+                        {
+                            "id": "NY",
+                            "value": "42828"
+                        },
+                        {
+                            "id": "VT",
+                            "value": "77411"
+                        },
+                        {
+                            "id": "NH",
+                            "value": "51403"
+                        },
+                        {
+                            "id": "ME",
+                            "value": "64636"
+                        },
+                        {
+                            "id": "MA",
+                            "value": "51767"
+                        },
+                        {
+                            "id": "CT",
+                            "value": "57353"
+                        },
+                        {
+                            "id": "NJ",
+                            "value": "80788"
+                        },
+                        {
+                            "id": "WV",
+                            "value": "95890"
+                        },
+                        {
+                            "id": "VA",
+                            "value": "83140"
+                        },
+                        {
+                            "id": "NC",
+                            "value": "97344"
+                        },
+                        {
+                            "id": "SC",
+                            "value": "88234"
+                        },
+                        {
+                            "id": "FL",
+                            "value": "88234"
                         }
                     ]
-                }
-            });
-            fusioncharts_rtscolumn.render();
+                }, "json", "csv");
+                csv = csv.replace(/\n/g, "<br>");
+                document.getElementById('msg_transcode').innerHTML = csv;
+            }
+
+            document.getElementById("transcode_data").addEventListener("click", getTranscodedData);
 
 
-
-            fusioncharts_rtthermometer = new FusionCharts({
-                id: "chart_11",
-                type: 'thermometer',
-                renderAt: 'chart-container11',
-                width: '320',
-                height: '300',
-                dataFormat: 'json',
-                baseChartMessageFont: 'arial',
-                loadMessage: 'API Automation',
-                loadMessageFontSize: '40',
-                loadMessageColor: '#FF0000',
-
-                dataSource: {
-                    "chart": {
-                        "caption": "Central cold storage",
-                        "subcaption": "Bakersfield Central",
-                        "lowerLimit": "-20",
-                        "upperLimit": "20",
-                        "numberSuffix": "°C",
-                        "theme": "fusion"
-                    },
-                    "value": "-10"
-                }
-            });
-            fusioncharts_rtthermometer.render();
-
-
-
-
-            fusioncharts_rthbullet = new FusionCharts({
-                id: "chart_12",
-                type: 'hbullet',
-                renderAt: 'chart-container12',
-                width: '320',
-                height: '300',
-                dataFormat: 'json',
-                baseChartMessageFont: 'arial',
-                loadMessage: 'API Automation',
-                loadMessageFontSize: '40',
-                loadMessageColor: '#FF0000',
-
-                dataSource: {
-                    "chart": {
-                        "lowerLimit": "0",
-                        "upperLimit": "100",
-                        "numberPrefix": "$",
-                        "numberSuffix": "K",
-                        "targetColor": "#8e0000",
-                        "showHoverEffect": "1",
-                        "colorRangeFillMix": "{light+0}",
-                        "valuePadding": "7",
-                        "theme": "fusion"
-                    },
-                    "colorRange": {
-                        "color": [{
-                                "minValue": "0",
-                                "maxValue": "50",
-                                "code": "#e44a00",
-                                "alpha": "70"
-                            },
-                            {
-                                "minValue": "50",
-                                "maxValue": "75",
-                                "code": "#f2c500",
-                                "alpha": "70"
-                            },
-                            {
-                                "minValue": "75",
-                                "maxValue": "120",
-                                "code": "#1aaf5d",
-                                "alpha": "70"
-                            }
-                        ]
-                    },
-                    "value": "82",
-                    "target": "90"
-                }
-            });
-            fusioncharts_rthbullet.render();
-
-
-
-
-            fusioncharts_rthled = new FusionCharts({
-                id: "chart_13",
-                type: 'hled',
-                renderAt: 'chart-container13',
-                width: '320',
-                height: '300',
-                dataFormat: 'json',
-                baseChartMessageFont: 'arial',
-                loadMessage: 'API Automation',
-                loadMessageFontSize: '40',
-                loadMessageColor: '#FF0000',
-
-                dataSource: {
-                    "chart": {
-                        "lowerLimit": "0",
-                        "upperLimit": "100",
-                        "numberPrefix": "$",
-                        "numberSuffix": "K",
-                        "targetColor": "#8e0000",
-                        "showHoverEffect": "1",
-                        "colorRangeFillMix": "{light+0}",
-                        "valuePadding": "7",
-                        "theme": "fusion"
-                    },
-                    "colorRange": {
-                        "color": [{
-                                "minValue": "0",
-                                "maxValue": "50",
-                                "code": "#e44a00",
-                                "alpha": "70"
-                            },
-                            {
-                                "minValue": "50",
-                                "maxValue": "75",
-                                "code": "#f2c500",
-                                "alpha": "70"
-                            },
-                            {
-                                "minValue": "75",
-                                "maxValue": "120",
-                                "code": "#1aaf5d",
-                                "alpha": "70"
-                            }
-                        ]
-                    },
-                    "value": "67",
-                    "target": "90"
-                }
-            });
-            fusioncharts_rthled.render();
-
-
-
-            fusioncharts_rtvbullet = new FusionCharts({
-                id: "chart_14",
-                type: 'vbullet',
-                renderAt: 'chart-container14',
-                width: '320',
-                height: '300',
-                dataFormat: 'json',
-                baseChartMessageFont: 'arial',
-                loadMessage: 'API Automation',
-                loadMessageFontSize: '40',
-                loadMessageColor: '#FF0000',
-
-                dataSource: {
-                    "chart": {
-                        "lowerLimit": "0",
-                        "upperLimit": "100",
-                        "numberPrefix": "$",
-                        "numberSuffix": "K",
-                        "targetColor": "#8e0000",
-                        "showHoverEffect": "1",
-                        "colorRangeFillMix": "{light+0}",
-                        "valuePadding": "7",
-                        "theme": "fusion"
-                    },
-                    "colorRange": {
-                        "color": [{
-                                "minValue": "0",
-                                "maxValue": "50",
-                                "code": "#e44a00",
-                                "alpha": "70"
-                            },
-                            {
-                                "minValue": "50",
-                                "maxValue": "75",
-                                "code": "#f2c500",
-                                "alpha": "70"
-                            },
-                            {
-                                "minValue": "75",
-                                "maxValue": "120",
-                                "code": "#1aaf5d",
-                                "alpha": "70"
-                            }
-                        ]
-                    },
-                    "value": "73",
-                    "target": "90"
-                }
-            });
-            fusioncharts_rtvbullet.render();
-
-
-
-            fusioncharts_rtvled = new FusionCharts({
-                id: "chart_15",
-                type: 'vled',
-                renderAt: 'chart-container15',
-                width: '320',
-                height: '300',
-                dataFormat: 'json',
-                baseChartMessageFont: 'arial',
-                loadMessage: 'API Automation',
-                loadMessageFontSize: '40',
-                loadMessageColor: '#FF0000',
-
-                dataSource: {
-                    "chart": {
-                        "lowerLimit": "0",
-                        "upperLimit": "100",
-                        "caption": "Monthly Revenue",
-                        "subcaption": "Actual vs Target<br>Bakersfield Central",
-                        "numberPrefix": "$",
-                        "numberSuffix": "K",
-                        "targetColor": "#8e0000",
-                        "showHoverEffect": "1",
-                        "colorRangeFillMix": "{light+0}",
-                        "valuePadding": "7",
-                        "theme": "fusion"
-                    },
-                    "colorRange": {
-                        "color": [{
-                                "minValue": "0",
-                                "maxValue": "50",
-                                "code": "#e44a00",
-                                "alpha": "70"
-                            },
-                            {
-                                "minValue": "50",
-                                "maxValue": "75",
-                                "code": "#f2c500",
-                                "alpha": "70"
-                            },
-                            {
-                                "minValue": "75",
-                                "maxValue": "120",
-                                "code": "#1aaf5d",
-                                "alpha": "70"
-                            }
-                        ]
-                    },
-                    "value": "58",
-                    "target": "90"
-                }
-            });
-            fusioncharts_rtvled.render();
 
         });
     </script>
 </head>
+<div class="text-center mb-20">
+    Select data format :
+    <select id="data_format">
+        <option value="csv">CSV</option>
+        <option value="json">JSON</option>
+    </select>
+
+    <button id="get_chart_data">Get Chart Data</button>
+    <button id="get_CSV_data">Get CSV Data</button>
+    <button id="get_JSON_data">Get JSON Data</button>
+    <button id="get_SVG_data">Get SVG Data</button>
+    <button id="transcode_data">Transcode data</button>
+</div>
+
+<div id="msg" class="mb-20"> Chart data in the selected format will be displayed here.</div><br><br>
+<div id="msg_CSV" class="mb-20"> Chart CSV data will be displayed here.</div><br><br>
+<div id="msg_JSON" class="mb-20"> Chart JSON data will be displayed here.</div><br><br>
+<div id="msg_SVG" class="mb-20"></div><br><br>
+<div id="datainsert" class="mb-20"></div>
+<div id="xmlins" class="mb-20"></div><br><br>
+<div id="msg_transcode"></div>
 
 <body>
-    <div id="main1">
-        <span id="chart-container">FusionCharts will render here</span>
-        <span id="chart-container2">FusionCharts will render here</span>
-        <span id="chart-container3">FusionCharts will render here</span>
-    </div>
+    <div id="chart-container">FusionCharts will render here</div>
+</body>
 
-    <div id="main2">
-        <span id="chart-container4">FusionCharts will render here</span>
-        <span id="chart-container5">FusionCharts will render here</span>
-        <span id="chart-container6">FusionCharts will render here</span>
-    </div>
-    <div id="main3">
-        <span id="chart-container7">FusionCharts will render here</span>
-        <span id="chart-container8">FusionCharts will render here</span>
-        <span id="chart-container9">FusionCharts will render here</span>
-    </div>
-    <div id="main4">
-        <span id="chart-container10">FusionCharts will render here</span>
-        <span id="chart-container11">FusionCharts will render here</span>
-        <span id="chart-container12">FusionCharts will render here</span>
-    </div>
-
-    <div id="main5">
-        <span id="chart-container13">FusionCharts will render here</span>
-        <span id="chart-container14">FusionCharts will render here</span>
-        <span id="chart-container15">FusionCharts will render here</span>
-    </div>
+</html>
