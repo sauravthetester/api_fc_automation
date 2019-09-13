@@ -13,13 +13,131 @@ import com.fusioncharts.main.APITestBase;
 
 public class APIRTPageObjectModel extends APITestBase
 {
-//	@FindBy(className="fusioncharts-container")
-//	WebElement mainContainer;
+	@FindBy(id="chart_1")
+	WebElement rtgauge;
+	
+	@FindBy(id="chart_2")
+	WebElement rtarea;
+	
+	@FindBy(id="chart_3")
+	WebElement rtbulb;
+	
+	@FindBy(id="chart_4")
+	WebElement rtcolumn;
+	
+	@FindBy(id="chart_5")
+	WebElement rtcylinder;
+	
+	@FindBy(id="chart_6")
+	WebElement rthlinear;
+	
+	@FindBy(id="chart_7")
+	WebElement rtline;
+	
+	@FindBy(id="chart_8")
+	WebElement rtlinedy;
+	
+	@FindBy(id="chart_9")
+	WebElement rtsarea;
+	
+	@FindBy(id="chart_10")
+	WebElement rtscolumn;
+	
+	@FindBy(id="chart_11")
+	WebElement rtthermo;
+	
+	@FindBy(id="chart_12")
+	WebElement rthbullet;
+	
+	@FindBy(id="chart_13")
+	WebElement rthled;
+	
+	@FindBy(id="chart_14")
+	WebElement rtvbullet;
+	
+	@FindBy(id="chart_15")
+	WebElement rtvled;
 	
 	public APIRTPageObjectModel()
 	{
 		PageFactory.initElements(driver, this);
 	}
+	
+	public WebElement rtgauge()
+	{
+		return rtgauge;
+	}
+	
+	public WebElement rtarea()
+	{
+		return rtarea;
+	}
+	
+	public WebElement rtbulb()
+	{
+		return rtbulb;
+	}
+	
+	public WebElement rtcolumn()
+	{
+		return rtcolumn;
+	}
+	
+	public WebElement rtcylinder()
+	{
+		return rtcylinder;
+	}
+	
+	public WebElement rthlinear()
+	{
+		return rthlinear;
+	}
+	
+	public WebElement rtline()
+	{
+		return rtline;
+	}
+	
+	public WebElement rtlinedy()
+	{
+		return rtlinedy;
+	}
+	
+	public WebElement rtsarea()
+	{
+		return rtsarea;
+	}
+	
+	public WebElement rtscolumn()
+	{
+		return rtscolumn;
+	}
+	
+	public WebElement rtthermo()
+	{
+		return rtthermo;
+	}
+	
+	public WebElement rthbullet()
+	{
+		return rthbullet;
+	}
+	
+	public WebElement rthled()
+	{
+		return rthled;
+	}
+	
+	public WebElement rtvbullet()
+	{
+		return rtvbullet;
+	}
+	
+	public WebElement rtvled()
+	{
+		return rtvled;
+	}
+	
 	
 	@SuppressWarnings("finally")
 	public int totalPlotsIn(WebElement elem)

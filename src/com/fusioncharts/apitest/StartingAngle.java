@@ -20,7 +20,7 @@ import com.fusioncharts.main.APITestBase;
 import com.fusioncharts.pom.APIPageObjectModel;
 import com.fusioncharts.util.TestUtil;
 import com.relevantcodes.extentreports.LogStatus;
-//
+
 //import net.avh4.util.imagecomparison.ImageComparison;
 //import ru.yandex.qatools.ashot.comparison.ImageDiff;
 //import ru.yandex.qatools.ashot.comparison.ImageDiffer;

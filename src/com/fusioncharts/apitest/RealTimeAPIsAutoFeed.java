@@ -276,7 +276,7 @@ public class RealTimeAPIsAutoFeed extends APITestBase {
 	{
 		try
 		{
-			System.out.println("realTimeAPIs() executed");
+			System.out.println("realTimeAPIsAutoFeed() executed");
 			Thread.sleep(3000);
 		}
 		catch (InterruptedException e) 
@@ -285,7 +285,7 @@ public class RealTimeAPIsAutoFeed extends APITestBase {
 		}
 		report.endTest(test);
 		report.flush();
-//		driver.quit();
+		driver.quit();
 	}
 
 

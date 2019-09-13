@@ -37,7 +37,7 @@ public class AllChartsDataAPIs extends APITestBase
 	  
 	
 	@Test(priority = 1)
-	public void verifyAllDataAPIs() throws IOException
+	public void verifyAllChartsDataAPIs() throws IOException
 	{	
 		
 		String csvChartData="";
@@ -166,7 +166,7 @@ public class AllChartsDataAPIs extends APITestBase
 	{
 		try
 		{
-			System.out.println("getXMLData() executed");
+			System.out.println("AllChartsDataAPIs() executed");
 			Thread.sleep(3000);
 		}
 		catch (InterruptedException e) 

@@ -198,4 +198,41 @@ public class APIPageObjectModel extends APITestBase
 	{
 		return driver.findElement(By.xpath("//*[contains(@class,'-crosslineBottom')]")).findElement(By.tagName("path"));
 	}
+	public String getUpperLimit()
+	{
+		int ctr=0;
+		long textVal;
+		String textInTag = null;
+		WebElement yAxisLabel = driver.findElement(By.xpath("//*[contains(@class,'dataset-Label-group')]"));
+		List<WebElement> textElems = yAxisLabel.findElements(By.tagName("text"));
+		for(WebElement text:textElems)
+		{
+			ctr++;
+			if(ctr==2)
+			{
+				textInTag = text.getText();
+				break;
+			}
+		}
+		return textInTag;
+	}
+	
+	public String getLowerLimit()
+	{
+		int ctr=0;
+		long textVal;
+		String textInTag = null;
+		WebElement yAxisLabel = driver.findElement(By.xpath("//*[contains(@class,'dataset-Label-group')]"));
+		List<WebElement> textElems = yAxisLabel.findElements(By.tagName("text"));
+		for(WebElement text:textElems)
+		{
+			ctr++;
+			if(ctr==3)
+			{
+				textInTag = text.getText();
+				break;
+			}
+		}
+		return textInTag;
+	}
 }
