@@ -5,7 +5,7 @@
     <title></title>
     <!-- <script src="http://192.168.2.211/repos/xt-edge/out/build/source/fusioncharts.js"></script> -->
     <!-- <script src="http://192.168.2.211/repos/xt-edge/out/build/source/fusioncharts.theme.fint.js"></script> -->
-    <!-- <script src="http://192.168.2.211/repos/xt-edge/out/build/source/fusioncharts.usa.js"></script> -->
+    
     <!-- <script type="text/javascript" src="../../../build_files/3.13.3/fusioncharts.js"></script> -->
     <script type="text/javascript" src="./build/develop/fusioncharts.js"></script>
     <!-- <script type="text/javascript" src="../build_files/8063/fusioncharts.vml.js"></script>
@@ -13,8 +13,9 @@
     <script type="text/javascript" src="../build_files/8063/fusioncharts.zoomscatter.js"></script>
     <script type="text/javascript" src="../build_files/8063/fusioncharts.charts.js"></script>
     <script type="text/javascript" src="../build_files/8063/fusioncharts.powercharts.js"></script>
-    <script type="text/javascript" src="../build_files/8063/fusioncharts.widgets.js"></script>
-    <script type="text/javascript" src="../build_files/8063/fusioncharts.maps.js"></script>-->
+    <script type="text/javascript" src="../build_files/8063/fusioncharts.widgets.js"></script> -->
+    <script type="text/javascript" src="./build/develop/fusioncharts.maps.js"></script>
+    <script type="text/javascript" src="./build/develop/maps/fusioncharts.usa.js"></script>
 
     <!-- <script type="text/javascript" src="../build_files/8063/maps/fusioncharts.usa.js"></script>
     <script type="text/javascript" src="../build_files/8063/maps/fusioncharts.world.js"></script>
@@ -323,6 +324,7 @@
                 ]
             }
         }).render();
+
         document.getElementById('addMarker').onclick = function () {
             usaMap.addMarker({
                 id: 'addedMarker',
@@ -333,14 +335,14 @@
             });
         }
         document.getElementById('updateMarker').onclick = function () {
-            usaMap.updateMarker("west-zone-ho-2", {
+            usaMap.updateMarker("addedMarker", {
                 tooltext: 'test tooltext',
                 shapeid: "hdo-shape",
                 fillColor: '#00ff00'
             });
         }
         document.getElementById('removeMarker').onclick = function () {
-            usaMap.removeMarker("west-zone-ho-2");
+            usaMap.removeMarker("addedMarker");
         }
 
 

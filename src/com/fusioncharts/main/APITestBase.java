@@ -13,8 +13,10 @@ import javax.imageio.ImageIO;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -99,6 +101,28 @@ public class APITestBase
         Screenshot fpScreenshot = new AShot().shootingStrategy(ShootingStrategies.viewportRetina(100,0,0,2)).takeScreenshot(driver);
         String dest = System.getProperty("user.dir") + "/Screenshots/"+screenShotName+".png"; 
 		ImageIO.write(fpScreenshot.getImage(),"PNG",new File(dest));     
+                     
+        return dest;
+    }
+	
+	public static String captureElement(WebElement elem,String screenShotName) throws IOException
+    {
+        Screenshot fpScreenshot = new AShot().shootingStrategy(ShootingStrategies.viewportRetina(100,0,0,2)).takeScreenshot(driver);
+        String dest = System.getProperty("user.dir") + "/Screenshots/"+screenShotName+".png"; 
+        ImageIO.write(fpScreenshot.getImage(),"PNG",new File(dest));
+        
+        File fpScreenshotFile = new File(dest);
+        
+        BufferedImage  fullImg = ImageIO.read(fpScreenshotFile);
+        Point point = elem.getLocation();
+
+        // Get width and height of the element
+        int eleWidth = elem.getSize().getWidth();
+        int eleHeight = elem.getSize().getHeight();
+
+        // Crop the entire page screenshot to get only element screenshot
+        BufferedImage elemScreenshot= fullImg.getSubimage(point.getX(), point.getY(),eleWidth, eleHeight);
+		ImageIO.write(elemScreenshot,"PNG",new File(dest));     
                      
         return dest;
     }

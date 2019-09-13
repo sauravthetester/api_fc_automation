@@ -3,23 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-<<<<<<< HEAD
-      <class name="com.fusioncharts.apitest.IsPlotItemSliced_slicePlotItem">
+      <class name="com.fusioncharts.apitest.AnnotationAPIs">
         <methods>
-          <include name="shutDown"/>
-          <include name="verifyAPIIsPlotItemSliced_slicePlotItem"/>
+          <include name="verifyAPIAnnotationAPIs"/>
+          <include name="verifyAPIExistsInDataSheetAnnotationAPIs"/>
           <include name="setUp"/>
-        </methods>
-      </class> <!-- com.fusioncharts.apitest.IsPlotItemSliced_slicePlotItem -->
-=======
-      <class name="com.fusioncharts.apitest.RealTimeAPIsAutoFeed">
-        <methods>
-          <include name="setUp"/>
+          <include name="verifyChartIsRenderedAnnotationAPIs"/>
           <include name="shutDown"/>
-          <include name="verifyAPIRealTimeAPIsAutoFeed"/>
         </methods>
-      </class> <!-- com.fusioncharts.apitest.RealTimeAPIsAutoFeed -->
->>>>>>> 34API
+      </class> <!-- com.fusioncharts.apitest.AnnotationAPIs -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -21,7 +21,7 @@ import com.relevantcodes.extentreports.LogStatus;
 public class FeedData extends APITestBase 
 {
 	//The api name according to the data sheet
-	private final static String apiName = "feedData()"; 
+	private final static String apiName = "realTimeAPIs()"; 
 	Object[][] data;
 	APIPageObjectModel pom;
 	
@@ -49,22 +49,33 @@ public class FeedData extends APITestBase
 		driver.navigate().refresh();
 		boolean containerDisplayed = pom.verifyIfChartMainContainerDisplayed();
 		Assert.assertTrue(containerDisplayed, "chart is rendered");
+		
 	}
 	
 	@Test(priority = 3)
 	public void verifyAPIFeedData() throws IOException
 	{
-		WebElement plot = pom.getElementByPartialClassName("g", "plot-group");
-		List<WebElement> plots = plot.findElements(By.tagName("rect"));
-		Assert.assertTrue(plots.size() == 1, "Chart contains only one column");
-		test.log(LogStatus.PASS, test.addScreenCapture(APITestBase.capture("feedData_One column should exists")));	//Code Line for screenshot
-		
 		String apiScript = TestUtil.apiScript(data, apiName);
-		jsExecuteWithBuffer(apiScript);
-		plot = pom.getElementByPartialClassName("g", "plot-group");
-		plots = plot.findElements(By.tagName("rect"));
-		Assert.assertTrue(plots.size() == 2, "Feed Data API added a new cloumn");
-		test.log(LogStatus.PASS, test.addScreenCapture(APITestBase.capture("feedData_Two columns should exists")));	//Code Line for screenshot
+		JavascriptExecutor js = (JavascriptExecutor) driver; 
+		
+		
+		js.executeScript("fusioncharts_gauge.feedData('&label=thislabel&value=43')");
+		js.executeScript("fusioncharts_rtarea.feedData('&label=thislabel&value=43')");
+		js.executeScript("fusioncharts_rtbulb.feedData('&label=thislabel&value=43')");
+		js.executeScript("fusioncharts_rtcolumn.feedData('&label=thislabel&value=43')");
+		js.executeScript("fusioncharts_rtcylinder.feedData('&label=thislabel&value=43')");
+		js.executeScript("fusioncharts_rthbullet.feedData('&label=thislabel&value=43')");
+		js.executeScript("fusioncharts_rthled.feedData('&label=thislabel&value=43')");
+		js.executeScript("fusioncharts_rthlinear.feedData('&label=thislabel&value=43')");
+		js.executeScript("fusioncharts_rtline.feedData('&label=thislabel&value=43')");
+		js.executeScript("fusioncharts_rtlinedy.feedData('&label=thislabel&value=43')");
+		js.executeScript("fusioncharts_rtsarea.feedData('&label=thislabel&value=43')");
+		js.executeScript("fusioncharts_rtscolumn.feedData('&label=thislabel&value=43')");
+		js.executeScript("fusioncharts_rtthermometer.feedData('&label=thislabel&value=43')");
+		js.executeScript("fusioncharts_rtvbullet.feedData('&label=thislabel&value=43')");
+		js.executeScript("fusioncharts_rtvled.feedData('&label=thislabel&value=43')");
+		
+		
 	}
 	
 	@AfterTest
@@ -81,7 +92,7 @@ public class FeedData extends APITestBase
 		}
 		report.endTest(test);
 		report.flush();
-		driver.quit();
+		//driver.quit();
 	}
 
 

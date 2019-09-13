@@ -2,32 +2,32 @@
 <testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="56318" started-at="2019-08-29T07:49:33Z" finished-at="2019-08-29T07:50:29Z">
+  <suite name="Default suite" duration-ms="46322" started-at="2019-09-12T09:10:11Z" finished-at="2019-09-12T09:10:57Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="56318" started-at="2019-08-29T07:49:33Z" finished-at="2019-08-29T07:50:29Z">
-      <class name="com.fusioncharts.apitest.RealTimeAPIs">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.fusioncharts.apitest.RealTimeAPIs@64f6106c]" name="setUp" is-config="true" duration-ms="5681" started-at="2019-08-29T07:49:33Z" finished-at="2019-08-29T07:49:39Z">
+    <test name="Default test" duration-ms="46322" started-at="2019-09-12T09:10:11Z" finished-at="2019-09-12T09:10:57Z">
+      <class name="com.fusioncharts.apitest.AnnotationAPIs">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.fusioncharts.apitest.AnnotationAPIs@cb0ed20]" name="setUp" is-config="true" duration-ms="5962" started-at="2019-09-12T09:10:11Z" finished-at="2019-09-12T09:10:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="verifyAPIExistsInDataSheetRealTimeAPIs()[pri:1, instance:com.fusioncharts.apitest.RealTimeAPIs@64f6106c]" name="verifyAPIExistsInDataSheetRealTimeAPIs" duration-ms="7" started-at="2019-08-29T07:49:39Z" finished-at="2019-08-29T07:49:39Z">
+        <test-method status="PASS" signature="verifyAPIExistsInDataSheetAnnotationAPIs()[pri:1, instance:com.fusioncharts.apitest.AnnotationAPIs@cb0ed20]" name="verifyAPIExistsInDataSheetAnnotationAPIs" duration-ms="25" started-at="2019-09-12T09:10:17Z" finished-at="2019-09-12T09:10:17Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyAPIExistsInDataSheetRealTimeAPIs -->
-        <test-method status="PASS" signature="verifyChartIsRenderedRealTimeAPIs()[pri:2, instance:com.fusioncharts.apitest.RealTimeAPIs@64f6106c]" name="verifyChartIsRenderedRealTimeAPIs" duration-ms="852" started-at="2019-08-29T07:49:39Z" finished-at="2019-08-29T07:49:39Z">
+        </test-method> <!-- verifyAPIExistsInDataSheetAnnotationAPIs -->
+        <test-method status="PASS" signature="verifyChartIsRenderedAnnotationAPIs()[pri:2, instance:com.fusioncharts.apitest.AnnotationAPIs@cb0ed20]" name="verifyChartIsRenderedAnnotationAPIs" duration-ms="835" started-at="2019-09-12T09:10:17Z" finished-at="2019-09-12T09:10:18Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyChartIsRenderedRealTimeAPIs -->
-        <test-method status="PASS" signature="verifyAPIRealTimeAPIs()[pri:3, instance:com.fusioncharts.apitest.RealTimeAPIs@64f6106c]" name="verifyAPIRealTimeAPIs" duration-ms="45621" started-at="2019-08-29T07:49:39Z" finished-at="2019-08-29T07:50:25Z">
+        </test-method> <!-- verifyChartIsRenderedAnnotationAPIs -->
+        <test-method status="PASS" signature="verifyAPIAnnotationAPIs()[pri:3, instance:com.fusioncharts.apitest.AnnotationAPIs@cb0ed20]" name="verifyAPIAnnotationAPIs" duration-ms="35475" started-at="2019-09-12T09:10:18Z" finished-at="2019-09-12T09:10:53Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyAPIRealTimeAPIs -->
-        <test-method status="PASS" signature="shutDown()[pri:0, instance:com.fusioncharts.apitest.RealTimeAPIs@64f6106c]" name="shutDown" is-config="true" duration-ms="4127" started-at="2019-08-29T07:50:25Z" finished-at="2019-08-29T07:50:29Z">
+        </test-method> <!-- verifyAPIAnnotationAPIs -->
+        <test-method status="PASS" signature="shutDown()[pri:0, instance:com.fusioncharts.apitest.AnnotationAPIs@cb0ed20]" name="shutDown" is-config="true" duration-ms="3985" started-at="2019-09-12T09:10:53Z" finished-at="2019-09-12T09:10:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- shutDown -->
-      </class> <!-- com.fusioncharts.apitest.RealTimeAPIs -->
+      </class> <!-- com.fusioncharts.apitest.AnnotationAPIs -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
