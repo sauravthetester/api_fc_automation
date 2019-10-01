@@ -18,9 +18,8 @@ import com.relevantcodes.extentreports.LogStatus;
 
 public class AllChartsDataAPIs extends APITestBase 
 {
-
 	//The api name according to the data sheet
-//	private final static String apiName = "getXMLData()"; 
+	//private final static String apiName = "getXMLData()"; 
 	Object[][] data;
 	APIPageObjectModel pom;
 	private static boolean hasRendered;
@@ -144,6 +143,19 @@ public class AllChartsDataAPIs extends APITestBase
 			Assert.assertTrue(svgData.startsWith("<svg"),msgSVGData);
 			Assert.assertTrue(svgData.endsWith("</svg>"),msgSVGData);
 			
+			
+			jsExecuteWithBuffer("fusioncharts.resizeTo(400,250)");
+			
+			long resizeToWidth = (long) js.executeScript("return fusioncharts.apiInstance.getFromEnv('chartWidth')");
+			long resizeToHeight = (long) js.executeScript("return fusioncharts.apiInstance.getFromEnv('chartHeight')");
+			
+			int resizeWidthInt = (int) resizeToWidth;
+			int resizeToHeightInt = (int) resizeToHeight;
+			
+			Assert.assertTrue((resizeWidthInt==400 && resizeToHeightInt==250), chart+" resizeTo() API - chart should get resized");
+			
+			try {Thread.sleep(2000);} catch (InterruptedException e){e.printStackTrace();}
+			
 			jsExecuteWithBuffer("fusioncharts.dispose()");
 			
 			try
@@ -175,6 +187,6 @@ public class AllChartsDataAPIs extends APITestBase
 		}
 		report.endTest(test);
 		report.flush();
-//		driver.quit();
+		driver.quit();
 	}
 }

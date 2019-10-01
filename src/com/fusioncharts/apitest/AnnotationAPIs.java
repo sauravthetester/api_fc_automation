@@ -62,7 +62,7 @@ public class AnnotationAPIs extends APITestBase{
 		JavascriptExecutor js = (JavascriptExecutor) driver; 
 		Actions action = new Actions(driver);
 		
-		annotationDisplayed = pom.annotation().isDisplayed();
+		annotationDisplayed = pom.annotationExists();
 		Assert.assertTrue(!annotationDisplayed,"Annotation not displayed");
 		
 		try {Thread.sleep(3000);} catch (InterruptedException e) {e.printStackTrace();}
@@ -79,6 +79,7 @@ public class AnnotationAPIs extends APITestBase{
 		Assert.assertTrue(annotationDisplayed,"Annotation displayed");
 		
 		try {Thread.sleep(3000);} catch (InterruptedException e) {e.printStackTrace();}
+		
 		
 		js.executeScript("arguments[0].scrollIntoView(true);", pom.update());
 		action.click(pom.update()).build().perform();
@@ -187,7 +188,7 @@ public class AnnotationAPIs extends APITestBase{
 		}
 		report.endTest(test);
 		report.flush();
-		driver.quit();
+//		driver.quit();
 	}
 
 

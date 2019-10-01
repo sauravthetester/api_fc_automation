@@ -52,6 +52,13 @@ public class GetDataWithId extends APITestBase {
 	public void verifyAPIGetDataWithId() throws IOException
 	{
 		String apiScript = TestUtil.apiScript(data, apiName);
+		String[] dataheader = {"Food Item","Available Stock","Estimated Demand"};
+		String[] dataContent = {"Poultry","P_AS,6000","P_ED,19000","Rice",
+				"R_AS,9500","R_ED,16500","Peanut Butter","PB_AS,11900","PB_ED,14300","Salmon","S_AS,8000","S_ED,10000","Cereal",
+				"C_AS,9700","C_ED,9800"};
+		
+		int headerCnt=0;
+		int dataCnt=0;
 
 		WebElement table = driver.findElement(By.id("data-table"));
 
@@ -72,6 +79,27 @@ public class GetDataWithId extends APITestBase {
 		Assert.assertTrue(!isTableEmpty, "Table should not be null");
 		
 		test.log(LogStatus.PASS, test.addScreenCapture(APITestBase.capture("GetDataWithId_table below chart with 1 heading row 3 columns and 5 data rows")));	//Code Line for screenshot
+		
+		List<WebElement> headers= table.findElements(By.tagName("th"));
+		
+		for(WebElement header : headers)
+		{			
+			Assert.assertTrue(header.getText().equals(dataheader[headerCnt]), "Table header mismatch");
+			Assert.assertTrue(driver.findElements(By.xpath("//*[contains(text(),'" + dataheader[headerCnt] + "')]")).size()>0,"Header Text not visible!");
+			headerCnt++;
+		}
+		
+		
+		List<WebElement> contents= table.findElements(By.tagName("td"));
+		
+		for(WebElement content : contents)
+		{			
+			Assert.assertTrue(content.getText().equals(dataContent[dataCnt]), "Table data mismatch");
+			Assert.assertTrue(driver.findElements(By.xpath("//*[contains(text(),'" + dataContent[dataCnt] + "')]")).size()>0,"Table data Text not visible!");
+			dataCnt++;
+		}
+		
+		
 	}
 	
 	@AfterTest

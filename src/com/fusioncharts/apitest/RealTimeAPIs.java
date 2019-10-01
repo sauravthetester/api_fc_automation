@@ -123,10 +123,10 @@ public class RealTimeAPIs extends APITestBase {
 		//setDataForId() for all real time charts
 		
 		js.executeScript("fusioncharts_gauge.setDataForId('dial1',47)");
-		try {Thread.sleep(2000);} catch (InterruptedException e) {e.printStackTrace();}
+		try {Thread.sleep(4000);} catch (InterruptedException e) {e.printStackTrace();}
 		js.executeScript("fusioncharts_gauge.setDataForId('dial2',23)");
 		
-		try {Thread.sleep(3000);} catch (InterruptedException e) {e.printStackTrace();}
+		try {Thread.sleep(5000);} catch (InterruptedException e) {e.printStackTrace();}
 		
 		gaugeGetData1 = (long) js.executeScript("return fusioncharts_gauge.getData(1)");
 		gaugeGetData2 = (long) js.executeScript("return fusioncharts_gauge.getData(2)");
@@ -136,10 +136,10 @@ public class RealTimeAPIs extends APITestBase {
 		Assert.assertTrue(gaugeGetData2==23, "GetData() angulargauge after setDataForId expected to return correct value");
 		
 		js.executeScript("fusioncharts_gauge.setData(1,63)");
-		try {Thread.sleep(2000);} catch (InterruptedException e) {e.printStackTrace();}
+		try {Thread.sleep(4000);} catch (InterruptedException e) {e.printStackTrace();}
 		js.executeScript("fusioncharts_gauge.setData(2,79)");
 		
-		try {Thread.sleep(3000);} catch (InterruptedException e) {e.printStackTrace();}
+		try {Thread.sleep(5000);} catch (InterruptedException e) {e.printStackTrace();}
 		
 		gaugeGetData1 = (long) js.executeScript("return fusioncharts_gauge.getData(1)");
 		gaugeGetData2 = (long) js.executeScript("return fusioncharts_gauge.getData(2)");
@@ -149,10 +149,10 @@ public class RealTimeAPIs extends APITestBase {
 		
 		
 		js.executeScript("fusioncharts_rthlinear.setDataForId('pointer1',37)");
-		try {Thread.sleep(2000);} catch (InterruptedException e) {e.printStackTrace();}
+		try {Thread.sleep(4000);} catch (InterruptedException e) {e.printStackTrace();}
 		js.executeScript("fusioncharts_rthlinear.setDataForId('pointer2',29)");
 		
-		try {Thread.sleep(3000);} catch (InterruptedException e) {e.printStackTrace();}
+		try {Thread.sleep(5000);} catch (InterruptedException e) {e.printStackTrace();}
 		
 		hlinearGetData1 = (long) js.executeScript("return fusioncharts_rthlinear.getData(1)");
 		hlinearGetData2 = (long) js.executeScript("return fusioncharts_rthlinear.getData(2)");
@@ -237,7 +237,7 @@ public class RealTimeAPIs extends APITestBase {
 	}
 	
 	@AfterTest
-	public void shutDown() 
+	public void shutDown()
 	{
 		try
 		{

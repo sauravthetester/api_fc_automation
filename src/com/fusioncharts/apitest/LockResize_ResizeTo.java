@@ -103,6 +103,8 @@ public class LockResize_ResizeTo extends APITestBase {
 		
 		Assert.assertTrue((resizeWidthInt==400 && resizeToHeightInt==250), "resizeTo() API - chart should get resized");
 		
+		try {Thread.sleep(2000);} catch (InterruptedException e){e.printStackTrace();}
+		
 		test.log(LogStatus.PASS, test.addScreenCapture(APITestBase.capture("LockResize_ResizeTo_JSON data should show above chart")));	//Code Line for screenshot
 	}
 	

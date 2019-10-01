@@ -71,8 +71,6 @@ public class TestUtilData {
 			{
 				return (String) data[i][1];
 			}
-			
-//			allChartsHTML[i] = (String) data[i][1];
 		}
 		return "";
 	}

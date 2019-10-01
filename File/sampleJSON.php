@@ -1,90 +1,66 @@
 {
-  "chart": {
-      "caption": "Product-wise Quarterly Revenue vs. Profit %",
-      "subCaption": "Harry's SuperMart - Last Year",
-      "xAxisname": "Quarter",
-      "pYAxisName": "Sales",
-      "sYAxisName": "Profit %",
-      "numberPrefix": "$",
-      "sNumberSuffix": "%",
-      "sYAxisMaxValue": "25",
-      "theme": "fusion",
-      "exportenabled": 1,
-      "enableChartMouseMoveEvent": 1,
-      //External image url path for logo
-      "logoURL": "http://static.fusioncharts.com/sampledata/images/Logo-HM-72x72.png",
-      //Changing logo alpha
-      "logoAlpha": "40",
-      //Scaling logo image
-      "logoScale": "110",
-      //Setting logo position
-      "logoPosition": "TR"
-  },
-  "categories": [{
-      "category": [{
-              "label": "Q1"
-          },
-          {
-              "label": "Q2"
-          },
-          {
-              "label": "Q3"
-          },
-          {
-              "label": "Q4"
-          }
-      ]
-  }],
-  "dataset": [{
-          "seriesname": "Food Products",
-          "data": [{
-                  "value": "10000"
-              },
-              {
-                  "value": "15000"
-              },
-              {
-                  "value": "2000"
-              },
-              {
-                  "value": "15000"
-              }
-          ]
-      },
-      {
-          "seriesname": "Non-Food Products",
-          "data": [{
-                  "value": "3000"
-              },
-              {
-                  "value": "3400"
-              },
-              {
-                  "value": "9000"
-              },
-              {
-                  "value": "11800"
-              }
-          ]
-      },
-      {
-          "seriesname": "Profit %",
-          "renderAs": "line",
-          "parentYAxis": "S",
-          "showValues": "0",
-          "data": [{
-                  "value": "14"
-              },
-              {
-                  "value": "16"
-              },
-              {
-                  "value": "15"
-              },
-              {
-                  "value": "17"
-              }
-          ]
-      }
-  ]
-}
+                    "chart": {
+                        "caption": "Monthly revenue for last year",
+                        "subCaption": "Harry's SuperMart",
+                        "xAxisName": "Month",
+                        "yAxisName": "Revenues (In USD)",
+                        "numberPrefix": "$",
+                        "theme": "fusion"
+                    },
+                    "data": [{
+                            "label": "Jan",
+                            "value": "540000"
+                        },
+                        {
+                            "label": "Feb",
+                            "value": "540000"
+                        },
+                        {
+                            "label": "Mar",
+                            "value": "540000"
+                        },
+                        {
+                            "label": "Apr",
+                            "value": "540000"
+                        },
+                        {
+                            "label": "May",
+                            "value": "540000"
+                        },
+                        {
+                            "label": "Jun",
+                            "value": "540000"
+                        },
+                        {
+                            "label": "Jul",
+                            "value": "540000"
+                        },
+                        {
+                            "label": "Aug",
+                            "value": "540000"
+                        },
+                        {
+                            "label": "Sep",
+                            "value": "540000"
+                        },
+                        {
+                            "label": "Oct",
+                            "value": "540000"
+                        },
+                        {
+                            "label": "Nov",
+                            "value": "540000"
+                        },
+                        {
+                            "label": "Dec",
+                            "value": "540000"
+                        }
+                    ],
+                    "trendlines": [{
+                        "line": [{
+                            "startvalue": "700000",
+                            "valueOnRight": "1",
+                            "displayvalue": "Monthly Target"
+                        }]
+                    }]
+                }

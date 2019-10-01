@@ -85,7 +85,7 @@ public class StartingAngle extends APITestBase
         jsExecuteWithBuffer("fusioncharts.startingAngle(60,1)");
         
         test.log(LogStatus.PASS, test.addScreenCapture(APITestBase.capture("ZZZAutoVerify StartingAngle()_Pie and Doughnut Chart after relative rotate 60 degrees for 1 time")));
-        BufferedImage pieAfterRotateRelative1 = ImageIO.read(new File(System.getProperty("user.dir") +"/Screenshots/ZZZAutoVerify StartingAngle()_Pie and Doughnut Chart after absolute rotate 60 degrees.png"));
+        BufferedImage pieAfterRotateRelative1 = ImageIO.read(new File(System.getProperty("user.dir") +"/Screenshots/ZZZAutoVerify StartingAngle()_Pie and Doughnut Chart after relative rotate 60 degrees for 1 time.png"));
         Assert.assertTrue(!bufferedImagesEqual(pieAfterRotateRelative1,pieAfterRotateAbs),"First Rotate and Absolute rotate are same images");
         
         jsExecuteWithBuffer("fusioncharts.startingAngle(60,1)");

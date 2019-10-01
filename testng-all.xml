@@ -180,5 +180,10 @@
       		<class name="com.fusioncharts.apitest.AllChartsDataAPIs" />
     	</classes>
   	</test>
+  	<test name="AllChartsSetDataAPIs" parallel="false" preserve-order="true" thread-count="1" >
+    	<classes>
+      		<class name="com.fusioncharts.apitest.AllChartsSetDataAPIs" />
+    	</classes>
+  	</test>
   	
 </suite>

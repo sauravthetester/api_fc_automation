@@ -30,6 +30,8 @@ public class APITestBase
     public static ExtentTest test;
     public APITestBase api;
     public static String htmlFile = System.getProperty("user.dir")+"/File/NewTestTry.html";
+    public static String feeddataFileJSON = System.getProperty("user.dir")+"/File/feeddata.json";
+    public static String feeddataFileXML = System.getProperty("user.dir")+"/File/feeddata.xml";
     public static String configFile = System.getProperty("user.dir")+"/src/com/fusioncharts/config/config.properties";
     public static String extentreportXMLFile = System.getProperty("user.dir")+"/src/com/fusioncharts/config/extent-config.xml";
     public static String extentreportReportFile = System.getProperty("user.dir") +"/test-output/FC_API_ExtentReport.html";

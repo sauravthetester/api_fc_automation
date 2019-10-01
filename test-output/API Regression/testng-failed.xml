@@ -4,35 +4,6 @@
   <listeners>
     <listener class-name="com.fusioncharts.ExtentReportListener.ExtentReporterNG"/>
   </listeners>
-<<<<<<< HEAD
-  <test thread-count="5" name="SetJSONUrl(failed)">
-    <classes>
-      <class name="com.fusioncharts.apitest.SetJSONUrl">
-        <methods>
-          <include name="verifyAPISetJSONUrl"/>
-          <include name="shutDown"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- com.fusioncharts.apitest.SetJSONUrl -->
-    </classes>
-  </test> <!-- SetJSONUrl(failed) -->
-  <test thread-count="5" name="GetSVGString(failed)">
-    <classes>
-      <class name="com.fusioncharts.apitest.GetSVGString">
-        <methods>
-          <include name="verifyAPIGetSVGString"/>
-          <include name="shutDown"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- com.fusioncharts.apitest.GetSVGString -->
-    </classes>
-  </test> <!-- GetSVGString(failed) -->
-  <test thread-count="5" name="HasRendered(failed)">
-    <classes>
-      <class name="com.fusioncharts.apitest.HasRendered">
-        <methods>
-          <include name="verifyAPIHasRendered"/>
-=======
   <test thread-count="5" name="SetChartDataUrl(failed)">
     <classes>
       <class name="com.fusioncharts.apitest.SetChartDataUrl">
@@ -44,56 +15,70 @@
       </class> <!-- com.fusioncharts.apitest.SetChartDataUrl -->
     </classes>
   </test> <!-- SetChartDataUrl(failed) -->
+  <test thread-count="5" name="SetJSONUrl(failed)">
+    <classes>
+      <class name="com.fusioncharts.apitest.SetJSONUrl">
+        <methods>
+          <include name="verifyAPISetJSONUrl"/>
+          <include name="shutDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.fusioncharts.apitest.SetJSONUrl -->
+    </classes>
+  </test> <!-- SetJSONUrl(failed) -->
   <test thread-count="5" name="SetXMLUrl(failed)">
     <classes>
       <class name="com.fusioncharts.apitest.SetXMLUrl">
         <methods>
           <include name="verifyAPISetXMLUrl"/>
           <include name="shutDown"/>
->>>>>>> 34API
           <include name="setUp"/>
         </methods>
       </class> <!-- com.fusioncharts.apitest.SetXMLUrl -->
     </classes>
   </test> <!-- SetXMLUrl(failed) -->
-  <test thread-count="5" name="SetXMLData(failed)">
+  <test thread-count="5" name="RealTimeAPIs(failed)">
     <classes>
-      <class name="com.fusioncharts.apitest.SetXMLUrl">
+      <class name="com.fusioncharts.apitest.RealTimeAPIs">
         <methods>
-          <include name="verifyAPISetXMLUrl"/>
-          <include name="shutDown"/>
-<<<<<<< HEAD
-        </methods>
-      </class> <!-- com.fusioncharts.apitest.HasRendered -->
-    </classes>
-  </test> <!-- HasRendered(failed) -->
-  <test thread-count="5" name="Configure(failed)">
-    <classes>
-      <class name="com.fusioncharts.apitest.Configure">
-        <methods>
-          <include name="shutDown"/>
-          <include name="setUp"/>
-          <include name="verifyAPIConfigure"/>
-        </methods>
-      </class> <!-- com.fusioncharts.apitest.Configure -->
-    </classes>
-  </test> <!-- Configure(failed) -->
-=======
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- com.fusioncharts.apitest.SetXMLUrl -->
-    </classes>
-  </test> <!-- SetXMLData(failed) -->
-  <test thread-count="5" name="LockResize_ResizeTo(failed)">
-    <classes>
-      <class name="com.fusioncharts.apitest.LockResize_ResizeTo">
-        <methods>
-          <include name="verifyAPILockResize_ResizeTo"/>
+          <include name="verifyAPIRealTimeAPIs"/>
           <include name="setUp"/>
           <include name="shutDown"/>
         </methods>
-      </class> <!-- com.fusioncharts.apitest.LockResize_ResizeTo -->
+      </class> <!-- com.fusioncharts.apitest.RealTimeAPIs -->
     </classes>
-  </test> <!-- LockResize_ResizeTo(failed) -->
->>>>>>> 34API
+  </test> <!-- RealTimeAPIs(failed) -->
+  <test thread-count="5" name="RealTimeAPIsAutoFeed(failed)">
+    <classes>
+      <class name="com.fusioncharts.apitest.RealTimeAPIsAutoFeed">
+        <methods>
+          <include name="setUp"/>
+          <include name="shutDown"/>
+          <include name="verifyAPIRealTimeAPIsAutoFeed"/>
+        </methods>
+      </class> <!-- com.fusioncharts.apitest.RealTimeAPIsAutoFeed -->
+    </classes>
+  </test> <!-- RealTimeAPIsAutoFeed(failed) -->
+  <test thread-count="5" name="StartingAngle(failed)">
+    <classes>
+      <class name="com.fusioncharts.apitest.StartingAngle">
+        <methods>
+          <include name="shutDown"/>
+          <include name="setUp"/>
+          <include name="verifyAPIStartingAngle"/>
+        </methods>
+      </class> <!-- com.fusioncharts.apitest.StartingAngle -->
+    </classes>
+  </test> <!-- StartingAngle(failed) -->
+  <test thread-count="5" name="AnnotationAPIs(failed)">
+    <classes>
+      <class name="com.fusioncharts.apitest.AnnotationAPIs">
+        <methods>
+          <include name="verifyAPIAnnotationAPIs"/>
+          <include name="setUp"/>
+          <include name="shutDown"/>
+        </methods>
+      </class> <!-- com.fusioncharts.apitest.AnnotationAPIs -->
+    </classes>
+  </test> <!-- AnnotationAPIs(failed) -->
 </suite> <!-- Failed suite [API Regression] -->

@@ -6,9 +6,9 @@
 		<listener class-name="com.fusioncharts.ExtentReportListener.ExtentReporterNG"/>
 	</listeners>
 
-  	<test name="StartingAngle" parallel="false" preserve-order="true" thread-count="1" >
+  	<test name="Clone" parallel="false" preserve-order="true" thread-count="1" >
     	<classes>
-      		<class name="com.fusioncharts.apitest.StartingAngle" />
+      		<class name="com.fusioncharts.apitest.Clone" />
     	</classes>
   	</test>
   	
