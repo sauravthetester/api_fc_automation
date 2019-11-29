@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.fusioncharts.apitest.AllChartsSetDataAPIs">
+      <class name="com.fusioncharts.apitest.LockResize_ResizeTo">
         <methods>
+          <include name="verifyAPILockResize_ResizeTo"/>
           <include name="setUp"/>
-          <include name="verifyAllChartsDataAPIs"/>
           <include name="shutDown"/>
         </methods>
-      </class> <!-- com.fusioncharts.apitest.AllChartsSetDataAPIs -->
+      </class> <!-- com.fusioncharts.apitest.LockResize_ResizeTo -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -68,23 +68,21 @@ public class Clone extends APITestBase
 		int firstChartElementsTotal = svgTotal.get(0).findElements(By.xpath("*")).size();
 		int clonedChartElementsTotal = svgTotal.get(1).findElements(By.xpath("*")).size();
 		Assert.assertTrue(firstChartElementsTotal==clonedChartElementsTotal, "Child elements of both are equal in number");
+		
 		test.log(LogStatus.PASS, test.addScreenCapture(APITestBase.capture("Clone_there Should Be 2 Similar Charts")));	//Code Line for screenshot
 		
-		BufferedImage cloned = ImageIO.read(new File(System.getProperty("user.dir") +"/Compare Screenshots/Cloned.png"));
-		test.log(LogStatus.PASS, test.addScreenCapture(APITestBase.captureElement(driver.findElement(By.id("chart_1")),"ZZZAutoVerify cloned")));
-		BufferedImage clonedcapture = ImageIO.read(new File(System.getProperty("user.dir") +"/Screenshots/ZZZAutoVerify cloned.png"));
-		Assert.assertTrue(bufferedImagesEqual(cloned,clonedcapture),"Clone() API with same chart type working correctly");
 		
 		driver.findElement(By.id("modified_copy")).click();
 		
 		try {Thread.sleep(4000);} catch (InterruptedException e) {e.printStackTrace();}
 		svgTotal = pom.getAllSvgElems();
 		Assert.assertTrue(svgTotal.size()==2, "Totally 2 charts exist");
+		String clonedChartType = (String) js.executeScript("return clonedchart.type");
 		
-		BufferedImage clonechanged = ImageIO.read(new File(System.getProperty("user.dir") +"/Compare Screenshots/clone changed.png"));
-		test.log(LogStatus.PASS, test.addScreenCapture(APITestBase.captureElement(driver.findElement(By.id("chartobject-2")),"ZZZAutoVerify clone changed")));
-		BufferedImage clonechangedcapture = ImageIO.read(new File(System.getProperty("user.dir") +"/Screenshots/ZZZAutoVerify clone changed.png"));
-		Assert.assertTrue(bufferedImagesEqual(clonechanged,clonechangedcapture),"Clone() API with different chart type working correctly");
+		Assert.assertTrue(clonedChartType.equals("bar2d"), "Cloned chart type is bar2d");
+		
+		test.log(LogStatus.PASS, test.addScreenCapture(APITestBase.capture("Clone_there Should Be a line and a bar Chart")));	//Code Line for screenshot
+		
 	}
 	
 	@AfterTest

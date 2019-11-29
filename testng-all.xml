@@ -61,11 +61,6 @@
     	</classes>
   	</test>
   	
-  	<test name="SetChartDataUrl" parallel="false" preserve-order="true" thread-count="1" >
-    	<classes>
-      		<class name="com.fusioncharts.apitest.SetChartDataUrl" />
-    	</classes>
-  	</test>
   	
   	<test name="SetChartData" parallel="false" preserve-order="true" thread-count="1" >
     	<classes>
@@ -73,11 +68,6 @@
     	</classes>
   	</test>
   	
-  	<test name="SetJSONUrl" parallel="false" preserve-order="true" thread-count="1" >
-    	<classes>
-      		<class name="com.fusioncharts.apitest.SetJSONUrl" />
-    	</classes>
-  	</test>
   	
   	<test name="SetJSONData" parallel="false" preserve-order="true" thread-count="1" >
     	<classes>
@@ -85,11 +75,6 @@
     	</classes>
   	</test>
   	
-  	<test name="SetXMLUrl" parallel="false" preserve-order="true" thread-count="1" >
-    	<classes>
-      		<class name="com.fusioncharts.apitest.SetXMLUrl" />
-    	</classes>
-  	</test>
   	
   	<test name="SetXMLData" parallel="false" preserve-order="true" thread-count="1" >
     	<classes>

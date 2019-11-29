@@ -122,7 +122,6 @@ public class TestUtilSetData {
 		for(int i=0; i<sheet.getLastRowNum(); i++)
 		{
 			allCharts[i] = (String) data[i][0];
-			
 		}
 		return allCharts;
 	}

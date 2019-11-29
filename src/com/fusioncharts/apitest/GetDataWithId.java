@@ -64,7 +64,6 @@ public class GetDataWithId extends APITestBase {
 
 		boolean isTableEmpty = table.findElements(By.xpath(".//*")).isEmpty();
 		
-		System.out.println("isAnyElementInTable = "+isTableEmpty);
 		
 		Assert.assertTrue(isTableEmpty, "Table should be null");
 		

@@ -40,7 +40,7 @@ public class AllChartsSetDataAPIs extends APITestBase
 	  
 	
 	@Test(priority = 1)
-	public void verifyAllChartsDataAPIs() throws IOException, SAXException
+	public void verifyAllChartsSetDataAPIs() throws IOException, SAXException
 	{	
 		JavascriptExecutor js = (JavascriptExecutor) driver; 
 		
@@ -57,8 +57,12 @@ public class AllChartsSetDataAPIs extends APITestBase
 		Map<String, Object> getJSONDataMap = null;
 		Map<String, Object> getChartJSONMap = null;
 		
+		
+		
 		for(String chart:allCharts)
 		{
+			if(chart==null)
+				break;
 			cnt++;
 			htmlData = TestUtilSetData.chartHtml(data, chart);
 			TestUtilSetData.htmlWrite(htmlData);
@@ -96,7 +100,6 @@ public class AllChartsSetDataAPIs extends APITestBase
 			
 			try {Thread.sleep(4000);} catch (InterruptedException e){e.printStackTrace();}
 			
-			System.out.println(chart);
 			
 //			Assert.assertEquals(mapper.readTree(getChartData), mapper.readTree(getChartDataJSON),chart+" setChartDataURL() returns correct data");
 //			Assert.assertEquals(mapper.readTree(getJSONData), mapper.readTree(getChartJSON),chart+" setJSONUrl() returns correct data");
@@ -130,7 +133,7 @@ public class AllChartsSetDataAPIs extends APITestBase
 	{
 		try
 		{
-			System.out.println("AllChartsDataAPIs() executed");
+			System.out.println("AllChartsSetDataAPIs() executed");
 			Thread.sleep(3000);
 		}
 		catch (InterruptedException e) 

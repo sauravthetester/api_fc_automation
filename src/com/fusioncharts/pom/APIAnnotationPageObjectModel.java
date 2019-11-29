@@ -145,12 +145,18 @@ public class APIAnnotationPageObjectModel extends APITestBase{
 	
 	public WebElement getAddedMarker()
 	{
+		int ctr=0;
 		WebElement addedMarker = null;
 		List<WebElement> ellipseMarkers = chart.markerParent().findElements(By.tagName("ellipse"));
 		
 		for(WebElement marker:ellipseMarkers)
-			addedMarker = marker;
+		{
+			ctr++;
+			if(ctr==5)
+				addedMarker = marker;
+		}
 		
 		return addedMarker;
 	}
+	
 }

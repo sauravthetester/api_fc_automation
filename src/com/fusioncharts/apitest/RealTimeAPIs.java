@@ -54,6 +54,8 @@ public class RealTimeAPIs extends APITestBase {
 		
 		JavascriptExecutor js = (JavascriptExecutor) driver; 
 		
+		try {Thread.sleep(3000);} catch (InterruptedException e) {e.printStackTrace();}
+		
 		//getData() and getDataForId() for all real time charts
 		long gaugeGetData1 = (long) js.executeScript("return fusioncharts_gauge.getData(1)");
 		long gaugeGetData2 = (long) js.executeScript("return fusioncharts_gauge.getData(2)");

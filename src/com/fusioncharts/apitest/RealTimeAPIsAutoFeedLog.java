@@ -259,7 +259,12 @@ public class RealTimeAPIsAutoFeedLog extends APITestBase {
 		
 		///Verifying cleared windows
 		
-		BufferedImage blankLogWindow = ImageIO.read(new File(System.getProperty("user.dir") +"/Compare Screenshots/Log Window Blank Sample.png"));
+		BufferedImage blankLogWindow = null;
+		
+		if(prop.getProperty("browser").equalsIgnoreCase("chrome"))
+			blankLogWindow = ImageIO.read(new File(System.getProperty("user.dir") +"/Compare Screenshots/Log Window Blank Sample_Chrome.png"));
+		else if(prop.getProperty("browser").equalsIgnoreCase("firefox"))
+			blankLogWindow = ImageIO.read(new File(System.getProperty("user.dir") +"/Compare Screenshots/Log Window Blank Sample_Firefox.png"));
 		
 		test.log(LogStatus.PASS, test.addScreenCapture(APITestBase.captureElement(pomRT.rtgauge().findElement(By.id("dialog")),"ZZZAutoVerify log window rtgauge")));
 		BufferedImage rtgaugeLogWindow = ImageIO.read(new File(System.getProperty("user.dir") +"/Screenshots/ZZZAutoVerify log window rtgauge.png"));

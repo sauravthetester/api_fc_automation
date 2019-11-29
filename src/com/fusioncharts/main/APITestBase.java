@@ -74,8 +74,8 @@ public class APITestBase
         
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
-        driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().pageLoadTimeout(6, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(6, TimeUnit.SECONDS);
         
         driver.get(prop.getProperty("url"));
     }
@@ -128,7 +128,9 @@ public class APITestBase
 	     for (int x = 0; x < img1.getWidth(); x++) {
 	      for (int y = 0; y < img1.getHeight(); y++) {
 	       if (img1.getRGB(x, y) != img2.getRGB(x, y))
-	        return false;
+		       {
+		        return false;
+		       }
 	       }
 	      }
 	     } else {

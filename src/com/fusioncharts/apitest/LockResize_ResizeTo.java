@@ -72,8 +72,12 @@ public class LockResize_ResizeTo extends APITestBase {
 		action.moveByOffset(70,0).build().perform();
 		action.release().build().perform();
 		
+		try {Thread.sleep(2000);} catch (InterruptedException e){e.printStackTrace();}
+		
 		long newWidth = (long) js.executeScript("return fusioncharts.apiInstance.getFromEnv('chartWidth')");
 		int newWidthInt = (int) newWidth;
+		
+		
 		Assert.assertTrue(newWidthInt!=widthInt, "Chart should get resized");
 		
 		jsExecuteWithBuffer("fusioncharts.lockResize(true)");
