@@ -4,6 +4,28 @@
   <listeners>
     <listener class-name="com.fusioncharts.ExtentReportListener.ExtentReporterNG"/>
   </listeners>
+  <test thread-count="5" name="Configure(failed)">
+    <classes>
+      <class name="com.fusioncharts.apitest.Configure">
+        <methods>
+          <include name="shutDown"/>
+          <include name="setUp"/>
+          <include name="verifyAPIConfigure"/>
+        </methods>
+      </class> <!-- com.fusioncharts.apitest.Configure -->
+    </classes>
+  </test> <!-- Configure(failed) -->
+  <test thread-count="5" name="ConfigureLink(failed)">
+    <classes>
+      <class name="com.fusioncharts.apitest.ConfigureLink">
+        <methods>
+          <include name="setUp"/>
+          <include name="shutDown"/>
+          <include name="verifyAPIConfigureLink"/>
+        </methods>
+      </class> <!-- com.fusioncharts.apitest.ConfigureLink -->
+    </classes>
+  </test> <!-- ConfigureLink(failed) -->
   <test thread-count="5" name="AllChartsDataAPIs(failed)">
     <classes>
       <class name="com.fusioncharts.apitest.AllChartsDataAPIs">

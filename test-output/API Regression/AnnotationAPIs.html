@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>3/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Nov 29 16:20:03 IST 2019</td>
+<td>Started on:</td><td>Fri Nov 29 18:09:01 IST 2019</td>
 </tr>
-<tr><td>Total time:</td><td>68 seconds (68018 ms)</td>
+<tr><td>Total time:</td><td>70 seconds (70310 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,99 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.fusioncharts.apitest.Configure.verifyAPIConfigure()'><b>verifyAPIConfigure</b><br>Test class: com.fusioncharts.apitest.Configure</td>
+<td><div><pre>java.lang.AssertionError: Configure API custom message correctly shown did not expect to find [true] but found [false]
+	at com.fusioncharts.apitest.Configure.verifyAPIConfigure(Configure.java:57)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1378)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1112632546", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1112632546'><pre>java.lang.AssertionError: Configure API custom message correctly shown did not expect to find [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.failNotEquals(Assert.java:969)
+	at org.testng.Assert.assertTrue(Assert.java:43)
+	at com.fusioncharts.apitest.Configure.verifyAPIConfigure(Configure.java:57)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1378)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.fusioncharts.apitest.Configure@589da3f3</td></tr>
+<tr>
+<td title='com.fusioncharts.apitest.ConfigureLink.verifyAPIConfigureLink()'><b>verifyAPIConfigureLink</b><br>Test class: com.fusioncharts.apitest.ConfigureLink</td>
+<td><div><pre>java.lang.IllegalArgumentException: Must provide a location for a move action.
+	at org.openqa.selenium.interactions.MoveMouseAction.&lt;init&gt;(MoveMouseAction.java:37)
+	at org.openqa.selenium.interactions.Actions.moveToElement(Actions.java:386)
+	at com.fusioncharts.apitest.ConfigureLink.verifyAPIConfigureLink(ConfigureLink.java:77)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1378)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2128665553", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2128665553'><pre>java.lang.IllegalArgumentException: Must provide a location for a move action.
+	at org.openqa.selenium.interactions.MoveMouseAction.&lt;init&gt;(MoveMouseAction.java:37)
+	at org.openqa.selenium.interactions.Actions.moveToElement(Actions.java:386)
+	at com.fusioncharts.apitest.ConfigureLink.verifyAPIConfigureLink(ConfigureLink.java:77)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1378)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>9</td>
+<td>com.fusioncharts.apitest.ConfigureLink@7354b8c5</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -92,37 +185,27 @@ function toggleAllBoxes() {
 <tr>
 <td title='com.fusioncharts.apitest.FormatNumber.verifyAPIChartTypeFormatNumber()'><b>verifyAPIChartTypeFormatNumber</b><br>Test class: com.fusioncharts.apitest.FormatNumber</td>
 <td></td>
-<td>1</td>
+<td>0</td>
 <td>com.fusioncharts.apitest.FormatNumber@32115b28</td></tr>
 <tr>
 <td title='com.fusioncharts.apitest.Clone.verifyAPIClone()'><b>verifyAPIClone</b><br>Test class: com.fusioncharts.apitest.Clone</td>
 <td></td>
-<td>10</td>
+<td>9</td>
 <td>com.fusioncharts.apitest.Clone@1f9f6368</td></tr>
-<tr>
-<td title='com.fusioncharts.apitest.Configure.verifyAPIConfigure()'><b>verifyAPIConfigure</b><br>Test class: com.fusioncharts.apitest.Configure</td>
-<td></td>
-<td>0</td>
-<td>com.fusioncharts.apitest.Configure@589da3f3</td></tr>
-<tr>
-<td title='com.fusioncharts.apitest.ConfigureLink.verifyAPIConfigureLink()'><b>verifyAPIConfigureLink</b><br>Test class: com.fusioncharts.apitest.ConfigureLink</td>
-<td></td>
-<td>6</td>
-<td>com.fusioncharts.apitest.ConfigureLink@7354b8c5</td></tr>
 <tr>
 <td title='com.fusioncharts.apitest.DragableChartAPIs.verifyAPIDragarea()'><b>verifyAPIDragarea</b><br>Test class: com.fusioncharts.apitest.DragableChartAPIs</td>
 <td></td>
-<td>9</td>
+<td>7</td>
 <td>com.fusioncharts.apitest.DragableChartAPIs@4f704591</td></tr>
 <tr>
 <td title='com.fusioncharts.apitest.DragableChartAPIs.verifyAPIDragcolumn2d()'><b>verifyAPIDragcolumn2d</b><br>Test class: com.fusioncharts.apitest.DragableChartAPIs</td>
 <td></td>
-<td>9</td>
+<td>7</td>
 <td>com.fusioncharts.apitest.DragableChartAPIs@4f704591</td></tr>
 <tr>
 <td title='com.fusioncharts.apitest.DragableChartAPIs.verifyAPIDragline()'><b>verifyAPIDragline</b><br>Test class: com.fusioncharts.apitest.DragableChartAPIs</td>
 <td></td>
-<td>9</td>
+<td>8</td>
 <td>com.fusioncharts.apitest.DragableChartAPIs@4f704591</td></tr>
 <tr>
 <td title='com.fusioncharts.apitest.AddEventListener.verifyAPIExistsInDataSheetAddEventListener()'><b>verifyAPIExistsInDataSheetAddEventListener</b><br>Test class: com.fusioncharts.apitest.AddEventListener</td>
@@ -257,7 +340,7 @@ function toggleAllBoxes() {
 <tr>
 <td title='com.fusioncharts.apitest.GetChartData.verifyAPIGetChartData()'><b>verifyAPIGetChartData</b><br>Test class: com.fusioncharts.apitest.GetChartData</td>
 <td></td>
-<td>3</td>
+<td>2</td>
 <td>com.fusioncharts.apitest.GetChartData@5f0fd5a0</td></tr>
 <tr>
 <td title='com.fusioncharts.apitest.GetData.verifyAPIGetData()'><b>verifyAPIGetData</b><br>Test class: com.fusioncharts.apitest.GetData</td>
@@ -272,12 +355,12 @@ function toggleAllBoxes() {
 <tr>
 <td title='com.fusioncharts.apitest.IsPlotItemSliced_slicePlotItem.verifyAPIIsPlotItemSliced_slicePlotItem()'><b>verifyAPIIsPlotItemSliced_slicePlotItem</b><br>Test class: com.fusioncharts.apitest.IsPlotItemSliced_slicePlotItem</td>
 <td></td>
-<td>24</td>
+<td>12</td>
 <td>com.fusioncharts.apitest.IsPlotItemSliced_slicePlotItem@5f9edf14</td></tr>
 <tr>
 <td title='com.fusioncharts.apitest.LockResize_ResizeTo.verifyAPILockResize_ResizeTo()'><b>verifyAPILockResize_ResizeTo</b><br>Test class: com.fusioncharts.apitest.LockResize_ResizeTo</td>
 <td></td>
-<td>9</td>
+<td>10</td>
 <td>com.fusioncharts.apitest.LockResize_ResizeTo@1130520d</td></tr>
 <tr>
 <td title='com.fusioncharts.apitest.RealTimeAPIs.verifyAPIRealTimeAPIs()'><b>verifyAPIRealTimeAPIs</b><br>Test class: com.fusioncharts.apitest.RealTimeAPIs</td>
@@ -287,12 +370,12 @@ function toggleAllBoxes() {
 <tr>
 <td title='com.fusioncharts.apitest.RealTimeAPIsAutoFeed.verifyAPIRealTimeAPIsAutoFeed()'><b>verifyAPIRealTimeAPIsAutoFeed</b><br>Test class: com.fusioncharts.apitest.RealTimeAPIsAutoFeed</td>
 <td></td>
-<td>345</td>
+<td>352</td>
 <td>com.fusioncharts.apitest.RealTimeAPIsAutoFeed@766653e6</td></tr>
 <tr>
 <td title='com.fusioncharts.apitest.RealTimeAPIsAutoFeedLog.verifyAPIRealTimeAPIsAutoFeedLog()'><b>verifyAPIRealTimeAPIsAutoFeedLog</b><br>Test class: com.fusioncharts.apitest.RealTimeAPIsAutoFeedLog</td>
 <td></td>
-<td>50</td>
+<td>37</td>
 <td>com.fusioncharts.apitest.RealTimeAPIsAutoFeedLog@53b7f657</td></tr>
 <tr>
 <td title='com.fusioncharts.apitest.RemoveEventListener.verifyAPIRemoveEventListener()'><b>verifyAPIRemoveEventListener</b><br>Test class: com.fusioncharts.apitest.RemoveEventListener</td>
@@ -302,7 +385,7 @@ function toggleAllBoxes() {
 <tr>
 <td title='com.fusioncharts.apitest.SetChartData.verifyAPISetChartData()'><b>verifyAPISetChartData</b><br>Test class: com.fusioncharts.apitest.SetChartData</td>
 <td></td>
-<td>4</td>
+<td>3</td>
 <td>com.fusioncharts.apitest.SetChartData@77659b30</td></tr>
 <tr>
 <td title='com.fusioncharts.apitest.SetData.verifyAPISetData()'><b>verifyAPISetData</b><br>Test class: com.fusioncharts.apitest.SetData</td>
@@ -312,12 +395,12 @@ function toggleAllBoxes() {
 <tr>
 <td title='com.fusioncharts.apitest.SetJSONData.verifyAPISetJSONData()'><b>verifyAPISetJSONData</b><br>Test class: com.fusioncharts.apitest.SetJSONData</td>
 <td></td>
-<td>4</td>
+<td>3</td>
 <td>com.fusioncharts.apitest.SetJSONData@2f666ebb</td></tr>
 <tr>
 <td title='com.fusioncharts.apitest.SetXMLData.verifyAPISetXMLData()'><b>verifyAPISetXMLData</b><br>Test class: com.fusioncharts.apitest.SetXMLData</td>
 <td></td>
-<td>2</td>
+<td>1</td>
 <td>com.fusioncharts.apitest.SetXMLData@102cec62</td></tr>
 <tr>
 <td title='com.fusioncharts.apitest.ShowChartMessage.verifyAPIShowChartMessage()'><b>verifyAPIShowChartMessage</b><br>Test class: com.fusioncharts.apitest.ShowChartMessage</td>
@@ -327,7 +410,7 @@ function toggleAllBoxes() {
 <tr>
 <td title='com.fusioncharts.apitest.StartingAngle.verifyAPIStartingAngle()'><b>verifyAPIStartingAngle</b><br>Test class: com.fusioncharts.apitest.StartingAngle</td>
 <td></td>
-<td>12</td>
+<td>10</td>
 <td>com.fusioncharts.apitest.StartingAngle@2b9ed6da</td></tr>
 <tr>
 <td title='com.fusioncharts.apitest.ZoomlineAPIs.verifyAPIZoomlineAPIs()'><b>verifyAPIZoomlineAPIs</b><br>Test class: com.fusioncharts.apitest.ZoomlineAPIs</td>
@@ -337,7 +420,7 @@ function toggleAllBoxes() {
 <tr>
 <td title='com.fusioncharts.apitest.AddEventListener.verifyChartIsRenderedAddEventListener()'><b>verifyChartIsRenderedAddEventListener</b><br>Test class: com.fusioncharts.apitest.AddEventListener</td>
 <td></td>
-<td>0</td>
+<td>1</td>
 <td>com.fusioncharts.apitest.AddEventListener@7975d1d8</td></tr>
 <tr>
 <td title='com.fusioncharts.apitest.AnnotationAPIs.verifyChartIsRenderedAnnotationAPIs()'><b>verifyChartIsRenderedAnnotationAPIs</b><br>Test class: com.fusioncharts.apitest.AnnotationAPIs</td>
@@ -412,7 +495,7 @@ function toggleAllBoxes() {
 <tr>
 <td title='com.fusioncharts.apitest.LockResize_ResizeTo.verifyChartIsRenderedLockResize_ResizeTo()'><b>verifyChartIsRenderedLockResize_ResizeTo</b><br>Test class: com.fusioncharts.apitest.LockResize_ResizeTo</td>
 <td></td>
-<td>3</td>
+<td>1</td>
 <td>com.fusioncharts.apitest.LockResize_ResizeTo@1130520d</td></tr>
 <tr>
 <td title='com.fusioncharts.apitest.RealTimeAPIs.verifyChartIsRenderedRealTimeAPIs()'><b>verifyChartIsRenderedRealTimeAPIs</b><br>Test class: com.fusioncharts.apitest.RealTimeAPIs</td>
@@ -427,7 +510,7 @@ function toggleAllBoxes() {
 <tr>
 <td title='com.fusioncharts.apitest.RealTimeAPIsAutoFeedLog.verifyChartIsRenderedRealTimeAPIsAutoFeedLog()'><b>verifyChartIsRenderedRealTimeAPIsAutoFeedLog</b><br>Test class: com.fusioncharts.apitest.RealTimeAPIsAutoFeedLog</td>
 <td></td>
-<td>1</td>
+<td>0</td>
 <td>com.fusioncharts.apitest.RealTimeAPIsAutoFeedLog@53b7f657</td></tr>
 <tr>
 <td title='com.fusioncharts.apitest.RemoveEventListener.verifyChartIsRenderedRemoveEventListener()'><b>verifyChartIsRenderedRemoveEventListener</b><br>Test class: com.fusioncharts.apitest.RemoveEventListener</td>

@@ -3,15 +3,12 @@
 <head>
       <title>My first chart using FusionCharts Suite XT</title>
       <script type="text/javascript" src="./build/develop/fusioncharts.js"></script>
-      <script type="text/javascript" src="./build/develop/themes/fusioncharts.theme.carbon.js"></script>
-      <script type="text/javascript" src="./build/develop/themes/fusioncharts.theme.zune.js"></script>
-      <script type="text/javascript" src="./build/develop/themes/fusioncharts.theme.ocean.js"></script>
 
       <script type="text/javascript">
         FusionCharts.ready(function () {
             fusioncharts = new FusionCharts({
                 id: "chart_1",
-                type: 'spline',
+                type: 'doughnut2d',
                 renderAt: 'chart-container',
                 width: '800',
                 height: '500',
@@ -23,178 +20,29 @@
 
                 dataSource: {
                     "chart": {
-                        "caption": "Total footfall in Bakersfield Central",
-                        "subCaption": "Last week",
-                        "xAxisName": "Day",
-                        "yAxisName": "No. of Footfalls",
-                        "lineThickness": "2",
-                        "theme": "fusion",
-                        "drawcrossline": "1",
-                        "crossLineColor": "#ff0000"
+                        "caption": "Split of Revenue by Product Categories",
+                        "animation": "0",
+                        "subCaption": "Last year",
+                        "numberPrefix": "$",
+                        "theme": "fint",
+                        "captionFontSize": "13",
+                        "subcaptionFontSize": "12",
+                        "subcaptionFontBold": "0"
                     },
-                    "data": [{
-                            "label": "Mon",
-                            "value": "15123"
-                        },
-                        {
-                            "label": "Tue",
-                            "value": "14233"
-                        },
-                        {
-                            "label": "Wed",
-                            "value": "25507"
-                        },
-                        {
-                            "vline": "true",
-                            "lineposition": "0",
-                            "color": "#6baa01",
-                            "labelHAlign": "left",
-                            "label": "National holiday"
-                        },
-                        {
-                            "label": "Thu",
-                            "value": "9110"
-                        },
-                        {
-                            "label": "Fri",
-                            "value": "15529"
-                        },
-                        {
-                            "label": "Sat",
-                            "value": "20803"
-                        },
-                        {
-                            "label": "Sun",
-                            "value": "19202"
-                        }
+                    "data": [
+
                     ]
                 }
             });
-            var msg = document.getElementById("msg");
+            fusioncharts.render();
 
-            function getData() {
-                var format = document.getElementById("data_format").value;
-                var data = fusioncharts.getChartData(format);
-                if (format == "csv") {
-                    data = data.replace(/\n/g, "<br>");
-                    msg.innerHTML = data;
-                } else if (format == "json") {
-                    msg.innerHTML = JSON.stringify(data, undefined, 2);
-                }
-            }
-            document.getElementById("get_chart_data").addEventListener("click", getData);
-
-
-            var msg_CSV = document.getElementById("msg_CSV");
-
-            function getCSVData() {
-                var data = fusioncharts.getCSVData();
-
-                data = data.replace(/\n/g, "<br>");
-                msg_CSV.innerHTML = data;
-            }
-            document.getElementById("get_CSV_data").addEventListener("click", getCSVData);
-
-
-            var msg_JSON = document.getElementById("msg_JSON");
-
-            function getJSONData() {
-                var data = fusioncharts.getJSONData();
-                msg_JSON.innerHTML = JSON.stringify(data, undefined, 2);
-            }
-            document.getElementById("get_JSON_data").addEventListener("click", getJSONData);
-
-            function svgString() {
-                fusioncharts.getSVGString(function (svg) {
-                    document.getElementById("msg_SVG").appendChild(document.createTextNode(svg));
-                });
-            }
-            document.getElementById("get_SVG_data").addEventListener("click", svgString);
-
-
-            document.getElementById('xmlins').appendChild(document.createTextNode(fusioncharts.getXMLData()));
-
-            function getTranscodedData() {
-                var csv = FusionCharts.transcodeData({
-                    "chart": {
-                        "caption": "Total footfall in Bakersfield Central",
-                        "subCaption": "Last week",
-                        "xAxisName": "Day",
-                        "yAxisName": "No. of Footfalls",
-                        "lineThickness": "2",
-                        "theme": "fusion",
-                        "drawcrossline": "1",
-                        "crossLineColor": "#ff0000"
-                    },
-                    "data": [{
-                            "label": "Mon",
-                            "value": "15123"
-                        },
-                        {
-                            "label": "Tue",
-                            "value": "14233"
-                        },
-                        {
-                            "label": "Wed",
-                            "value": "25507"
-                        },
-                        {
-                            "vline": "true",
-                            "lineposition": "0",
-                            "color": "#6baa01",
-                            "labelHAlign": "left",
-                            "label": "National holiday"
-                        },
-                        {
-                            "label": "Thu",
-                            "value": "9110"
-                        },
-                        {
-                            "label": "Fri",
-                            "value": "15529"
-                        },
-                        {
-                            "label": "Sat",
-                            "value": "20803"
-                        },
-                        {
-                            "label": "Sun",
-                            "value": "19202"
-                        }
-                    ]
-                }, "json", "csv");
-                csv = csv.replace(/\n/g, "<br>");
-                document.getElementById('msg_transcode').innerHTML = csv;
-            }
-
-            document.getElementById("transcode_data").addEventListener("click", getTranscodedData);
-
-
+            fusioncharts.configure({
+            "dataEmptyMessage": "Custom Message: No data to load"
+        });
 
         });
     </script>
 </head>
-<div class="text-center mb-20">
-    Select data format :
-    <select id="data_format">
-        <option value="csv">CSV</option>
-        <option value="json">JSON</option>
-    </select>
-
-    <button id="get_chart_data">Get Chart Data</button>
-    <button id="get_CSV_data">Get CSV Data</button>
-    <button id="get_JSON_data">Get JSON Data</button>
-    <button id="get_SVG_data">Get SVG Data</button>
-    <button id="transcode_data">Transcode data</button>
-</div>
-
-<div id="msg" class="mb-20"> Chart data in the selected format will be displayed here.</div><br><br>
-<div id="msg_CSV" class="mb-20"> Chart CSV data will be displayed here.</div><br><br>
-<div id="msg_JSON" class="mb-20"> Chart JSON data will be displayed here.</div><br><br>
-<div id="msg_SVG" class="mb-20"></div><br><br>
-<div id="datainsert" class="mb-20"></div>
-<div id="xmlins" class="mb-20"></div><br><br>
-<div id="msg_transcode"></div>
 
 <body>
     <div id="chart-container">FusionCharts will render here</div>
