@@ -6,9 +6,15 @@
 		<listener class-name="com.fusioncharts.ExtentReportListener.ExtentReporterNG"/>
 	</listeners>
 
-  	<test name="RealTimeAPIsAutoFeedLog" parallel="false" preserve-order="true" thread-count="1" >
+  	<test name="ConfigureLink" parallel="false" preserve-order="true" thread-count="1" >
     	<classes>
-      		<class name="com.fusioncharts.apitest.RealTimeAPIsAutoFeedLog" />
+      		<class name="com.fusioncharts.apitest.ConfigureLink">
+      			<methods>
+      				<include name="verifyAPIExistsInDataSheetConfigureLink" />
+			        <include name="verifyChartIsRenderedConfigureLink" />
+			        <include name="verifyAPIConfigureLink" />
+      			</methods>
+      		</class>
     	</classes>
   	</test>
   	

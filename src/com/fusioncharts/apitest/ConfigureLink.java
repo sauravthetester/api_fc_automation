@@ -2,6 +2,7 @@ package com.fusioncharts.apitest;
 
 import com.fusioncharts.main.APITestBase;
 import java.io.IOException;
+import java.lang.reflect.Method;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -9,6 +10,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
+import org.testng.ITest;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -25,6 +27,19 @@ public class ConfigureLink extends APITestBase {
 	Object[][] data;
 	APIPageObjectModel pom;
 	
+	private ThreadLocal<String> testName = new ThreadLocal<>();
+	
+
+
+//	@org.testng.annotations.BeforeMethod
+//	public void BeforeMethod(Method method, Object[] testData){
+//	   testName.set("" + "this test");
+//	}
+//	@Override
+//	public String getTestName() 
+//	{
+//		return testName.get();
+//	}
 	@BeforeTest
 	public void setUp() 
 	{
@@ -34,7 +49,7 @@ public class ConfigureLink extends APITestBase {
 		data = TestUtil.getTestData();
 	}
 	  
-	@Test(priority = 1)
+	@Test(priority = 1, enabled = false)
 	public void verifyAPIExistsInDataSheetConfigureLink()
 	{
 		boolean apiExists = TestUtil.thisAPIexists(data, apiName);

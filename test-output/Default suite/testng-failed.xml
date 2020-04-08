@@ -3,13 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.fusioncharts.apitest.LockResize_ResizeTo">
+      <class name="com.fusioncharts.apitest.ConfigureLink">
         <methods>
-          <include name="verifyAPILockResize_ResizeTo"/>
-          <include name="setUp"/>
-          <include name="shutDown"/>
+          <include name="verifyChartIsRenderedConfigureLink"/>
+          <include name="verifyAPIConfigureLink"/>
         </methods>
-      </class> <!-- com.fusioncharts.apitest.LockResize_ResizeTo -->
+      </class> <!-- com.fusioncharts.apitest.ConfigureLink -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
