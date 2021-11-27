@@ -35,6 +35,7 @@ public class ConfigureLink extends APITestBase {
 //	public void BeforeMethod(Method method, Object[] testData){
 //	   testName.set("" + "this test");
 //	}
+// this is a test
 //	@Override
 //	public String getTestName() 
 //	{
