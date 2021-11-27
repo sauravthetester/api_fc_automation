@@ -3,12 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.fusioncharts.apitest.ConfigureLink">
+      <class name="com.fusioncharts.apitest.AddEventListener">
         <methods>
-          <include name="verifyChartIsRenderedConfigureLink"/>
-          <include name="verifyAPIConfigureLink"/>
+          <include name="verifyAPIAddEventListener"/>
+          <include name="shutDown"/>
+          <include name="setUp"/>
+          <include name="verifyChartIsRenderedAddEventListener"/>
         </methods>
-      </class> <!-- com.fusioncharts.apitest.ConfigureLink -->
+      </class> <!-- com.fusioncharts.apitest.AddEventListener -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

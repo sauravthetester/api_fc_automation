@@ -1,29 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="3" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-04-01T19:58:29 IST" name="API Regression" finished-at="2020-04-01T19:58:47 IST" duration-ms="18816">
+  <suite started-at="2020-07-03T19:23:23 IST" name="Default suite" finished-at="2020-07-03T19:23:34 IST" duration-ms="11276">
     <groups>
     </groups>
-    <test started-at="2020-04-01T19:58:29 IST" name="ConfigureLink" finished-at="2020-04-01T19:58:47 IST" duration-ms="18816">
-      <class name="com.fusioncharts.apitest.ConfigureLink">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.fusioncharts.apitest.ConfigureLink@6e2aa843]" started-at="2020-04-01T19:58:29 IST" name="setUp" finished-at="2020-04-01T19:58:34 IST" duration-ms="5733" status="PASS">
+    <test started-at="2020-07-03T19:23:23 IST" name="Default test" finished-at="2020-07-03T19:23:34 IST" duration-ms="11276">
+      <class name="com.fusioncharts.apitest.AddEventListener">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.fusioncharts.apitest.AddEventListener@5d908d47]" started-at="2020-07-03T19:23:23 IST" name="setUp" finished-at="2020-07-03T19:23:26 IST" duration-ms="3220" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyChartIsRenderedConfigureLink()[pri:2, instance:com.fusioncharts.apitest.ConfigureLink@6e2aa843]" started-at="2020-04-01T19:58:34 IST" name="verifyChartIsRenderedConfigureLink" finished-at="2020-04-01T19:58:35 IST" duration-ms="546" status="PASS">
+        <test-method signature="verifyAPIExistsInDataSheetAddEventListener()[pri:1, instance:com.fusioncharts.apitest.AddEventListener@5d908d47]" started-at="2020-07-03T19:23:26 IST" name="verifyAPIExistsInDataSheetAddEventListener" finished-at="2020-07-03T19:23:26 IST" duration-ms="13" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyChartIsRenderedConfigureLink -->
-        <test-method signature="verifyAPIConfigureLink()[pri:3, instance:com.fusioncharts.apitest.ConfigureLink@6e2aa843]" started-at="2020-04-01T19:58:35 IST" name="verifyAPIConfigureLink" finished-at="2020-04-01T19:58:42 IST" duration-ms="7207" status="PASS">
+        </test-method> <!-- verifyAPIExistsInDataSheetAddEventListener -->
+        <test-method signature="verifyChartIsRenderedAddEventListener()[pri:2, instance:com.fusioncharts.apitest.AddEventListener@5d908d47]" started-at="2020-07-03T19:23:26 IST" name="verifyChartIsRenderedAddEventListener" finished-at="2020-07-03T19:23:26 IST" duration-ms="251" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyAPIConfigureLink -->
-        <test-method is-config="true" signature="shutDown()[pri:0, instance:com.fusioncharts.apitest.ConfigureLink@6e2aa843]" started-at="2020-04-01T19:58:42 IST" name="shutDown" finished-at="2020-04-01T19:58:47 IST" duration-ms="5257" status="PASS">
+        </test-method> <!-- verifyChartIsRenderedAddEventListener -->
+        <test-method signature="verifyAPIAddEventListener()[pri:3, instance:com.fusioncharts.apitest.AddEventListener@5d908d47]" started-at="2020-07-03T19:23:26 IST" name="verifyAPIAddEventListener" finished-at="2020-07-03T19:23:31 IST" duration-ms="4298" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAPIAddEventListener -->
+        <test-method is-config="true" signature="shutDown()[pri:0, instance:com.fusioncharts.apitest.AddEventListener@5d908d47]" started-at="2020-07-03T19:23:31 IST" name="shutDown" finished-at="2020-07-03T19:23:34 IST" duration-ms="3423" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- shutDown -->
-      </class> <!-- com.fusioncharts.apitest.ConfigureLink -->
-    </test> <!-- ConfigureLink -->
-  </suite> <!-- API Regression -->
+      </class> <!-- com.fusioncharts.apitest.AddEventListener -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

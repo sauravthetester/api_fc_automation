@@ -35,7 +35,7 @@ public class Clone extends APITestBase
 		pom = new APIPageObjectModel();
 		data = TestUtil.getTestData();
 	}
-	  
+
 	@Test(priority = 1)
 	public void verifyAPIExistsInDataSheetClone()
 	{

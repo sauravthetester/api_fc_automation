@@ -63,7 +63,7 @@ public class APITestBase
         String browser = prop.getProperty("browser");
         if(browser.equalsIgnoreCase("chrome"))
         {
-            System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
+            System.setProperty("webdriver.chrome.driver", "drivers//chromedriver.exe");
             driver=new ChromeDriver();
         }
         else if(browser.equalsIgnoreCase("firefox"))
