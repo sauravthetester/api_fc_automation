@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [API Regression]" guice-stage="DEVELOPMENT" verbose="0">
+  <listeners>
+    <listener class-name="com.fusioncharts.ExtentReportListener.ExtentReporterNG"/>
+  </listeners>
+  <test name="ConfigureLink(failed)">
+    <classes>
+      <class name="com.fusioncharts.apitest.ConfigureLink">
+        <methods>
+          <include name="setUp"/>
+          <include name="verifyChartIsRenderedConfigureLink"/>
+          <include name="verifyAPIConfigureLink"/>
+        </methods>
+      </class> <!-- com.fusioncharts.apitest.ConfigureLink -->
+    </classes>
+  </test> <!-- ConfigureLink(failed) -->
+</suite> <!-- Failed suite [API Regression] -->
