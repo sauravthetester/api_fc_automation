@@ -1,0 +1,394 @@
+<html>
+<head>
+<title>TestNG:  RealTimeAPIsAutoFeed</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>RealTimeAPIsAutoFeed</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>3/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Tue Feb 25 15:14:53 IST 2020</td>
+</tr>
+<tr><td>Total time:</td><td>350 seconds (350831 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.fusioncharts.apitest.AddEventListener.verifyAPIAddEventListener()'><b>verifyAPIAddEventListener</b><br>Test class: com.fusioncharts.apitest.AddEventListener</td>
+<td></td>
+<td>3</td>
+<td>com.fusioncharts.apitest.AddEventListener@7975d1d8</td></tr>
+<tr>
+<td title='com.fusioncharts.apitest.CenterLabel.verifyAPICenterLabel()'><b>verifyAPICenterLabel</b><br>Test class: com.fusioncharts.apitest.CenterLabel</td>
+<td></td>
+<td>2</td>
+<td>com.fusioncharts.apitest.CenterLabel@51a9ad5e</td></tr>
+<tr>
+<td title='com.fusioncharts.apitest.FormatNumber.verifyAPIChartTypeFormatNumber()'><b>verifyAPIChartTypeFormatNumber</b><br>Test class: com.fusioncharts.apitest.FormatNumber</td>
+<td></td>
+<td>1</td>
+<td>com.fusioncharts.apitest.FormatNumber@32115b28</td></tr>
+<tr>
+<td title='com.fusioncharts.apitest.Clone.verifyAPIClone()'><b>verifyAPIClone</b><br>Test class: com.fusioncharts.apitest.Clone</td>
+<td></td>
+<td>10</td>
+<td>com.fusioncharts.apitest.Clone@1f9f6368</td></tr>
+<tr>
+<td title='com.fusioncharts.apitest.Configure.verifyAPIConfigure()'><b>verifyAPIConfigure</b><br>Test class: com.fusioncharts.apitest.Configure</td>
+<td></td>
+<td>0</td>
+<td>com.fusioncharts.apitest.Configure@589da3f3</td></tr>
+<tr>
+<td title='com.fusioncharts.apitest.ConfigureLink.verifyAPIConfigureLink()'><b>verifyAPIConfigureLink</b><br>Test class: com.fusioncharts.apitest.ConfigureLink</td>
+<td></td>
+<td>5</td>
+<td>com.fusioncharts.apitest.ConfigureLink@7354b8c5</td></tr>
+<tr>
+<td title='com.fusioncharts.apitest.AddEventListener.verifyAPIExistsInDataSheetAddEventListener()'><b>verifyAPIExistsInDataSheetAddEventListener</b><br>Test class: com.fusioncharts.apitest.AddEventListener</td>
+<td></td>
+<td>0</td>
+<td>com.fusioncharts.apitest.AddEventListener@7975d1d8</td></tr>
+<tr>
+<td title='com.fusioncharts.apitest.CenterLabel.verifyAPIExistsInDataSheetCenterLabel()'><b>verifyAPIExistsInDataSheetCenterLabel</b><br>Test class: com.fusioncharts.apitest.CenterLabel</td>
+<td></td>
+<td>0</td>
+<td>com.fusioncharts.apitest.CenterLabel@51a9ad5e</td></tr>
+<tr>
+<td title='com.fusioncharts.apitest.Clone.verifyAPIExistsInDataSheetClone()'><b>verifyAPIExistsInDataSheetClone</b><br>Test class: com.fusioncharts.apitest.Clone</td>
+<td></td>
+<td>0</td>
+<td>com.fusioncharts.apitest.Clone@1f9f6368</td></tr>
+<tr>
+<td title='com.fusioncharts.apitest.Configure.verifyAPIExistsInDataSheetConfigure()'><b>verifyAPIExistsInDataSheetConfigure</b><br>Test class: com.fusioncharts.apitest.Configure</td>
+<td></td>
+<td>0</td>
+<td>com.fusioncharts.apitest.Configure@589da3f3</td></tr>
+<tr>
+<td title='com.fusioncharts.apitest.ConfigureLink.verifyAPIExistsInDataSheetConfigureLink()'><b>verifyAPIExistsInDataSheetConfigureLink</b><br>Test class: com.fusioncharts.apitest.ConfigureLink</td>
+<td></td>
+<td>0</td>
+<td>com.fusioncharts.apitest.ConfigureLink@7354b8c5</td></tr>
+<tr>
+<td title='com.fusioncharts.apitest.FeedData.verifyAPIExistsInDataSheetFeedData()'><b>verifyAPIExistsInDataSheetFeedData</b><br>Test class: com.fusioncharts.apitest.FeedData</td>
+<td></td>
+<td>0</td>
+<td>com.fusioncharts.apitest.FeedData@17d919b6</td></tr>
+<tr>
+<td title='com.fusioncharts.apitest.FormatNumber.verifyAPIExistsInDataSheetFormatNumber()'><b>verifyAPIExistsInDataSheetFormatNumber</b><br>Test class: com.fusioncharts.apitest.FormatNumber</td>
+<td></td>
+<td>0</td>
+<td>com.fusioncharts.apitest.FormatNumber@32115b28</td></tr>
+<tr>
+<td title='com.fusioncharts.apitest.GetChartData.verifyAPIExistsInDataSheetGetChartData()'><b>verifyAPIExistsInDataSheetGetChartData</b><br>Test class: com.fusioncharts.apitest.GetChartData</td>
+<td></td>
+<td>0</td>
+<td>com.fusioncharts.apitest.GetChartData@5f0fd5a0</td></tr>
+<tr>
+<td title='com.fusioncharts.apitest.GetData.verifyAPIExistsInDataSheetGetData()'><b>verifyAPIExistsInDataSheetGetData</b><br>Test class: com.fusioncharts.apitest.GetData</td>
+<td></td>
+<td>0</td>
+<td>com.fusioncharts.apitest.GetData@536dbea0</td></tr>
+<tr>
+<td title='com.fusioncharts.apitest.GetDataWithId.verifyAPIExistsInDataSheetGetDataWithId()'><b>verifyAPIExistsInDataSheetGetDataWithId</b><br>Test class: com.fusioncharts.apitest.GetDataWithId</td>
+<td></td>
+<td>0</td>
+<td>com.fusioncharts.apitest.GetDataWithId@747f281</td></tr>
+<tr>
+<td title='com.fusioncharts.apitest.IsPlotItemSliced_slicePlotItem.verifyAPIExistsInDataSheetIsPlotItemSliced_slicePlotItem()'><b>verifyAPIExistsInDataSheetIsPlotItemSliced_slicePlotItem</b><br>Test class: com.fusioncharts.apitest.IsPlotItemSliced_slicePlotItem</td>
+<td></td>
+<td>0</td>
+<td>com.fusioncharts.apitest.IsPlotItemSliced_slicePlotItem@5f9edf14</td></tr>
+<tr>
+<td title='com.fusioncharts.apitest.LockResize_ResizeTo.verifyAPIExistsInDataSheetLockResize_ResizeTo()'><b>verifyAPIExistsInDataSheetLockResize_ResizeTo</b><br>Test class: com.fusioncharts.apitest.LockResize_ResizeTo</td>
+<td></td>
+<td>0</td>
+<td>com.fusioncharts.apitest.LockResize_ResizeTo@1130520d</td></tr>
+<tr>
+<td title='com.fusioncharts.apitest.RealTimeAPIs.verifyAPIExistsInDataSheetRealTimeAPIs()'><b>verifyAPIExistsInDataSheetRealTimeAPIs</b><br>Test class: com.fusioncharts.apitest.RealTimeAPIs</td>
+<td></td>
+<td>0</td>
+<td>com.fusioncharts.apitest.RealTimeAPIs@1c39680d</td></tr>
+<tr>
+<td title='com.fusioncharts.apitest.RealTimeAPIsAutoFeed.verifyAPIExistsInDataSheetRealTimeAPIsAutoFeed()'><b>verifyAPIExistsInDataSheetRealTimeAPIsAutoFeed</b><br>Test class: com.fusioncharts.apitest.RealTimeAPIsAutoFeed</td>
+<td></td>
+<td>0</td>
+<td>com.fusioncharts.apitest.RealTimeAPIsAutoFeed@766653e6</td></tr>
+<tr>
+<td title='com.fusioncharts.apitest.RemoveEventListener.verifyAPIExistsInDataSheetRemoveEventListener()'><b>verifyAPIExistsInDataSheetRemoveEventListener</b><br>Test class: com.fusioncharts.apitest.RemoveEventListener</td>
+<td></td>
+<td>0</td>
+<td>com.fusioncharts.apitest.RemoveEventListener@2c78324b</td></tr>
+<tr>
+<td title='com.fusioncharts.apitest.SetChartData.verifyAPIExistsInDataSheetSetChartData()'><b>verifyAPIExistsInDataSheetSetChartData</b><br>Test class: com.fusioncharts.apitest.SetChartData</td>
+<td></td>
+<td>0</td>
+<td>com.fusioncharts.apitest.SetChartData@77659b30</td></tr>
+<tr>
+<td title='com.fusioncharts.apitest.SetData.verifyAPIExistsInDataSheetSetData()'><b>verifyAPIExistsInDataSheetSetData</b><br>Test class: com.fusioncharts.apitest.SetData</td>
+<td></td>
+<td>0</td>
+<td>com.fusioncharts.apitest.SetData@7905a0b8</td></tr>
+<tr>
+<td title='com.fusioncharts.apitest.SetJSONData.verifyAPIExistsInDataSheetSetJSONData()'><b>verifyAPIExistsInDataSheetSetJSONData</b><br>Test class: com.fusioncharts.apitest.SetJSONData</td>
+<td></td>
+<td>0</td>
+<td>com.fusioncharts.apitest.SetJSONData@2f666ebb</td></tr>
+<tr>
+<td title='com.fusioncharts.apitest.SetXMLData.verifyAPIExistsInDataSheetSetXMLData()'><b>verifyAPIExistsInDataSheetSetXMLData</b><br>Test class: com.fusioncharts.apitest.SetXMLData</td>
+<td></td>
+<td>0</td>
+<td>com.fusioncharts.apitest.SetXMLData@102cec62</td></tr>
+<tr>
+<td title='com.fusioncharts.apitest.ShowChartMessage.verifyAPIExistsInDataSheetShowChartMessage()'><b>verifyAPIExistsInDataSheetShowChartMessage</b><br>Test class: com.fusioncharts.apitest.ShowChartMessage</td>
+<td></td>
+<td>0</td>
+<td>com.fusioncharts.apitest.ShowChartMessage@93081b6</td></tr>
+<tr>
+<td title='com.fusioncharts.apitest.ZoomlineAPIs.verifyAPIExistsInDataSheetZoomlineAPIs()'><b>verifyAPIExistsInDataSheetZoomlineAPIs</b><br>Test class: com.fusioncharts.apitest.ZoomlineAPIs</td>
+<td></td>
+<td>0</td>
+<td>com.fusioncharts.apitest.ZoomlineAPIs@6dd7b5a3</td></tr>
+<tr>
+<td title='com.fusioncharts.apitest.FeedData.verifyAPIFeedData()'><b>verifyAPIFeedData</b><br>Test class: com.fusioncharts.apitest.FeedData</td>
+<td></td>
+<td>0</td>
+<td>com.fusioncharts.apitest.FeedData@17d919b6</td></tr>
+<tr>
+<td title='com.fusioncharts.apitest.GetChartData.verifyAPIGetChartData()'><b>verifyAPIGetChartData</b><br>Test class: com.fusioncharts.apitest.GetChartData</td>
+<td></td>
+<td>3</td>
+<td>com.fusioncharts.apitest.GetChartData@5f0fd5a0</td></tr>
+<tr>
+<td title='com.fusioncharts.apitest.GetData.verifyAPIGetData()'><b>verifyAPIGetData</b><br>Test class: com.fusioncharts.apitest.GetData</td>
+<td></td>
+<td>0</td>
+<td>com.fusioncharts.apitest.GetData@536dbea0</td></tr>
+<tr>
+<td title='com.fusioncharts.apitest.GetDataWithId.verifyAPIGetDataWithId()'><b>verifyAPIGetDataWithId</b><br>Test class: com.fusioncharts.apitest.GetDataWithId</td>
+<td></td>
+<td>30</td>
+<td>com.fusioncharts.apitest.GetDataWithId@747f281</td></tr>
+<tr>
+<td title='com.fusioncharts.apitest.IsPlotItemSliced_slicePlotItem.verifyAPIIsPlotItemSliced_slicePlotItem()'><b>verifyAPIIsPlotItemSliced_slicePlotItem</b><br>Test class: com.fusioncharts.apitest.IsPlotItemSliced_slicePlotItem</td>
+<td></td>
+<td>19</td>
+<td>com.fusioncharts.apitest.IsPlotItemSliced_slicePlotItem@5f9edf14</td></tr>
+<tr>
+<td title='com.fusioncharts.apitest.LockResize_ResizeTo.verifyAPILockResize_ResizeTo()'><b>verifyAPILockResize_ResizeTo</b><br>Test class: com.fusioncharts.apitest.LockResize_ResizeTo</td>
+<td></td>
+<td>9</td>
+<td>com.fusioncharts.apitest.LockResize_ResizeTo@1130520d</td></tr>
+<tr>
+<td title='com.fusioncharts.apitest.RealTimeAPIs.verifyAPIRealTimeAPIs()'><b>verifyAPIRealTimeAPIs</b><br>Test class: com.fusioncharts.apitest.RealTimeAPIs</td>
+<td></td>
+<td>59</td>
+<td>com.fusioncharts.apitest.RealTimeAPIs@1c39680d</td></tr>
+<tr>
+<td title='com.fusioncharts.apitest.RealTimeAPIsAutoFeed.verifyAPIRealTimeAPIsAutoFeed()'><b>verifyAPIRealTimeAPIsAutoFeed</b><br>Test class: com.fusioncharts.apitest.RealTimeAPIsAutoFeed</td>
+<td></td>
+<td>344</td>
+<td>com.fusioncharts.apitest.RealTimeAPIsAutoFeed@766653e6</td></tr>
+<tr>
+<td title='com.fusioncharts.apitest.RemoveEventListener.verifyAPIRemoveEventListener()'><b>verifyAPIRemoveEventListener</b><br>Test class: com.fusioncharts.apitest.RemoveEventListener</td>
+<td></td>
+<td>5</td>
+<td>com.fusioncharts.apitest.RemoveEventListener@2c78324b</td></tr>
+<tr>
+<td title='com.fusioncharts.apitest.SetChartData.verifyAPISetChartData()'><b>verifyAPISetChartData</b><br>Test class: com.fusioncharts.apitest.SetChartData</td>
+<td></td>
+<td>3</td>
+<td>com.fusioncharts.apitest.SetChartData@77659b30</td></tr>
+<tr>
+<td title='com.fusioncharts.apitest.SetData.verifyAPISetData()'><b>verifyAPISetData</b><br>Test class: com.fusioncharts.apitest.SetData</td>
+<td></td>
+<td>7</td>
+<td>com.fusioncharts.apitest.SetData@7905a0b8</td></tr>
+<tr>
+<td title='com.fusioncharts.apitest.SetJSONData.verifyAPISetJSONData()'><b>verifyAPISetJSONData</b><br>Test class: com.fusioncharts.apitest.SetJSONData</td>
+<td></td>
+<td>3</td>
+<td>com.fusioncharts.apitest.SetJSONData@2f666ebb</td></tr>
+<tr>
+<td title='com.fusioncharts.apitest.SetXMLData.verifyAPISetXMLData()'><b>verifyAPISetXMLData</b><br>Test class: com.fusioncharts.apitest.SetXMLData</td>
+<td></td>
+<td>1</td>
+<td>com.fusioncharts.apitest.SetXMLData@102cec62</td></tr>
+<tr>
+<td title='com.fusioncharts.apitest.ShowChartMessage.verifyAPIShowChartMessage()'><b>verifyAPIShowChartMessage</b><br>Test class: com.fusioncharts.apitest.ShowChartMessage</td>
+<td></td>
+<td>11</td>
+<td>com.fusioncharts.apitest.ShowChartMessage@93081b6</td></tr>
+<tr>
+<td title='com.fusioncharts.apitest.ZoomlineAPIs.verifyAPIZoomlineAPIs()'><b>verifyAPIZoomlineAPIs</b><br>Test class: com.fusioncharts.apitest.ZoomlineAPIs</td>
+<td></td>
+<td>13</td>
+<td>com.fusioncharts.apitest.ZoomlineAPIs@6dd7b5a3</td></tr>
+<tr>
+<td title='com.fusioncharts.apitest.AddEventListener.verifyChartIsRenderedAddEventListener()'><b>verifyChartIsRenderedAddEventListener</b><br>Test class: com.fusioncharts.apitest.AddEventListener</td>
+<td></td>
+<td>0</td>
+<td>com.fusioncharts.apitest.AddEventListener@7975d1d8</td></tr>
+<tr>
+<td title='com.fusioncharts.apitest.CenterLabel.verifyChartIsRenderedCenterLabel()'><b>verifyChartIsRenderedCenterLabel</b><br>Test class: com.fusioncharts.apitest.CenterLabel</td>
+<td></td>
+<td>0</td>
+<td>com.fusioncharts.apitest.CenterLabel@51a9ad5e</td></tr>
+<tr>
+<td title='com.fusioncharts.apitest.Clone.verifyChartIsRenderedClone()'><b>verifyChartIsRenderedClone</b><br>Test class: com.fusioncharts.apitest.Clone</td>
+<td></td>
+<td>0</td>
+<td>com.fusioncharts.apitest.Clone@1f9f6368</td></tr>
+<tr>
+<td title='com.fusioncharts.apitest.Configure.verifyChartIsRenderedConfigure()'><b>verifyChartIsRenderedConfigure</b><br>Test class: com.fusioncharts.apitest.Configure</td>
+<td></td>
+<td>0</td>
+<td>com.fusioncharts.apitest.Configure@589da3f3</td></tr>
+<tr>
+<td title='com.fusioncharts.apitest.ConfigureLink.verifyChartIsRenderedConfigureLink()'><b>verifyChartIsRenderedConfigureLink</b><br>Test class: com.fusioncharts.apitest.ConfigureLink</td>
+<td></td>
+<td>0</td>
+<td>com.fusioncharts.apitest.ConfigureLink@7354b8c5</td></tr>
+<tr>
+<td title='com.fusioncharts.apitest.FeedData.verifyChartIsRenderedFeedData()'><b>verifyChartIsRenderedFeedData</b><br>Test class: com.fusioncharts.apitest.FeedData</td>
+<td></td>
+<td>0</td>
+<td>com.fusioncharts.apitest.FeedData@17d919b6</td></tr>
+<tr>
+<td title='com.fusioncharts.apitest.FormatNumber.verifyChartIsRenderedFormatNumber()'><b>verifyChartIsRenderedFormatNumber</b><br>Test class: com.fusioncharts.apitest.FormatNumber</td>
+<td></td>
+<td>0</td>
+<td>com.fusioncharts.apitest.FormatNumber@32115b28</td></tr>
+<tr>
+<td title='com.fusioncharts.apitest.GetChartData.verifyChartIsRenderedGetChartData()'><b>verifyChartIsRenderedGetChartData</b><br>Test class: com.fusioncharts.apitest.GetChartData</td>
+<td></td>
+<td>0</td>
+<td>com.fusioncharts.apitest.GetChartData@5f0fd5a0</td></tr>
+<tr>
+<td title='com.fusioncharts.apitest.GetData.verifyChartIsRenderedGetData()'><b>verifyChartIsRenderedGetData</b><br>Test class: com.fusioncharts.apitest.GetData</td>
+<td></td>
+<td>0</td>
+<td>com.fusioncharts.apitest.GetData@536dbea0</td></tr>
+<tr>
+<td title='com.fusioncharts.apitest.GetDataWithId.verifyChartIsRenderedGetDataWithId()'><b>verifyChartIsRenderedGetDataWithId</b><br>Test class: com.fusioncharts.apitest.GetDataWithId</td>
+<td></td>
+<td>0</td>
+<td>com.fusioncharts.apitest.GetDataWithId@747f281</td></tr>
+<tr>
+<td title='com.fusioncharts.apitest.IsPlotItemSliced_slicePlotItem.verifyChartIsRenderedIsPlotItemSliced_slicePlotItem()'><b>verifyChartIsRenderedIsPlotItemSliced_slicePlotItem</b><br>Test class: com.fusioncharts.apitest.IsPlotItemSliced_slicePlotItem</td>
+<td></td>
+<td>0</td>
+<td>com.fusioncharts.apitest.IsPlotItemSliced_slicePlotItem@5f9edf14</td></tr>
+<tr>
+<td title='com.fusioncharts.apitest.LockResize_ResizeTo.verifyChartIsRenderedLockResize_ResizeTo()'><b>verifyChartIsRenderedLockResize_ResizeTo</b><br>Test class: com.fusioncharts.apitest.LockResize_ResizeTo</td>
+<td></td>
+<td>1</td>
+<td>com.fusioncharts.apitest.LockResize_ResizeTo@1130520d</td></tr>
+<tr>
+<td title='com.fusioncharts.apitest.RealTimeAPIs.verifyChartIsRenderedRealTimeAPIs()'><b>verifyChartIsRenderedRealTimeAPIs</b><br>Test class: com.fusioncharts.apitest.RealTimeAPIs</td>
+<td></td>
+<td>0</td>
+<td>com.fusioncharts.apitest.RealTimeAPIs@1c39680d</td></tr>
+<tr>
+<td title='com.fusioncharts.apitest.RealTimeAPIsAutoFeed.verifyChartIsRenderedRealTimeAPIsAutoFeed()'><b>verifyChartIsRenderedRealTimeAPIsAutoFeed</b><br>Test class: com.fusioncharts.apitest.RealTimeAPIsAutoFeed</td>
+<td></td>
+<td>0</td>
+<td>com.fusioncharts.apitest.RealTimeAPIsAutoFeed@766653e6</td></tr>
+<tr>
+<td title='com.fusioncharts.apitest.RemoveEventListener.verifyChartIsRenderedRemoveEventListener()'><b>verifyChartIsRenderedRemoveEventListener</b><br>Test class: com.fusioncharts.apitest.RemoveEventListener</td>
+<td></td>
+<td>0</td>
+<td>com.fusioncharts.apitest.RemoveEventListener@2c78324b</td></tr>
+<tr>
+<td title='com.fusioncharts.apitest.SetChartData.verifyChartIsRenderedSetChartData()'><b>verifyChartIsRenderedSetChartData</b><br>Test class: com.fusioncharts.apitest.SetChartData</td>
+<td></td>
+<td>2</td>
+<td>com.fusioncharts.apitest.SetChartData@77659b30</td></tr>
+<tr>
+<td title='com.fusioncharts.apitest.SetData.verifyChartIsRenderedSetData()'><b>verifyChartIsRenderedSetData</b><br>Test class: com.fusioncharts.apitest.SetData</td>
+<td></td>
+<td>0</td>
+<td>com.fusioncharts.apitest.SetData@7905a0b8</td></tr>
+<tr>
+<td title='com.fusioncharts.apitest.SetJSONData.verifyChartIsRenderedSetJSONData()'><b>verifyChartIsRenderedSetJSONData</b><br>Test class: com.fusioncharts.apitest.SetJSONData</td>
+<td></td>
+<td>2</td>
+<td>com.fusioncharts.apitest.SetJSONData@2f666ebb</td></tr>
+<tr>
+<td title='com.fusioncharts.apitest.SetXMLData.verifyChartIsRenderedSetXMLData()'><b>verifyChartIsRenderedSetXMLData</b><br>Test class: com.fusioncharts.apitest.SetXMLData</td>
+<td></td>
+<td>2</td>
+<td>com.fusioncharts.apitest.SetXMLData@102cec62</td></tr>
+<tr>
+<td title='com.fusioncharts.apitest.ShowChartMessage.verifyChartIsRenderedShowChartMessage()'><b>verifyChartIsRenderedShowChartMessage</b><br>Test class: com.fusioncharts.apitest.ShowChartMessage</td>
+<td></td>
+<td>2</td>
+<td>com.fusioncharts.apitest.ShowChartMessage@93081b6</td></tr>
+<tr>
+<td title='com.fusioncharts.apitest.ZoomlineAPIs.verifyChartIsRenderedZoomlineAPIs()'><b>verifyChartIsRenderedZoomlineAPIs</b><br>Test class: com.fusioncharts.apitest.ZoomlineAPIs</td>
+<td></td>
+<td>0</td>
+<td>com.fusioncharts.apitest.ZoomlineAPIs@6dd7b5a3</td></tr>
+</table><p>
+</body>
+</html>
